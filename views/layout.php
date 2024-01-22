@@ -255,7 +255,7 @@ ew.ready(["chartjs", "luxon"], [
                 <li class="nav-item d-block d-sm-none">
                     <a class="nav-link" data-widget="pushmenu" data-enable-remember="true" data-ew-action="none"><i class="fa-solid fa-bars ew-icon"></i></a>
                 </li>
-                <a class="navbar-brand d-none d-sm-block" href="alfa.projectlearning.id">
+                <a class="navbar-brand d-none d-sm-block" href=".">
                     <span class="brand-text">Project Learning</span>
                 </a>
             </ul>
@@ -268,7 +268,7 @@ ew.ready(["chartjs", "luxon"], [
     <aside class="<?= Config("SIDEBAR_CLASS") ?>">
         <div class="brand-container">
             <!-- Brand Logo //** Note: Only licensed users are allowed to change the logo ** -->
-            <a href="alfa.projectlearning.id" class="brand-link">
+            <a href="." class="brand-link">
                 <span class="brand-text">Project Learning</span>
             </a>
             <?php if (preg_match('/\bsidebar-mini\b/', Config("BODY_CLASS"))) { ?>
