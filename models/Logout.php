@@ -363,6 +363,7 @@ class Logout
     {
         // Example:
         //$url = "your URL";
+        $url = "home";
     }
 
     // Message Showing event
