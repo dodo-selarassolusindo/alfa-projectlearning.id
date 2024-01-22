@@ -1,7 +1,7 @@
 <ew-language date="2024/1/22" id="en-US" author="e.World Technology Limited">
   <project>
-    <phrase id="bodytitle" value="PHPMaker Demo Project" />
-    <phrase id="footertext" value="&amp;copy;2023 e.World Technology Ltd. All rights reserved." />
+    <phrase id="bodytitle" value="Project Learning" />
+    <phrase id="footertext" value="&amp;copy;2024 Project Learning Team. All rights reserved." />
     <menu id="10153">
       <phrase id="menutext" value="messages" />
     </menu>

@@ -182,7 +182,7 @@ loadjs.ready("head", function () {
     if (in_array("orders", explode(",", $Page->getCurrentDetailTable())) && $orders->DetailView) {
 ?>
 <?php if ($Page->getCurrentDetailTable() != "") { ?>
-<h4 class="ew-detail-caption"><?= $Language->tablePhrase("orders", "TblCaption") ?>&nbsp;<?= str_replace("%s", "red", str_replace("%c", Container("orders")->Count, $Language->phrase("DetailCount"))) ?></h4>
+<h4 class="ew-detail-caption"><?= $Language->tablePhrase("orders", "TblCaption") ?>&nbsp;<?= str_replace("%s", "lightblue", str_replace("%c", Container("orders")->Count, $Language->phrase("DetailCount"))) ?></h4>
 <?php } ?>
 <?php include_once "OrdersGrid.php" ?>
 <?php } ?>

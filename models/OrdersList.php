@@ -1923,7 +1923,7 @@ class OrdersList extends Orders
                 $detailTbl->setCurrentMasterTable($this->TableVar);
                 $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
                 $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
-                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orderdetails")->Count, "red"], $Language->phrase("DetailCount"));
+                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orderdetails")->Count, "lightblue"], $Language->phrase("DetailCount"));
             }
             $body = "<a class=\"btn btn-default ew-row-link ew-detail" . ($this->ListOptions->UseDropDownButton ? " dropdown-toggle" : "") . "\" data-action=\"list\" href=\"" . HtmlEncode("orderdetailslist?" . Config("TABLE_SHOW_MASTER") . "=orders&" . GetForeignKeyUrl("fk_OrderID", $this->OrderID->CurrentValue) . "") . "\">" . $body . "</a>";
             $links = "";
@@ -1978,7 +1978,7 @@ class OrdersList extends Orders
                 $detailTbl->setCurrentMasterTable($this->TableVar);
                 $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
                 $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
-                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("order_details_extended")->Count, "red"], $Language->phrase("DetailCount"));
+                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("order_details_extended")->Count, "lightblue"], $Language->phrase("DetailCount"));
             }
             $body = "<a class=\"btn btn-default ew-row-link ew-detail" . ($this->ListOptions->UseDropDownButton ? " dropdown-toggle" : "") . "\" data-action=\"list\" href=\"" . HtmlEncode("orderdetailsextendedlist?" . Config("TABLE_SHOW_MASTER") . "=orders&" . GetForeignKeyUrl("fk_OrderID", $this->OrderID->CurrentValue) . "") . "\">" . $body . "</a>";
             $links = "";

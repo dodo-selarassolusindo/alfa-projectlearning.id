@@ -221,14 +221,14 @@ loadjs.ready("head", function () {
 <?php
     if (in_array("orderdetails", explode(",", $Page->getCurrentDetailTable())) && $orderdetails->DetailView) {
 ?>
-        <li class="nav-item"><button class="<?= $Page->DetailPages->navLinkClasses("orderdetails") ?><?= $Page->DetailPages->activeClasses("orderdetails") ?>" data-bs-target="#tab_orderdetails" data-bs-toggle="tab" type="button" role="tab" aria-controls="tab_orderdetails" aria-selected="<?= JsonEncode($Page->DetailPages->isActive("orderdetails")) ?>"><?= $Language->tablePhrase("orderdetails", "TblCaption") ?>&nbsp;<?= str_replace("%s", "red", str_replace("%c", Container("orderdetails")->Count, $Language->phrase("DetailCount"))) ?></button></li>
+        <li class="nav-item"><button class="<?= $Page->DetailPages->navLinkClasses("orderdetails") ?><?= $Page->DetailPages->activeClasses("orderdetails") ?>" data-bs-target="#tab_orderdetails" data-bs-toggle="tab" type="button" role="tab" aria-controls="tab_orderdetails" aria-selected="<?= JsonEncode($Page->DetailPages->isActive("orderdetails")) ?>"><?= $Language->tablePhrase("orderdetails", "TblCaption") ?>&nbsp;<?= str_replace("%s", "lightblue", str_replace("%c", Container("orderdetails")->Count, $Language->phrase("DetailCount"))) ?></button></li>
 <?php
     }
 ?>
 <?php
     if (in_array("order_details_extended", explode(",", $Page->getCurrentDetailTable())) && $order_details_extended->DetailView) {
 ?>
-        <li class="nav-item"><button class="<?= $Page->DetailPages->navLinkClasses("order_details_extended") ?><?= $Page->DetailPages->activeClasses("order_details_extended") ?>" data-bs-target="#tab_order_details_extended" data-bs-toggle="tab" type="button" role="tab" aria-controls="tab_order_details_extended" aria-selected="<?= JsonEncode($Page->DetailPages->isActive("order_details_extended")) ?>"><?= $Language->tablePhrase("order_details_extended", "TblCaption") ?>&nbsp;<?= str_replace("%s", "red", str_replace("%c", Container("order_details_extended")->Count, $Language->phrase("DetailCount"))) ?></button></li>
+        <li class="nav-item"><button class="<?= $Page->DetailPages->navLinkClasses("order_details_extended") ?><?= $Page->DetailPages->activeClasses("order_details_extended") ?>" data-bs-target="#tab_order_details_extended" data-bs-toggle="tab" type="button" role="tab" aria-controls="tab_order_details_extended" aria-selected="<?= JsonEncode($Page->DetailPages->isActive("order_details_extended")) ?>"><?= $Language->tablePhrase("order_details_extended", "TblCaption") ?>&nbsp;<?= str_replace("%s", "lightblue", str_replace("%c", Container("order_details_extended")->Count, $Language->phrase("DetailCount"))) ?></button></li>
 <?php
     }
 ?>

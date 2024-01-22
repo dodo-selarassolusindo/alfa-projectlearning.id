@@ -1882,7 +1882,7 @@ class CustomersList extends Customers
                 $detailTbl->setCurrentMasterTable($this->TableVar);
                 $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
                 $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
-                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orders")->Count, "red"], $Language->phrase("DetailCount"));
+                $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orders")->Count, "lightblue"], $Language->phrase("DetailCount"));
             }
             $body = "<a class=\"btn btn-default ew-row-link ew-detail" . ($this->ListOptions->UseDropDownButton ? " dropdown-toggle" : "") . "\" data-action=\"list\" href=\"" . HtmlEncode("orderslist?" . Config("TABLE_SHOW_MASTER") . "=customers&" . GetForeignKeyUrl("fk_CustomerID", $this->CustomerID->CurrentValue) . "") . "\">" . $body . "</a>";
             $links = "";

@@ -25,8 +25,8 @@ body {
 
 .ew-table .ew-table-header td, .ew-table .ew-table-header th {
   background-image: none;
-  background-color: #CC3140;
-  color: #FFFFFF;
+  background-color: #5797BC;
+  color: #000000;
   vertical-align: top;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .ew-table .ew-table-footer td {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-table .ew-table-column-row {
@@ -51,27 +51,27 @@ body {
 }
 
 .ew-rpt-grp-field-1 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-summary-1 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-field-3 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-summary-3 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-field-5 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-summary-5 {
-  background-color: #FAE1E3;
+  background-color: #E7F1F7;
 }
 
 .ew-rpt-grp-aggregate {
@@ -79,20 +79,20 @@ body {
 }
 
 .ew-rpt-page-summary {
-  background-color: #F9DCDE;
+  background-color: #E3EFF6;
 }
 
 .ew-rpt-grand-summary {
-  background-color: #F8D7DA;
+  background-color: #DFEDF5;
 }
 
 .ew-rpt-col-summary {
-  background-color: #CC3140;
+  background-color: #5797BC;
   border: 0;
 }
 
 .ew-rpt-col-header {
-  background-color: #CC3140;
+  background-color: #5797BC;
   border: 0;
 }
 

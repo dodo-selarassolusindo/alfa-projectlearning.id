@@ -252,11 +252,11 @@ ew.ready(["chartjs", "luxon"], [
         <div class="container-fluid">
             <!-- Left navbar links -->
             <ul id="ew-navbar" class="navbar-nav">
-                <li class="nav-item d-block">
+                <li class="nav-item d-block d-sm-none">
                     <a class="nav-link" data-widget="pushmenu" data-enable-remember="true" data-ew-action="none"><i class="fa-solid fa-bars ew-icon"></i></a>
                 </li>
-                <a class="navbar-brand d-none" href="https://phpmaker.dev/">
-                    <span class="brand-text">PHPMaker 2024</span>
+                <a class="navbar-brand d-none d-sm-block" href="alfa.projectlearning.id">
+                    <span class="brand-text">Project Learning</span>
                 </a>
             </ul>
             <!-- Right navbar links -->
@@ -268,8 +268,8 @@ ew.ready(["chartjs", "luxon"], [
     <aside class="<?= Config("SIDEBAR_CLASS") ?>">
         <div class="brand-container">
             <!-- Brand Logo //** Note: Only licensed users are allowed to change the logo ** -->
-            <a href="https://phpmaker.dev/" class="brand-link">
-                <span class="brand-text">PHPMaker 2024</span>
+            <a href="alfa.projectlearning.id" class="brand-link">
+                <span class="brand-text">Project Learning</span>
             </a>
             <?php if (preg_match('/\bsidebar-mini\b/', Config("BODY_CLASS"))) { ?>
             <a class="pushmenu mx-1" data-pushmenu="mini" role="button"><i class="fa-solid fa-angle-double-left"></i></a>
@@ -292,15 +292,6 @@ ew.ready(["chartjs", "luxon"], [
                 <?php } ?>
             </div>
             <?php } ?>
-            <!-- SidebarSearch Form -->
-            <div class="mt-3">
-                <div class="input-group" data-widget="sidebar-search" data-not-found-text="<?= $Language->phrase("NoMenuItem") ?>">
-                    <input class="form-control form-control-sidebar" type="search" placeholder="<?= $Language->phrase("Search") ?>" aria-label="<?= $Language->phrase("Search") ?>">
-                    <button class="btn btn-sidebar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
             <!-- Sidebar Menu -->
             <nav id="ew-menu" class="mt-2"></nav>
             <!-- /.sidebar-menu -->

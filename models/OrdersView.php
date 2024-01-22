@@ -788,7 +788,7 @@ class OrdersView extends Orders
         $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
         $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
         if (!$this->ShowMultipleDetails) { // Skip record count if show multiple details
-            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orderdetails")->Count, "red"], $Language->phrase("DetailCount"));
+            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orderdetails")->Count, "lightblue"], $Language->phrase("DetailCount"));
         }
         $body = "<a class=\"btn btn-default ew-row-link ew-detail\" data-action=\"list\" href=\"" . HtmlEncode(GetUrl("orderdetailslist?" . Config("TABLE_SHOW_MASTER") . "=orders&" . GetForeignKeyUrl("fk_OrderID", $this->OrderID->CurrentValue) . "")) . "\">" . $body . "</a>";
         $links = "";
@@ -842,7 +842,7 @@ class OrdersView extends Orders
         $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
         $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
         if (!$this->ShowMultipleDetails) { // Skip record count if show multiple details
-            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("order_details_extended")->Count, "red"], $Language->phrase("DetailCount"));
+            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("order_details_extended")->Count, "lightblue"], $Language->phrase("DetailCount"));
         }
         $body = "<a class=\"btn btn-default ew-row-link ew-detail\" data-action=\"list\" href=\"" . HtmlEncode(GetUrl("orderdetailsextendedlist?" . Config("TABLE_SHOW_MASTER") . "=orders&" . GetForeignKeyUrl("fk_OrderID", $this->OrderID->CurrentValue) . "")) . "\">" . $body . "</a>";
         $links = "";

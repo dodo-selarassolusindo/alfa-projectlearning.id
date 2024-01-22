@@ -771,7 +771,7 @@ class CustomersView extends Customers
         $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
         $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
         if (!$this->ShowMultipleDetails) { // Skip record count if show multiple details
-            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orders")->Count, "red"], $Language->phrase("DetailCount"));
+            $body .= "&nbsp;" . str_replace(["%c", "%s"], [Container("orders")->Count, "lightblue"], $Language->phrase("DetailCount"));
         }
         $body = "<a class=\"btn btn-default ew-row-link ew-detail\" data-action=\"list\" href=\"" . HtmlEncode(GetUrl("orderslist?" . Config("TABLE_SHOW_MASTER") . "=customers&" . GetForeignKeyUrl("fk_CustomerID", $this->CustomerID->CurrentValue) . "")) . "\">" . $body . "</a>";
         $links = "";
