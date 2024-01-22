@@ -32,6 +32,10 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         array (
             'voku\\' => 5,
         ),
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'Z' => 
         array (
             'ZipStream\\' => 10,
@@ -134,6 +138,7 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
+            'Giggsey\\Locale\\' => 15,
         ),
         'F' => 
         array (
@@ -179,6 +184,10 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'ZipStream\\' => 
         array (
@@ -351,8 +360,8 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -446,9 +455,9 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Filesystem\\' => 
@@ -466,6 +475,10 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'Giggsey\\Locale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
         'FontLib\\' => 
         array (
@@ -521,8 +534,8 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'DiDom\\' => 
         array (

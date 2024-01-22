@@ -513,9 +513,6 @@ class AudittrailAdd extends Audittrail
             $this->InlineDelete = true;
         }
 
-        // Set up lookup cache
-        $this->setupLookupOptions($this->User);
-
         // Load default values for add
         $this->loadDefaultValues();
 
@@ -928,27 +925,6 @@ class AudittrailAdd extends Audittrail
 
             // User
             $this->User->ViewValue = $this->User->CurrentValue;
-            $curVal = strval($this->User->CurrentValue);
-            if ($curVal != "") {
-                $this->User->ViewValue = $this->User->lookupCacheOption($curVal);
-                if ($this->User->ViewValue === null) { // Lookup from database
-                    $filterWrk = SearchFilter($this->User->Lookup->getTable()->Fields["EmployeeID"]->searchExpression(), "=", $curVal, $this->User->Lookup->getTable()->Fields["EmployeeID"]->searchDataType(), "");
-                    $sqlWrk = $this->User->Lookup->getSql(false, $filterWrk, '', $this, true, true);
-                    $conn = Conn();
-                    $config = $conn->getConfiguration();
-                    $config->setResultCache($this->Cache);
-                    $rswrk = $conn->executeCacheQuery($sqlWrk, [], [], $this->CacheProfile)->fetchAll();
-                    $ari = count($rswrk);
-                    if ($ari > 0) { // Lookup values found
-                        $arwrk = $this->User->Lookup->renderViewRow($rswrk[0]);
-                        $this->User->ViewValue = $this->User->displayValue($arwrk);
-                    } else {
-                        $this->User->ViewValue = $this->User->CurrentValue;
-                    }
-                }
-            } else {
-                $this->User->ViewValue = null;
-            }
 
             // Action
             $this->_Action->ViewValue = $this->_Action->CurrentValue;
@@ -1014,27 +990,6 @@ class AudittrailAdd extends Audittrail
                 $this->User->CurrentValue = HtmlDecode($this->User->CurrentValue);
             }
             $this->User->EditValue = HtmlEncode($this->User->CurrentValue);
-            $curVal = strval($this->User->CurrentValue);
-            if ($curVal != "") {
-                $this->User->EditValue = $this->User->lookupCacheOption($curVal);
-                if ($this->User->EditValue === null) { // Lookup from database
-                    $filterWrk = SearchFilter($this->User->Lookup->getTable()->Fields["EmployeeID"]->searchExpression(), "=", $curVal, $this->User->Lookup->getTable()->Fields["EmployeeID"]->searchDataType(), "");
-                    $sqlWrk = $this->User->Lookup->getSql(false, $filterWrk, '', $this, true, true);
-                    $conn = Conn();
-                    $config = $conn->getConfiguration();
-                    $config->setResultCache($this->Cache);
-                    $rswrk = $conn->executeCacheQuery($sqlWrk, [], [], $this->CacheProfile)->fetchAll();
-                    $ari = count($rswrk);
-                    if ($ari > 0) { // Lookup values found
-                        $arwrk = $this->User->Lookup->renderViewRow($rswrk[0]);
-                        $this->User->EditValue = $this->User->displayValue($arwrk);
-                    } else {
-                        $this->User->EditValue = HtmlEncode($this->User->CurrentValue);
-                    }
-                }
-            } else {
-                $this->User->EditValue = null;
-            }
             $this->User->PlaceHolder = RemoveHtml($this->User->caption());
 
             // Action
@@ -1332,8 +1287,6 @@ class AudittrailAdd extends Audittrail
 
             // Set up lookup SQL and connection
             switch ($fld->FieldVar) {
-                case "x_User":
-                    break;
                 default:
                     $lookupFilter = "";
                     break;

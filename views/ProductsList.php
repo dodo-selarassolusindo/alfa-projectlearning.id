@@ -38,8 +38,8 @@ loadjs.ready(["wrapper", "head"], function () {
 </script>
 <script>
 window.Tabulator || loadjs([
-    ew.PATH_BASE + "js/tabulator.min.js?v=24.7.4",
-    ew.PATH_BASE + "css/<?= CssFile("tabulator_bootstrap5.css", false) ?>?v=24.7.4"
+    ew.PATH_BASE + "js/tabulator.min.js?v=24.6.4",
+    ew.PATH_BASE + "css/<?= CssFile("tabulator_bootstrap5.css", false) ?>?v=24.6.4"
 ], "import");
 </script>
 <script>

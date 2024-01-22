@@ -136,10 +136,10 @@ class Audittrail extends DbTable
             'x_DateTime', // Variable name
             'DateTime', // Name
             '`DateTime`', // Expression
-            CastDateFieldForLike("`DateTime`", 17, "DB"), // Basic search expression
+            CastDateFieldForLike("`DateTime`", 0, "DB"), // Basic search expression
             135, // Type
             19, // Size
-            17, // Date/Time format
+            0, // Date/Time format
             false, // Is upload field
             '`DateTime`', // Virtual expression
             false, // Is virtual
@@ -152,7 +152,7 @@ class Audittrail extends DbTable
         $this->DateTime->Raw = true;
         $this->DateTime->Nullable = false; // NOT NULL field
         $this->DateTime->Required = true; // Required field
-        $this->DateTime->DefaultErrorMessage = str_replace("%s", DateFormat(17), $Language->phrase("IncorrectDate"));
+        $this->DateTime->DefaultErrorMessage = str_replace("%s", $GLOBALS["DATE_FORMAT"], $Language->phrase("IncorrectDate"));
         $this->DateTime->SearchOperators = ["=", "<>", "IN", "NOT IN", "<", "<=", ">", ">=", "BETWEEN", "NOT BETWEEN"];
         $this->Fields['DateTime'] = &$this->DateTime;
 
@@ -197,7 +197,6 @@ class Audittrail extends DbTable
             'TEXT' // Edit Tag
         );
         $this->User->InputTextType = "text";
-        $this->User->Lookup = new Lookup($this->User, 'employees', false, 'EmployeeID', ["Username","","",""], '', '', [], [], [], [], [], [], false, '', '', "`Username`");
         $this->User->SearchOperators = ["=", "<>", "IN", "NOT IN", "STARTS WITH", "NOT STARTS WITH", "LIKE", "NOT LIKE", "ENDS WITH", "NOT ENDS WITH", "IS EMPTY", "IS NOT EMPTY", "IS NULL", "IS NOT NULL"];
         $this->Fields['User'] = &$this->User;
 
@@ -1292,27 +1291,6 @@ class Audittrail extends DbTable
 
         // User
         $this->User->ViewValue = $this->User->CurrentValue;
-        $curVal = strval($this->User->CurrentValue);
-        if ($curVal != "") {
-            $this->User->ViewValue = $this->User->lookupCacheOption($curVal);
-            if ($this->User->ViewValue === null) { // Lookup from database
-                $filterWrk = SearchFilter($this->User->Lookup->getTable()->Fields["EmployeeID"]->searchExpression(), "=", $curVal, $this->User->Lookup->getTable()->Fields["EmployeeID"]->searchDataType(), "");
-                $sqlWrk = $this->User->Lookup->getSql(false, $filterWrk, '', $this, true, true);
-                $conn = Conn();
-                $config = $conn->getConfiguration();
-                $config->setResultCache($this->Cache);
-                $rswrk = $conn->executeCacheQuery($sqlWrk, [], [], $this->CacheProfile)->fetchAll();
-                $ari = count($rswrk);
-                if ($ari > 0) { // Lookup values found
-                    $arwrk = $this->User->Lookup->renderViewRow($rswrk[0]);
-                    $this->User->ViewValue = $this->User->displayValue($arwrk);
-                } else {
-                    $this->User->ViewValue = $this->User->CurrentValue;
-                }
-            }
-        } else {
-            $this->User->ViewValue = null;
-        }
 
         // Action
         $this->_Action->ViewValue = $this->_Action->CurrentValue;

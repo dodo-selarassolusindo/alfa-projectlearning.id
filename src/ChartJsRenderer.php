@@ -89,7 +89,6 @@ class ChartJsRenderer implements ChartRendererInterface
         // chartjs-plugin-datalabels options
         // https://chartjs-plugin-datalabels.netlify.app/guide/options.html
         $this->Options["plugins.datalabels.clamp"] ??= true;
-        $this->Options["plugins.datalabels.display"] ??= "auto";
         $title = $this->Chart->loadParameter("caption");
 
         // Set dataset.circular to true for Pie/Doughnut/Polar Area chart
@@ -139,7 +138,7 @@ class ChartJsRenderer implements ChartRendererInterface
                         $seriesName = (is_array($chartSeries[$i])) ? $chartSeries[$i][0] : $chartSeries[$i];
                         $yAxisId = (is_array($chartSeries[$i])) ? $chartSeries[$i][1] : "";
                         if (!EmptyString($yAxisId) && !in_array($yAxisId, array_column($yAxes, "id"))) { // Dual axis
-                            $yAxes[$yAxisId] = ["type" => "linear", "display" => "auto", "position" => $yAxisId == "y" ? "left" : "right"];
+                            $yAxes[$yAxisId] = ["type" => "linear", "display" => true, "position" => $yAxisId == "y" ? "left" : "right"];
                             if ($yAxisId != "y") {
                                 $yAxes[$yAxisId]["grid"] = ["drawOnChartArea" => false];
                             }

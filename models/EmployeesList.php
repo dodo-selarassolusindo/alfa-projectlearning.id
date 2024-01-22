@@ -2329,9 +2329,7 @@ class EmployeesList extends Employees
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $userlist = implode(",", array_column($rows, Config("LOGIN_USERNAME_FIELD_NAME")));
@@ -2342,9 +2340,7 @@ class EmployeesList extends Employees
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $user = $row[Config("LOGIN_USERNAME_FIELD_NAME")];

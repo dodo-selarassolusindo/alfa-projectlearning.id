@@ -56,7 +56,6 @@ loadjs.ready(["wrapper", "head"], function () {
 
         // Dynamic selection lists
         .setLists({
-            "User": <?= $Page->User->toClientList($Page) ?>,
         })
         .build();
     window[form.id] = form;
@@ -104,7 +103,7 @@ loadjs.ready("head", function () {
 <?php if (!$Page->DateTime->ReadOnly && !$Page->DateTime->Disabled && !isset($Page->DateTime->EditAttrs["readonly"]) && !isset($Page->DateTime->EditAttrs["disabled"])) { ?>
 <script>
 loadjs.ready(["faudittrailedit", "datetimepicker"], function () {
-    let format = "<?= DateFormat(17) ?>",
+    let format = "<?= DateFormat(0) ?>",
         options = {
             localization: {
                 locale: ew.LANGUAGE_ID + "-u-nu-" + ew.getNumberingSystem(),
@@ -147,26 +146,12 @@ loadjs.ready(["faudittrailedit", "datetimepicker"], function () {
 <?php } ?>
 <?php if ($Page->User->Visible) { // User ?>
     <div id="r_User"<?= $Page->User->rowAttributes() ?>>
-        <label id="elh_audittrail_User" class="<?= $Page->LeftColumnClass ?>"><?= $Page->User->caption() ?><?= $Page->User->Required ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
+        <label id="elh_audittrail_User" for="x_User" class="<?= $Page->LeftColumnClass ?>"><?= $Page->User->caption() ?><?= $Page->User->Required ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
         <div class="<?= $Page->RightColumnClass ?>"><div<?= $Page->User->cellAttributes() ?>>
 <span id="el_audittrail_User">
-<?php
-if (IsRTL()) {
-    $Page->User->EditAttrs["dir"] = "rtl";
-}
-?>
-<span id="as_x_User" class="ew-auto-suggest">
-    <input type="<?= $Page->User->getInputTextType() ?>" class="form-control" name="sv_x_User" id="sv_x_User" value="<?= RemoveHtml($Page->User->EditValue) ?>" autocomplete="off" size="30" maxlength="255" placeholder="<?= HtmlEncode($Page->User->getPlaceHolder()) ?>" data-placeholder="<?= HtmlEncode($Page->User->getPlaceHolder()) ?>" data-format-pattern="<?= HtmlEncode($Page->User->formatPattern()) ?>"<?= $Page->User->editAttributes() ?> aria-describedby="x_User_help">
-</span>
-<selection-list hidden class="form-control" data-table="audittrail" data-field="x_User" data-input="sv_x_User" data-value-separator="<?= $Page->User->displayValueSeparatorAttribute() ?>" name="x_User" id="x_User" value="<?= HtmlEncode($Page->User->CurrentValue) ?>"></selection-list>
+<input type="<?= $Page->User->getInputTextType() ?>" name="x_User" id="x_User" data-table="audittrail" data-field="x_User" value="<?= $Page->User->EditValue ?>" size="30" maxlength="255" placeholder="<?= HtmlEncode($Page->User->getPlaceHolder()) ?>" data-format-pattern="<?= HtmlEncode($Page->User->formatPattern()) ?>"<?= $Page->User->editAttributes() ?> aria-describedby="x_User_help">
 <?= $Page->User->getCustomMessage() ?>
 <div class="invalid-feedback"><?= $Page->User->getErrorMessage() ?></div>
-<script>
-loadjs.ready("faudittrailedit", function() {
-    faudittrailedit.createAutoSuggest(Object.assign({"id":"x_User","forceSelect":false}, { lookupAllDisplayFields: <?= $Page->User->Lookup->LookupAllDisplayFields ? "true" : "false" ?> }, ew.vars.tables.audittrail.fields.User.autoSuggestOptions));
-});
-</script>
-<?= $Page->User->Lookup->getParamTag($Page, "p_x_User") ?>
 </span>
 </div></div>
     </div>

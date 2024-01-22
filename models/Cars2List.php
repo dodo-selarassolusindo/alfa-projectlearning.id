@@ -1984,9 +1984,7 @@ class Cars2List extends Cars2
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -1996,9 +1994,7 @@ class Cars2List extends Cars2
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

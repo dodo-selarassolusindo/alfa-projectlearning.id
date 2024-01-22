@@ -768,9 +768,7 @@ class CategoriesDelete extends Categories
         }
         if ($deleteRows) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Set warning message if delete some records failed
@@ -779,9 +777,7 @@ class CategoriesDelete extends Categories
             }
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
         }
 

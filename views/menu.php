@@ -27,7 +27,7 @@ $topMenu->addMenuItem(17, "mci_ADMIN_ONLY", $Language->menuPhrase("17", "MenuTex
 $topMenu->addMenuItem(4, "mi_employees", $Language->menuPhrase("4", "MenuText"), "employeeslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}employees'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10084, "mi_userlevels", $Language->menuPhrase("10084", "MenuText"), "userlevelslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}userlevels'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10083, "mi_userlevelpermissions", $Language->menuPhrase("10083", "MenuText"), "userlevelpermissionslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}userlevelpermissions'), false, false, "", "", true, false);
-$topMenu->addMenuItem(10155, "mi_audittrail", $Language->menuPhrase("10155", "MenuText"), "audittraillist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail'), false, false, "", "", true, false);
+$topMenu->addMenuItem(10207, "mi_audittrail", $Language->menuPhrase("10207", "MenuText"), "audittraillist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10127, "mi_Dashboard1", $Language->menuPhrase("10127", "MenuText"), "dashboard1", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}Dashboard1'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10152, "mi_Calendar1", $Language->menuPhrase("10152", "MenuText"), "calendar1", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}Calendar1'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10144, "mci_REPORTS", $Language->menuPhrase("10144", "MenuText"), "", -1, "", true, false, true, "fa-file-alt", "", true, false);
@@ -67,7 +67,7 @@ $sideMenu->addMenuItem(17, "mci_ADMIN_ONLY", $Language->menuPhrase("17", "MenuTe
 $sideMenu->addMenuItem(4, "mi_employees", $Language->menuPhrase("4", "MenuText"), "employeeslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}employees'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10084, "mi_userlevels", $Language->menuPhrase("10084", "MenuText"), "userlevelslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}userlevels'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10083, "mi_userlevelpermissions", $Language->menuPhrase("10083", "MenuText"), "userlevelpermissionslist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}userlevelpermissions'), false, false, "", "", true, true);
-$sideMenu->addMenuItem(10155, "mi_audittrail", $Language->menuPhrase("10155", "MenuText"), "audittraillist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail'), false, false, "", "", true, true);
+$sideMenu->addMenuItem(10207, "mi_audittrail", $Language->menuPhrase("10207", "MenuText"), "audittraillist", 17, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10127, "mi_Dashboard1", $Language->menuPhrase("10127", "MenuText"), "dashboard1", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}Dashboard1'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10152, "mi_Calendar1", $Language->menuPhrase("10152", "MenuText"), "calendar1", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}Calendar1'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10144, "mci_REPORTS", $Language->menuPhrase("10144", "MenuText"), "", -1, "", true, false, true, "fa-file-alt", "", true, true);

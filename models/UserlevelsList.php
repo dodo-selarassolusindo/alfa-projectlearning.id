@@ -1645,9 +1645,7 @@ class UserlevelsList extends Userlevels
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -1657,9 +1655,7 @@ class UserlevelsList extends Userlevels
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

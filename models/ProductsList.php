@@ -2105,9 +2105,7 @@ class ProductsList extends Products
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2117,9 +2115,7 @@ class ProductsList extends Products
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);
@@ -2984,13 +2980,9 @@ class ProductsList extends Products
                     // Rollback transaction
                     if ($this->ImportUseTransaction) {
                         if ($rollback || $failCnt > $this->ImportMaxFailures) {
-                            if ($conn->isTransactionActive()) {
-                                $res["rollbacked"] = $conn->rollback();
-                            }
+                            $res["rollbacked"] = $conn->rollback();
                         } else {
-                            if ($conn->isTransactionActive()) {
-                                $conn->commit();
-                            }
+                            $conn->commit();
                         }
                     }
                     unset($res["row"], $res["error"]); // Remove current row info

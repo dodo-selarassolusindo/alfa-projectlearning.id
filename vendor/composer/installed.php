@@ -190,6 +190,24 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'giggsey/libphonenumber-for-php' => array(
+            'pretty_version' => '8.13.28',
+            'version' => '8.13.28.0',
+            'reference' => 'f508ab946a60c1470c92e33cfc0393a0d580b9a1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/libphonenumber-for-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'giggsey/locale' => array(
+            'pretty_version' => '2.5',
+            'version' => '2.5.0.0',
+            'reference' => 'e6d4540109a01dd2bc7334cdc842d6a6a67cf239',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/locale',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'guzzlehttp/psr7' => array(
             'pretty_version' => '2.6.2',
             'version' => '2.6.2.0',
@@ -673,8 +691,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -744,9 +762,9 @@
             'dev_requirement' => false,
         ),
         'slim/csrf' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
-            'reference' => 'ebaaf295fd6d7224078d8ae3bba45329b31798c7',
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => 'f66be9740283ed4f432535aff3623540e178013a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../slim/csrf',
             'aliases' => array(),

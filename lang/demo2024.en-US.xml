@@ -1,4 +1,4 @@
-<ew-language date="2024/1/22" id="en-US" author="e.World Technology Limited">
+<ew-language date="2024/1/22" id="en-US" desc="English" author="e.World Technology Limited">
   <project>
     <phrase id="bodytitle" value="Project Learning Membership (alfa-release)" />
     <phrase id="footertext" value="&amp;copy;2024 Project Learning Team. All rights reserved." />
@@ -80,8 +80,8 @@
     <menu id="10083">
       <phrase id="menutext" value="User Level Permissions" />
     </menu>
-    <menu id="10155">
-      <phrase id="menutext" value="Audit Trail" />
+    <menu id="10207">
+      <phrase id="menutext" value="audittrail" />
     </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
@@ -1485,8 +1485,11 @@
         <phrase id="fldcaption" value="Created At" />
       </field>
     </table>
+    <table id="join_premium">
+      <phrase id="tblcaption" value="Join Premium" />
+    </table>
     <table id="audittrail">
-      <phrase id="tblcaption" value="Audit Trail" />
+      <phrase id="tblcaption" value="audittrail" />
       <field id="id">
         <phrase id="fldcaption" value="Id" />
       </field>
@@ -1517,9 +1520,6 @@
       <field id="newvalue">
         <phrase id="fldcaption" value="New Value" />
       </field>
-    </table>
-    <table id="join_premium">
-      <phrase id="tblcaption" value="Join Premium" />
     </table>
   </project>
 </ew-language>

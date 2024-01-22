@@ -36,7 +36,8 @@ use Dflydev\FigCookies\FigRequestCookies;
 use Dflydev\FigCookies\FigResponseCookies;
 use Hautelook\Phpass\PasswordHash;
 use PHPMailer\PHPMailer\PHPMailer;
-
+use libphonenumber\PhoneNumberFormat;
+use libphonenumber\PhoneNumberUtil;
 use Detection\MobileDetect;
 
 // Custom types
@@ -1928,17 +1929,10 @@ function ConnectDb($info)
         $info["driverOptions"] ??= []; // See https://docs.microsoft.com/en-us/sql/connect/php/connection-options?view=sql-server-ver16
         // Use TransactionIsolation = SQLSRV_TXN_READ_UNCOMMITTED to avoid record locking
         // https://docs.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql?view=sql-server-ver15
+        $info["driverOptions"]["TransactionIsolation"] = 1; // SQLSRV_TXN_READ_UNCOMMITTED
         $info["driverOptions"]["TrustServerCertificate"] = 1;
-        if ($info["driver"] == "sqlsrv") {
-            $info["driverOptions"]["TransactionIsolation"] = 1; // SQLSRV_TXN_READ_UNCOMMITTED
-            if (IS_UTF8) {
-                $info["driverOptions"]["CharacterSet"] = "UTF-8";
-            }
-        } elseif ($info["driver"] == "pdo_sqlsrv") {
-            $info["driverOptions"]["TransactionIsolation"] = "READ_UNCOMMITTED"; // PDO::SQLSRV_TXN_READ_UNCOMMITTED
-            //if (IS_UTF8) { // Not supported for pdo_sqlsrv
-                //$info["driverOptions"]["CharacterSet"] = "UTF-8";
-            //}
+        if (IS_UTF8) {
+            $info["driverOptions"]["CharacterSet"] = "UTF-8";
         }
     } elseif ($dbtype == "SQLITE") {
         $info["driver"] = "pdo_sqlite";
@@ -3142,12 +3136,23 @@ function FormatSequenceNumber($seq)
  *
  * @param string $phoneNumber Phone number (e.g. US mobile: "(415)555-2671")
  * @param bool|string $region Region code (e.g. "US" / "GB" / "FR"), if false, skip formatting
- * @param string $format Phone number format (PhoneNumberFormat::E164/INTERNATIONAL/NATIONAL/RFC3966) (0/1/2/3)
+ * @param string $format Phone number format (PhoneNumberFormat::E164/INTERNATIONAL/NATIONAL/RFC3966)
  * @return string
  */
-function FormatPhoneNumber($phoneNumber, $region = null, $format = 0)
+function FormatPhoneNumber($phoneNumber, $region = null, $format = PhoneNumberFormat::E164)
 {
-    return $phoneNumber;
+    global $CurrentLanguage;
+    $region ??= Config("SMS_REGION_CODE");
+    if ($region === false) { // Skip formatting
+        return $phoneNumber;
+    }
+    if ($region === null) { // Get region from locale
+        $ar = explode("-", str_replace("_", "-", $CurrentLanguage));
+        $region = count($ar) >= 2 ? $ar[1] : "US";
+    }
+    $phoneNumberUtil = PhoneNumberUtil::getInstance();
+    $phoneNumberObj = $phoneNumberUtil->parse($phoneNumber, $region);
+    return $phoneNumberUtil->format($phoneNumberObj, $format);
 }
 
 /**
@@ -3519,10 +3524,10 @@ function RemoveHtml($str)
  * @param string $phoneNumber Phone Number (e.g. US mobile: "(415)555-2671")
  * @param string $content SMS content
  * @param bool|string $region Region code (e.g. "US" / "GB" / "FR"), if false, skip formatting
- * @param string $format Phone number format (PhoneNumberFormat::E164/INTERNATIONAL/NATIONAL/RFC3966) (0/1/2/3)
+ * @param string $format Phone number format (PhoneNumberFormat::E164/INTERNATIONAL/NATIONAL/RFC3966)
  * @return bool|string success or error description
  */
-function SendSms($phoneNumber, $content, $region = null, $format = 0)
+function SendSms($phoneNumber, $content, $region = null, $format = PhoneNumberFormat::E164)
 {
     $smsClass = Config("SMS_CLASS");
     $rc = new \ReflectionClass($smsClass);

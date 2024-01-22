@@ -408,9 +408,6 @@ class AudittrailDelete extends Audittrail
             $this->InlineDelete = true;
         }
 
-        // Set up lookup cache
-        $this->setupLookupOptions($this->User);
-
         // Set up Breadcrumb
         $this->setupBreadcrumb();
 
@@ -668,27 +665,6 @@ class AudittrailDelete extends Audittrail
 
             // User
             $this->User->ViewValue = $this->User->CurrentValue;
-            $curVal = strval($this->User->CurrentValue);
-            if ($curVal != "") {
-                $this->User->ViewValue = $this->User->lookupCacheOption($curVal);
-                if ($this->User->ViewValue === null) { // Lookup from database
-                    $filterWrk = SearchFilter($this->User->Lookup->getTable()->Fields["EmployeeID"]->searchExpression(), "=", $curVal, $this->User->Lookup->getTable()->Fields["EmployeeID"]->searchDataType(), "");
-                    $sqlWrk = $this->User->Lookup->getSql(false, $filterWrk, '', $this, true, true);
-                    $conn = Conn();
-                    $config = $conn->getConfiguration();
-                    $config->setResultCache($this->Cache);
-                    $rswrk = $conn->executeCacheQuery($sqlWrk, [], [], $this->CacheProfile)->fetchAll();
-                    $ari = count($rswrk);
-                    if ($ari > 0) { // Lookup values found
-                        $arwrk = $this->User->Lookup->renderViewRow($rswrk[0]);
-                        $this->User->ViewValue = $this->User->displayValue($arwrk);
-                    } else {
-                        $this->User->ViewValue = $this->User->CurrentValue;
-                    }
-                }
-            } else {
-                $this->User->ViewValue = null;
-            }
 
             // Action
             $this->_Action->ViewValue = $this->_Action->CurrentValue;
@@ -804,9 +780,7 @@ class AudittrailDelete extends Audittrail
         }
         if ($deleteRows) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Set warning message if delete some records failed
@@ -815,9 +789,7 @@ class AudittrailDelete extends Audittrail
             }
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
         }
 
@@ -857,8 +829,6 @@ class AudittrailDelete extends Audittrail
 
             // Set up lookup SQL and connection
             switch ($fld->FieldVar) {
-                case "x_User":
-                    break;
                 default:
                     $lookupFilter = "";
                     break;

@@ -814,9 +814,7 @@ class CalendarDelete extends Calendar
         }
         if ($deleteRows) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Set warning message if delete some records failed
@@ -825,9 +823,7 @@ class CalendarDelete extends Calendar
             }
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
         }
 

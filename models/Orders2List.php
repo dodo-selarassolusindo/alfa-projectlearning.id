@@ -1403,9 +1403,7 @@ class Orders2List extends Orders2
         }
         if ($gridUpdate) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
             $this->FilterForModalActions = $wrkfilter;
 
@@ -1420,9 +1418,7 @@ class Orders2List extends Orders2
             $this->clearInlineMode(); // Clear inline edit mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("UpdateFailed")); // Set update failed message
@@ -1534,9 +1530,7 @@ class Orders2List extends Orders2
         }
         if ($gridInsert) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Get new records
@@ -1553,9 +1547,7 @@ class Orders2List extends Orders2
             $this->clearInlineMode(); // Clear grid add mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("InsertFailed")); // Set insert failed message
@@ -2683,9 +2675,7 @@ class Orders2List extends Orders2
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2695,9 +2685,7 @@ class Orders2List extends Orders2
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);
