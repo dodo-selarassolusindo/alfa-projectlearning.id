@@ -4,9 +4,6 @@ namespace PHPMaker2024\demo2024;
 
 // Navbar menu
 $topMenu = new Menu("navbar", true, true);
-$topMenu->addMenuItem(10148, "mi_locations", $Language->menuPhrase("10148", "MenuText"), "locationslist", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations'), false, false, "", "", true, false);
-$topMenu->addMenuItem(10149, "mi_locations2", $Language->menuPhrase("10149", "MenuText"), "locations2list", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations2'), false, false, "", "", true, false);
-$topMenu->addMenuItem(10150, "mi_locations3", $Language->menuPhrase("10150", "MenuText"), "locations3list", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations3'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10087, "mi_home", $Language->menuPhrase("10087", "MenuText"), "home", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}home.php'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10088, "mi_news", $Language->menuPhrase("10088", "MenuText"), "news", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}news.php'), false, false, "", "", true, false);
 $topMenu->addMenuItem(16, "mci_CARS_RELATED", $Language->menuPhrase("16", "MenuText"), "", -1, "", true, false, true, "fa-car", "", true, false);
@@ -45,9 +42,6 @@ echo $topMenu->toScript();
 
 // Sidebar menu
 $sideMenu = new Menu("menu", true, false);
-$sideMenu->addMenuItem(10148, "mi_locations", $Language->menuPhrase("10148", "MenuText"), "locationslist", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations'), false, false, "", "", true, true);
-$sideMenu->addMenuItem(10149, "mi_locations2", $Language->menuPhrase("10149", "MenuText"), "locations2list", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations2'), false, false, "", "", true, true);
-$sideMenu->addMenuItem(10150, "mi_locations3", $Language->menuPhrase("10150", "MenuText"), "locations3list", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}locations3'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10087, "mi_home", $Language->menuPhrase("10087", "MenuText"), "home", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}home.php'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10088, "mi_news", $Language->menuPhrase("10088", "MenuText"), "news", -1, "", AllowListMenu('{DFB61542-7FFC-43AB-88E7-31D7F8D95066}news.php'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(16, "mci_CARS_RELATED", $Language->menuPhrase("16", "MenuText"), "", -1, "", true, false, true, "fa-car", "", true, true);
