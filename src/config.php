@@ -140,7 +140,7 @@ $CONFIG = [
     "MAINTENANCE_TEMPLATE" => "Error.php", // Template
 
     // Container
-    "COMPILE_CONTAINER" => false,
+    "COMPILE_CONTAINER" => true,
 
     // Use route cache
     "USE_ROUTE_CACHE" => true,
