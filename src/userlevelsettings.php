@@ -250,7 +250,7 @@ $USER_LEVEL_TABLES = [["cars","cars","Cars",true,"{DFB61542-7FFC-43AB-88E7-31D7F
     ["cars2","cars2","Cars 2",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","cars2list"],
     ["home.php","home","Home Page",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","home"],
     ["news.php","news","News",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","news"],
-    ["dji","dji","Dow Jones Index",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","djilist"],
+    ["dji","dji","Dow Jones Index",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["employee_sales_by_country_for_2014","employee_sales_by_country_for_2014","employee sales by county for 2014",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["list_of_products","list_of_products","list of products",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["order details extended 2","order_details_extended_2","order details extended 2",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],

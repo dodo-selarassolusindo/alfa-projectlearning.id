@@ -97,7 +97,6 @@ return [
     "cars2" => \DI\create(Cars2::class),
     "home" => \DI\create(Home::class),
     "news" => \DI\create(News::class),
-    "dji" => \DI\create(Dji::class),
     "order_details_extended_2" => \DI\create(OrderDetailsExtended2::class),
     "sales_by_category_for_20142" => \DI\create(SalesByCategoryFor20142::class),
     "Quarterly_Orders_By_Product" => \DI\create(QuarterlyOrdersByProduct::class),
