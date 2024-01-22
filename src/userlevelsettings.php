@@ -289,5 +289,5 @@ $USER_LEVEL_TABLES = [["cars","cars","Cars",true,"{DFB61542-7FFC-43AB-88E7-31D7F
     ["messages","messages2","messages",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["favorites","favorites","favorites",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["join_premium.php","join_premium","Join Premium",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","joinpremium"],
-    ["audittrail","audittrail","audittrail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"],
+    ["audittrail","audittrail","Audit Trail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"],
     ["konfirmasi_pembayaran.php","konfirmasi_pembayaran","Konfirmasi Pembayaran",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","konfirmasipembayaran"]];

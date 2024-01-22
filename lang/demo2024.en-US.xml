@@ -84,7 +84,7 @@
       <phrase id="menutext" value="User Level Permissions" />
     </menu>
     <menu id="10207">
-      <phrase id="menutext" value="audittrail" />
+      <phrase id="menutext" value="Audit Trail" />
     </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
@@ -1492,7 +1492,7 @@
       <phrase id="tblcaption" value="Join Premium" />
     </table>
     <table id="audittrail">
-      <phrase id="tblcaption" value="audittrail" />
+      <phrase id="tblcaption" value="Audit Trail" />
       <field id="id">
         <phrase id="fldcaption" value="Id" />
       </field>
