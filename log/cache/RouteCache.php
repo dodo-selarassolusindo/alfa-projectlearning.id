@@ -3,6 +3,7 @@
   array (
     'GET' => 
     array (
+<<<<<<< HEAD
       '/alfa-projectlearning.id/alphabeticallistofproducts' => 'route0',
       '/alfa-projectlearning.id/audittraillist' => 'route1',
       '/alfa-projectlearning.id/audittrailadd' => 'route2',
@@ -415,6 +416,420 @@
       '/alfa-projectlearning.id/userlevelsview' => 'route134',
       '/alfa-projectlearning.id/userlevelsedit' => 'route135',
       '/alfa-projectlearning.id/userlevelsdelete' => 'route136',
+=======
+      '/alphabeticallistofproducts' => 'route0',
+      '/audittraillist' => 'route1',
+      '/audittrailadd' => 'route2',
+      '/audittrailview' => 'route3',
+      '/audittrailedit' => 'route4',
+      '/audittraildelete' => 'route5',
+      '/calendar1' => 'route6',
+      '/calendar1add' => 'route7',
+      '/calendar1view' => 'route8',
+      '/calendar1edit' => 'route9',
+      '/calendar1delete' => 'route10',
+      '/calendarlist' => 'route11',
+      '/calendaradd' => 'route12',
+      '/calendarview' => 'route13',
+      '/calendaredit' => 'route14',
+      '/calendardelete' => 'route15',
+      '/cars2list' => 'route16',
+      '/carslist' => 'route17',
+      '/carsadd' => 'route18',
+      '/carsview' => 'route19',
+      '/carsedit' => 'route20',
+      '/carsupdate' => 'route21',
+      '/carsdelete' => 'route22',
+      '/carssearch' => 'route23',
+      '/carsquery' => 'route24',
+      '/categorieslist' => 'route25',
+      '/categoriesview' => 'route26',
+      '/categoriesedit' => 'route27',
+      '/categoriesdelete' => 'route28',
+      '/categoriessearch' => 'route29',
+      '/customerslist' => 'route30',
+      '/customersadd' => 'route31',
+      '/customersview' => 'route32',
+      '/customersedit' => 'route33',
+      '/customersdelete' => 'route34',
+      '/customerssearch' => 'route35',
+      '/dashboard1' => 'route36',
+      '/djilist' => 'route37',
+      '/djiadd' => 'route38',
+      '/djiview' => 'route39',
+      '/djiedit' => 'route40',
+      '/djidelete' => 'route41',
+      '/employeeslist' => 'route42',
+      '/employeesadd' => 'route43',
+      '/employeesview' => 'route44',
+      '/employeesedit' => 'route45',
+      '/employeesdelete' => 'route46',
+      '/employeessearch' => 'route47',
+      '/gantt' => 'route48',
+      '/home' => 'route49',
+      '/locations2list' => 'route50',
+      '/locations3list' => 'route51',
+      '/locationslist' => 'route52',
+      '/modelslist' => 'route53',
+      '/modelsadd' => 'route54',
+      '/modelsaddopt' => 'route55',
+      '/modelsview' => 'route56',
+      '/modelsedit' => 'route57',
+      '/modelsdelete' => 'route58',
+      '/modelssearch' => 'route59',
+      '/news' => 'route60',
+      '/orderdetailslist' => 'route61',
+      '/orderdetailsadd' => 'route62',
+      '/orderdetailsview' => 'route63',
+      '/orderdetailsedit' => 'route64',
+      '/orderdetailsdelete' => 'route65',
+      '/orderdetailssearch' => 'route66',
+      '/orderdetailsextendedlist' => 'route67',
+      '/orders2list/FreightByEmployees' => 'route68',
+      '/orders2list' => 'route69',
+      '/orders2add' => 'route70',
+      '/orders2view' => 'route71',
+      '/orders2edit' => 'route72',
+      '/orders2update' => 'route73',
+      '/orders2delete' => 'route74',
+      '/ordersbyproduct2' => 'route75',
+      '/ordersbyproduct2/OrderByProducts' => 'route76',
+      '/orderslist' => 'route77',
+      '/ordersadd' => 'route78',
+      '/ordersview' => 'route79',
+      '/ordersedit' => 'route80',
+      '/ordersdelete' => 'route81',
+      '/orderssearch' => 'route82',
+      '/ordersquery' => 'route83',
+      '/barcode' => 'route84',
+      '/privacy' => 'route85',
+      '/personaldata' => 'route86',
+      '/login' => 'route87',
+      '/resetpassword' => 'route88',
+      '/changepassword' => 'route89',
+      '/register' => 'route90',
+      '/userpriv' => 'route91',
+      '/logout' => 'route92',
+      '/swagger/swagger' => 'route93',
+      '/' => 'route94',
+      '/index' => 'route94',
+      '/productsbycategory' => 'route95',
+      '/productslist' => 'route96',
+      '/productsadd' => 'route97',
+      '/productsview' => 'route98',
+      '/productsedit' => 'route99',
+      '/productsdelete' => 'route100',
+      '/productssearch' => 'route101',
+      '/quarterlyordersbyproduct' => 'route102',
+      '/quarterlyordersbyproduct/OrdersByCategory' => 'route103',
+      '/salesbycategoryfor2014' => 'route104',
+      '/salesbycategoryfor2014/SalesByCategory2014' => 'route105',
+      '/salesbycustomer2' => 'route106',
+      '/salesbycustomercompact' => 'route107',
+      '/salesbycustomer' => 'route108',
+      '/salesbyorder' => 'route109',
+      '/salesbyyear' => 'route110',
+      '/shipperslist' => 'route111',
+      '/shipperssearch' => 'route112',
+      '/supplierslist' => 'route113',
+      '/suppliersadd' => 'route114',
+      '/suppliersview' => 'route115',
+      '/suppliersedit' => 'route116',
+      '/suppliersupdate' => 'route117',
+      '/suppliersdelete' => 'route118',
+      '/supplierssearch' => 'route119',
+      '/trademarkslist' => 'route120',
+      '/trademarksadd' => 'route121',
+      '/trademarksaddopt' => 'route122',
+      '/trademarksview' => 'route123',
+      '/trademarksedit' => 'route124',
+      '/trademarksdelete' => 'route125',
+      '/trademarkssearch' => 'route126',
+      '/userlevelpermissionslist' => 'route127',
+      '/userlevelpermissionsadd' => 'route128',
+      '/userlevelpermissionsview' => 'route129',
+      '/userlevelpermissionsedit' => 'route130',
+      '/userlevelpermissionsdelete' => 'route131',
+      '/userlevelslist' => 'route132',
+      '/userlevelsadd' => 'route133',
+      '/userlevelsview' => 'route134',
+      '/userlevelsedit' => 'route135',
+      '/userlevelsdelete' => 'route136',
+    ),
+    'POST' => 
+    array (
+      '/alphabeticallistofproducts' => 'route0',
+      '/audittraillist' => 'route1',
+      '/audittrailadd' => 'route2',
+      '/audittrailview' => 'route3',
+      '/audittrailedit' => 'route4',
+      '/audittraildelete' => 'route5',
+      '/calendar1' => 'route6',
+      '/calendar1add' => 'route7',
+      '/calendar1edit' => 'route9',
+      '/calendar1delete' => 'route10',
+      '/calendarlist' => 'route11',
+      '/calendaradd' => 'route12',
+      '/calendarview' => 'route13',
+      '/calendaredit' => 'route14',
+      '/calendardelete' => 'route15',
+      '/cars2list' => 'route16',
+      '/carslist' => 'route17',
+      '/carsadd' => 'route18',
+      '/carsview' => 'route19',
+      '/carsedit' => 'route20',
+      '/carsupdate' => 'route21',
+      '/carsdelete' => 'route22',
+      '/carssearch' => 'route23',
+      '/carsquery' => 'route24',
+      '/categorieslist' => 'route25',
+      '/categoriesview' => 'route26',
+      '/categoriesedit' => 'route27',
+      '/categoriesdelete' => 'route28',
+      '/categoriessearch' => 'route29',
+      '/customerslist' => 'route30',
+      '/customersadd' => 'route31',
+      '/customersview' => 'route32',
+      '/customersedit' => 'route33',
+      '/customersdelete' => 'route34',
+      '/customerssearch' => 'route35',
+      '/dashboard1' => 'route36',
+      '/djilist' => 'route37',
+      '/djiadd' => 'route38',
+      '/djiview' => 'route39',
+      '/djiedit' => 'route40',
+      '/djidelete' => 'route41',
+      '/employeeslist' => 'route42',
+      '/employeesadd' => 'route43',
+      '/employeesview' => 'route44',
+      '/employeesedit' => 'route45',
+      '/employeesdelete' => 'route46',
+      '/employeessearch' => 'route47',
+      '/gantt' => 'route48',
+      '/home' => 'route49',
+      '/locations2list' => 'route50',
+      '/locations3list' => 'route51',
+      '/locationslist' => 'route52',
+      '/modelslist' => 'route53',
+      '/modelsadd' => 'route54',
+      '/modelsaddopt' => 'route55',
+      '/modelsview' => 'route56',
+      '/modelsedit' => 'route57',
+      '/modelsdelete' => 'route58',
+      '/modelssearch' => 'route59',
+      '/news' => 'route60',
+      '/orderdetailslist' => 'route61',
+      '/orderdetailsadd' => 'route62',
+      '/orderdetailsview' => 'route63',
+      '/orderdetailsedit' => 'route64',
+      '/orderdetailsdelete' => 'route65',
+      '/orderdetailssearch' => 'route66',
+      '/orderdetailsextendedlist' => 'route67',
+      '/orders2list/FreightByEmployees' => 'route68',
+      '/orders2list' => 'route69',
+      '/orders2add' => 'route70',
+      '/orders2view' => 'route71',
+      '/orders2edit' => 'route72',
+      '/orders2update' => 'route73',
+      '/orders2delete' => 'route74',
+      '/ordersbyproduct2' => 'route75',
+      '/ordersbyproduct2/OrderByProducts' => 'route76',
+      '/orderslist' => 'route77',
+      '/ordersadd' => 'route78',
+      '/ordersview' => 'route79',
+      '/ordersedit' => 'route80',
+      '/ordersdelete' => 'route81',
+      '/orderssearch' => 'route82',
+      '/ordersquery' => 'route83',
+      '/privacy' => 'route85',
+      '/personaldata' => 'route86',
+      '/login' => 'route87',
+      '/resetpassword' => 'route88',
+      '/changepassword' => 'route89',
+      '/register' => 'route90',
+      '/userpriv' => 'route91',
+      '/logout' => 'route92',
+      '/productsbycategory' => 'route95',
+      '/productslist' => 'route96',
+      '/productsadd' => 'route97',
+      '/productsview' => 'route98',
+      '/productsedit' => 'route99',
+      '/productsdelete' => 'route100',
+      '/productssearch' => 'route101',
+      '/quarterlyordersbyproduct' => 'route102',
+      '/quarterlyordersbyproduct/OrdersByCategory' => 'route103',
+      '/salesbycategoryfor2014' => 'route104',
+      '/salesbycategoryfor2014/SalesByCategory2014' => 'route105',
+      '/salesbycustomer2' => 'route106',
+      '/salesbycustomercompact' => 'route107',
+      '/salesbycustomer' => 'route108',
+      '/salesbyorder' => 'route109',
+      '/salesbyyear' => 'route110',
+      '/shipperslist' => 'route111',
+      '/shipperssearch' => 'route112',
+      '/supplierslist' => 'route113',
+      '/suppliersadd' => 'route114',
+      '/suppliersview' => 'route115',
+      '/suppliersedit' => 'route116',
+      '/suppliersupdate' => 'route117',
+      '/suppliersdelete' => 'route118',
+      '/supplierssearch' => 'route119',
+      '/trademarkslist' => 'route120',
+      '/trademarksadd' => 'route121',
+      '/trademarksaddopt' => 'route122',
+      '/trademarksview' => 'route123',
+      '/trademarksedit' => 'route124',
+      '/trademarksdelete' => 'route125',
+      '/trademarkssearch' => 'route126',
+      '/userlevelpermissionslist' => 'route127',
+      '/userlevelpermissionsadd' => 'route128',
+      '/userlevelpermissionsview' => 'route129',
+      '/userlevelpermissionsedit' => 'route130',
+      '/userlevelpermissionsdelete' => 'route131',
+      '/userlevelslist' => 'route132',
+      '/userlevelsadd' => 'route133',
+      '/userlevelsview' => 'route134',
+      '/userlevelsedit' => 'route135',
+      '/userlevelsdelete' => 'route136',
+    ),
+    'OPTIONS' => 
+    array (
+      '/alphabeticallistofproducts' => 'route0',
+      '/audittraillist' => 'route1',
+      '/audittrailadd' => 'route2',
+      '/audittrailview' => 'route3',
+      '/audittrailedit' => 'route4',
+      '/audittraildelete' => 'route5',
+      '/calendar1' => 'route6',
+      '/calendar1add' => 'route7',
+      '/calendar1view' => 'route8',
+      '/calendar1edit' => 'route9',
+      '/calendar1delete' => 'route10',
+      '/calendarlist' => 'route11',
+      '/calendaradd' => 'route12',
+      '/calendarview' => 'route13',
+      '/calendaredit' => 'route14',
+      '/calendardelete' => 'route15',
+      '/cars2list' => 'route16',
+      '/carslist' => 'route17',
+      '/carsadd' => 'route18',
+      '/carsview' => 'route19',
+      '/carsedit' => 'route20',
+      '/carsupdate' => 'route21',
+      '/carsdelete' => 'route22',
+      '/carssearch' => 'route23',
+      '/carsquery' => 'route24',
+      '/categorieslist' => 'route25',
+      '/categoriesview' => 'route26',
+      '/categoriesedit' => 'route27',
+      '/categoriesdelete' => 'route28',
+      '/categoriessearch' => 'route29',
+      '/customerslist' => 'route30',
+      '/customersadd' => 'route31',
+      '/customersview' => 'route32',
+      '/customersedit' => 'route33',
+      '/customersdelete' => 'route34',
+      '/customerssearch' => 'route35',
+      '/dashboard1' => 'route36',
+      '/djilist' => 'route37',
+      '/djiadd' => 'route38',
+      '/djiview' => 'route39',
+      '/djiedit' => 'route40',
+      '/djidelete' => 'route41',
+      '/employeeslist' => 'route42',
+      '/employeesadd' => 'route43',
+      '/employeesview' => 'route44',
+      '/employeesedit' => 'route45',
+      '/employeesdelete' => 'route46',
+      '/employeessearch' => 'route47',
+      '/gantt' => 'route48',
+      '/home' => 'route49',
+      '/locations2list' => 'route50',
+      '/locations3list' => 'route51',
+      '/locationslist' => 'route52',
+      '/modelslist' => 'route53',
+      '/modelsadd' => 'route54',
+      '/modelsaddopt' => 'route55',
+      '/modelsview' => 'route56',
+      '/modelsedit' => 'route57',
+      '/modelsdelete' => 'route58',
+      '/modelssearch' => 'route59',
+      '/news' => 'route60',
+      '/orderdetailslist' => 'route61',
+      '/orderdetailsadd' => 'route62',
+      '/orderdetailsview' => 'route63',
+      '/orderdetailsedit' => 'route64',
+      '/orderdetailsdelete' => 'route65',
+      '/orderdetailssearch' => 'route66',
+      '/orderdetailsextendedlist' => 'route67',
+      '/orders2list/FreightByEmployees' => 'route68',
+      '/orders2list' => 'route69',
+      '/orders2add' => 'route70',
+      '/orders2view' => 'route71',
+      '/orders2edit' => 'route72',
+      '/orders2update' => 'route73',
+      '/orders2delete' => 'route74',
+      '/ordersbyproduct2' => 'route75',
+      '/ordersbyproduct2/OrderByProducts' => 'route76',
+      '/orderslist' => 'route77',
+      '/ordersadd' => 'route78',
+      '/ordersview' => 'route79',
+      '/ordersedit' => 'route80',
+      '/ordersdelete' => 'route81',
+      '/orderssearch' => 'route82',
+      '/ordersquery' => 'route83',
+      '/barcode' => 'route84',
+      '/privacy' => 'route85',
+      '/personaldata' => 'route86',
+      '/login' => 'route87',
+      '/resetpassword' => 'route88',
+      '/changepassword' => 'route89',
+      '/register' => 'route90',
+      '/userpriv' => 'route91',
+      '/logout' => 'route92',
+      '/productsbycategory' => 'route95',
+      '/productslist' => 'route96',
+      '/productsadd' => 'route97',
+      '/productsview' => 'route98',
+      '/productsedit' => 'route99',
+      '/productsdelete' => 'route100',
+      '/productssearch' => 'route101',
+      '/quarterlyordersbyproduct' => 'route102',
+      '/quarterlyordersbyproduct/OrdersByCategory' => 'route103',
+      '/salesbycategoryfor2014' => 'route104',
+      '/salesbycategoryfor2014/SalesByCategory2014' => 'route105',
+      '/salesbycustomer2' => 'route106',
+      '/salesbycustomercompact' => 'route107',
+      '/salesbycustomer' => 'route108',
+      '/salesbyorder' => 'route109',
+      '/salesbyyear' => 'route110',
+      '/shipperslist' => 'route111',
+      '/shipperssearch' => 'route112',
+      '/supplierslist' => 'route113',
+      '/suppliersadd' => 'route114',
+      '/suppliersview' => 'route115',
+      '/suppliersedit' => 'route116',
+      '/suppliersupdate' => 'route117',
+      '/suppliersdelete' => 'route118',
+      '/supplierssearch' => 'route119',
+      '/trademarkslist' => 'route120',
+      '/trademarksadd' => 'route121',
+      '/trademarksaddopt' => 'route122',
+      '/trademarksview' => 'route123',
+      '/trademarksedit' => 'route124',
+      '/trademarksdelete' => 'route125',
+      '/trademarkssearch' => 'route126',
+      '/userlevelpermissionslist' => 'route127',
+      '/userlevelpermissionsadd' => 'route128',
+      '/userlevelpermissionsview' => 'route129',
+      '/userlevelpermissionsedit' => 'route130',
+      '/userlevelpermissionsdelete' => 'route131',
+      '/userlevelslist' => 'route132',
+      '/userlevelsadd' => 'route133',
+      '/userlevelsview' => 'route134',
+      '/userlevelsedit' => 'route135',
+      '/userlevelsdelete' => 'route136',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
     ),
   ),
   1 => 
@@ -423,7 +838,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/audittraillist/([^/]+)|/alfa\\-projectlearning\\.id/audittrailadd/([^/]+)()|/alfa\\-projectlearning\\.id/audittrailview/([^/]+)()()|/alfa\\-projectlearning\\.id/audittrailedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/audittraildelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/calendar1add/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/calendar1view/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/calendar1edit/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/calendar1delete/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/calendarlist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/calendaradd/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/audittraillist/([^/]+)|/audittrailadd/([^/]+)()|/audittrailview/([^/]+)()()|/audittrailedit/([^/]+)()()()|/audittraildelete/([^/]+)()()()()|/calendar1add/([^/]+)()()()()()|/calendar1view/([^/]+)()()()()()()|/calendar1edit/([^/]+)()()()()()()()|/calendar1delete/([^/]+)()()()()()()()()|/calendarlist/([^/]+)()()()()()()()()()|/calendaradd/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -518,7 +937,11 @@
       ),
       1 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/calendarview/([^/]+)|/alfa\\-projectlearning\\.id/calendaredit/([^/]+)()|/alfa\\-projectlearning\\.id/calendardelete/([^/]+)()()|/alfa\\-projectlearning\\.id/cars2list/([^/]+)()()()|/alfa\\-projectlearning\\.id/carslist/([^/]+)()()()()|/alfa\\-projectlearning\\.id/carsadd/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/carsview/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/carsedit/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/carsdelete/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/categorieslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/categoriesview/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/calendarview/([^/]+)|/calendaredit/([^/]+)()|/calendardelete/([^/]+)()()|/cars2list/([^/]+)()()()|/carslist/([^/]+)()()()()|/carsadd/([^/]+)()()()()()|/carsview/([^/]+)()()()()()()|/carsedit/([^/]+)()()()()()()()|/carsdelete/([^/]+)()()()()()()()()|/categorieslist/([^/]+)()()()()()()()()()|/categoriesview/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -613,7 +1036,11 @@
       ),
       2 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/categoriesedit/([^/]+)|/alfa\\-projectlearning\\.id/categoriesdelete/([^/]+)()|/alfa\\-projectlearning\\.id/customerslist/(.*)()()|/alfa\\-projectlearning\\.id/customersadd/(.*)()()()|/alfa\\-projectlearning\\.id/customersview/(.*)()()()()|/alfa\\-projectlearning\\.id/customersedit/(.*)()()()()()|/alfa\\-projectlearning\\.id/customersdelete/(.*)()()()()()()|/alfa\\-projectlearning\\.id/djilist/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/djiadd/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/djiview/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/djiedit/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/categoriesedit/([^/]+)|/categoriesdelete/([^/]+)()|/customerslist/(.*)()()|/customersadd/(.*)()()()|/customersview/(.*)()()()()|/customersedit/(.*)()()()()()|/customersdelete/(.*)()()()()()()|/djilist/([^/]+)()()()()()()()|/djiadd/([^/]+)()()()()()()()()|/djiview/([^/]+)()()()()()()()()()|/djiedit/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -708,7 +1135,11 @@
       ),
       3 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/djidelete/([^/]+)|/alfa\\-projectlearning\\.id/employeeslist/([^/]+)()|/alfa\\-projectlearning\\.id/employeesadd/([^/]+)()()|/alfa\\-projectlearning\\.id/employeesview/([^/]+)()()()|/alfa\\-projectlearning\\.id/employeesedit/([^/]+)()()()()|/alfa\\-projectlearning\\.id/employeesdelete/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/home/(.*)()()()()()()|/alfa\\-projectlearning\\.id/locations2list/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/locations3list/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/locationslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/modelslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/djidelete/([^/]+)|/employeeslist/([^/]+)()|/employeesadd/([^/]+)()()|/employeesview/([^/]+)()()()|/employeesedit/([^/]+)()()()()|/employeesdelete/([^/]+)()()()()()|/home/(.*)()()()()()()|/locations2list/([^/]+)()()()()()()()|/locations3list/([^/]+)()()()()()()()()|/locationslist/([^/]+)()()()()()()()()()|/modelslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -803,7 +1234,11 @@
       ),
       4 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/modelsadd/([^/]+)|/alfa\\-projectlearning\\.id/modelsview/([^/]+)()|/alfa\\-projectlearning\\.id/modelsedit/([^/]+)()()|/alfa\\-projectlearning\\.id/modelsdelete/([^/]+)()()()|/alfa\\-projectlearning\\.id/news/(.*)()()()()|/alfa\\-projectlearning\\.id/orderdetailslist/(.*)()()()()()|/alfa\\-projectlearning\\.id/orderdetailsadd/(.*)()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsview/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsedit/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsdelete/(.*)()()()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsextendedlist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/modelsadd/([^/]+)|/modelsview/([^/]+)()|/modelsedit/([^/]+)()()|/modelsdelete/([^/]+)()()()|/news/(.*)()()()()|/orderdetailslist/(.*)()()()()()|/orderdetailsadd/(.*)()()()()()()|/orderdetailsview/(.*)()()()()()()()|/orderdetailsedit/(.*)()()()()()()()()|/orderdetailsdelete/(.*)()()()()()()()()()|/orderdetailsextendedlist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -898,7 +1333,11 @@
       ),
       5 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/orders2list/([^/]+)|/alfa\\-projectlearning\\.id/orders2add/([^/]+)()|/alfa\\-projectlearning\\.id/orders2view/([^/]+)()()|/alfa\\-projectlearning\\.id/orders2edit/([^/]+)()()()|/alfa\\-projectlearning\\.id/orders2delete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/orderslist/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/ordersadd/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/ordersview/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/ordersedit/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/ordersdelete/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/login/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/orders2list/([^/]+)|/orders2add/([^/]+)()|/orders2view/([^/]+)()()|/orders2edit/([^/]+)()()()|/orders2delete/([^/]+)()()()()|/orderslist/([^/]+)()()()()()|/ordersadd/([^/]+)()()()()()()|/ordersview/([^/]+)()()()()()()()|/ordersedit/([^/]+)()()()()()()()()|/ordersdelete/([^/]+)()()()()()()()()()|/login/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -993,7 +1432,11 @@
       ),
       6 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/productslist/([^/]+)|/alfa\\-projectlearning\\.id/productsadd/([^/]+)()|/alfa\\-projectlearning\\.id/productsview/([^/]+)()()|/alfa\\-projectlearning\\.id/productsedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/productsdelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/shipperslist/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/supplierslist/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/suppliersadd/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/suppliersview/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/suppliersedit/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/suppliersdelete/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/productslist/([^/]+)|/productsadd/([^/]+)()|/productsview/([^/]+)()()|/productsedit/([^/]+)()()()|/productsdelete/([^/]+)()()()()|/shipperslist/([^/]+)()()()()()|/supplierslist/([^/]+)()()()()()()|/suppliersadd/([^/]+)()()()()()()()|/suppliersview/([^/]+)()()()()()()()()|/suppliersedit/([^/]+)()()()()()()()()()|/suppliersdelete/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1088,7 +1531,11 @@
       ),
       7 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/trademarkslist/([^/]+)|/alfa\\-projectlearning\\.id/trademarksadd/([^/]+)()|/alfa\\-projectlearning\\.id/trademarksview/([^/]+)()()|/alfa\\-projectlearning\\.id/trademarksedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/trademarksdelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionslist/(.*)()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsadd/(.*)()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsview/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsedit/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsdelete/(.*)()()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/trademarkslist/([^/]+)|/trademarksadd/([^/]+)()|/trademarksview/([^/]+)()()|/trademarksedit/([^/]+)()()()|/trademarksdelete/([^/]+)()()()()|/userlevelpermissionslist/(.*)()()()()()|/userlevelpermissionsadd/(.*)()()()()()()|/userlevelpermissionsview/(.*)()()()()()()()|/userlevelpermissionsedit/(.*)()()()()()()()()|/userlevelpermissionsdelete/(.*)()()()()()()()()()|/userlevelslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1183,7 +1630,11 @@
       ),
       8 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/userlevelsadd/([^/]+)|/alfa\\-projectlearning\\.id/userlevelsview/([^/]+)()|/alfa\\-projectlearning\\.id/userlevelsedit/([^/]+)()()|/alfa\\-projectlearning\\.id/userlevelsdelete/([^/]+)()()()|/alfa\\-projectlearning\\.id/(.+)()()()())$~',
+=======
+        'regex' => '~^(?|/userlevelsadd/([^/]+)|/userlevelsview/([^/]+)()|/userlevelsedit/([^/]+)()()|/userlevelsdelete/([^/]+)()()()|/(.+)()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1233,7 +1684,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/audittraillist/([^/]+)|/alfa\\-projectlearning\\.id/audittrailadd/([^/]+)()|/alfa\\-projectlearning\\.id/audittrailview/([^/]+)()()|/alfa\\-projectlearning\\.id/audittrailedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/audittraildelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/calendar1add/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/calendar1edit/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/calendar1delete/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/calendarlist/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/calendaradd/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/calendarview/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/audittraillist/([^/]+)|/audittrailadd/([^/]+)()|/audittrailview/([^/]+)()()|/audittrailedit/([^/]+)()()()|/audittraildelete/([^/]+)()()()()|/calendar1add/([^/]+)()()()()()|/calendar1edit/([^/]+)()()()()()()|/calendar1delete/([^/]+)()()()()()()()|/calendarlist/([^/]+)()()()()()()()()|/calendaradd/([^/]+)()()()()()()()()()|/calendarview/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1328,7 +1783,11 @@
       ),
       1 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/calendaredit/([^/]+)|/alfa\\-projectlearning\\.id/calendardelete/([^/]+)()|/alfa\\-projectlearning\\.id/cars2list/([^/]+)()()|/alfa\\-projectlearning\\.id/carslist/([^/]+)()()()|/alfa\\-projectlearning\\.id/carsadd/([^/]+)()()()()|/alfa\\-projectlearning\\.id/carsview/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/carsedit/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/carsdelete/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/categorieslist/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/categoriesview/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/categoriesedit/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/calendaredit/([^/]+)|/calendardelete/([^/]+)()|/cars2list/([^/]+)()()|/carslist/([^/]+)()()()|/carsadd/([^/]+)()()()()|/carsview/([^/]+)()()()()()|/carsedit/([^/]+)()()()()()()|/carsdelete/([^/]+)()()()()()()()|/categorieslist/([^/]+)()()()()()()()()|/categoriesview/([^/]+)()()()()()()()()()|/categoriesedit/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1423,7 +1882,11 @@
       ),
       2 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/categoriesdelete/([^/]+)|/alfa\\-projectlearning\\.id/customerslist/(.*)()|/alfa\\-projectlearning\\.id/customersadd/(.*)()()|/alfa\\-projectlearning\\.id/customersview/(.*)()()()|/alfa\\-projectlearning\\.id/customersedit/(.*)()()()()|/alfa\\-projectlearning\\.id/customersdelete/(.*)()()()()()|/alfa\\-projectlearning\\.id/djilist/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/djiadd/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/djiview/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/djiedit/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/djidelete/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/categoriesdelete/([^/]+)|/customerslist/(.*)()|/customersadd/(.*)()()|/customersview/(.*)()()()|/customersedit/(.*)()()()()|/customersdelete/(.*)()()()()()|/djilist/([^/]+)()()()()()()|/djiadd/([^/]+)()()()()()()()|/djiview/([^/]+)()()()()()()()()|/djiedit/([^/]+)()()()()()()()()()|/djidelete/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1518,7 +1981,11 @@
       ),
       3 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/employeeslist/([^/]+)|/alfa\\-projectlearning\\.id/employeesadd/([^/]+)()|/alfa\\-projectlearning\\.id/employeesview/([^/]+)()()|/alfa\\-projectlearning\\.id/employeesedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/employeesdelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/home/(.*)()()()()()|/alfa\\-projectlearning\\.id/locations2list/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/locations3list/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/locationslist/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/modelslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/modelsadd/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/employeeslist/([^/]+)|/employeesadd/([^/]+)()|/employeesview/([^/]+)()()|/employeesedit/([^/]+)()()()|/employeesdelete/([^/]+)()()()()|/home/(.*)()()()()()|/locations2list/([^/]+)()()()()()()|/locations3list/([^/]+)()()()()()()()|/locationslist/([^/]+)()()()()()()()()|/modelslist/([^/]+)()()()()()()()()()|/modelsadd/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1613,7 +2080,11 @@
       ),
       4 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/modelsview/([^/]+)|/alfa\\-projectlearning\\.id/modelsedit/([^/]+)()|/alfa\\-projectlearning\\.id/modelsdelete/([^/]+)()()|/alfa\\-projectlearning\\.id/news/(.*)()()()|/alfa\\-projectlearning\\.id/orderdetailslist/(.*)()()()()|/alfa\\-projectlearning\\.id/orderdetailsadd/(.*)()()()()()|/alfa\\-projectlearning\\.id/orderdetailsview/(.*)()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsedit/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsdelete/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsextendedlist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/orders2list/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/modelsview/([^/]+)|/modelsedit/([^/]+)()|/modelsdelete/([^/]+)()()|/news/(.*)()()()|/orderdetailslist/(.*)()()()()|/orderdetailsadd/(.*)()()()()()|/orderdetailsview/(.*)()()()()()()|/orderdetailsedit/(.*)()()()()()()()|/orderdetailsdelete/(.*)()()()()()()()()|/orderdetailsextendedlist/([^/]+)()()()()()()()()()|/orders2list/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1708,7 +2179,11 @@
       ),
       5 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/orders2add/([^/]+)|/alfa\\-projectlearning\\.id/orders2view/([^/]+)()|/alfa\\-projectlearning\\.id/orders2edit/([^/]+)()()|/alfa\\-projectlearning\\.id/orders2delete/([^/]+)()()()|/alfa\\-projectlearning\\.id/orderslist/([^/]+)()()()()|/alfa\\-projectlearning\\.id/ordersadd/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/ordersview/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/ordersedit/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/ordersdelete/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/login/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/productslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/orders2add/([^/]+)|/orders2view/([^/]+)()|/orders2edit/([^/]+)()()|/orders2delete/([^/]+)()()()|/orderslist/([^/]+)()()()()|/ordersadd/([^/]+)()()()()()|/ordersview/([^/]+)()()()()()()|/ordersedit/([^/]+)()()()()()()()|/ordersdelete/([^/]+)()()()()()()()()|/login/([^/]+)()()()()()()()()()|/productslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1803,7 +2278,11 @@
       ),
       6 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/productsadd/([^/]+)|/alfa\\-projectlearning\\.id/productsview/([^/]+)()|/alfa\\-projectlearning\\.id/productsedit/([^/]+)()()|/alfa\\-projectlearning\\.id/productsdelete/([^/]+)()()()|/alfa\\-projectlearning\\.id/shipperslist/([^/]+)()()()()|/alfa\\-projectlearning\\.id/supplierslist/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/suppliersadd/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/suppliersview/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/suppliersedit/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/suppliersdelete/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/trademarkslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/productsadd/([^/]+)|/productsview/([^/]+)()|/productsedit/([^/]+)()()|/productsdelete/([^/]+)()()()|/shipperslist/([^/]+)()()()()|/supplierslist/([^/]+)()()()()()|/suppliersadd/([^/]+)()()()()()()|/suppliersview/([^/]+)()()()()()()()|/suppliersedit/([^/]+)()()()()()()()()|/suppliersdelete/([^/]+)()()()()()()()()()|/trademarkslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1898,7 +2377,11 @@
       ),
       7 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/trademarksadd/([^/]+)|/alfa\\-projectlearning\\.id/trademarksview/([^/]+)()|/alfa\\-projectlearning\\.id/trademarksedit/([^/]+)()()|/alfa\\-projectlearning\\.id/trademarksdelete/([^/]+)()()()|/alfa\\-projectlearning\\.id/userlevelpermissionslist/(.*)()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsadd/(.*)()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsview/(.*)()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsedit/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsdelete/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelsadd/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/trademarksadd/([^/]+)|/trademarksview/([^/]+)()|/trademarksedit/([^/]+)()()|/trademarksdelete/([^/]+)()()()|/userlevelpermissionslist/(.*)()()()()|/userlevelpermissionsadd/(.*)()()()()()|/userlevelpermissionsview/(.*)()()()()()()|/userlevelpermissionsedit/(.*)()()()()()()()|/userlevelpermissionsdelete/(.*)()()()()()()()()|/userlevelslist/([^/]+)()()()()()()()()()|/userlevelsadd/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -1993,7 +2476,11 @@
       ),
       8 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/userlevelsview/([^/]+)|/alfa\\-projectlearning\\.id/userlevelsedit/([^/]+)()|/alfa\\-projectlearning\\.id/userlevelsdelete/([^/]+)()()|/alfa\\-projectlearning\\.id/(.+)()()())$~',
+=======
+        'regex' => '~^(?|/userlevelsview/([^/]+)|/userlevelsedit/([^/]+)()|/userlevelsdelete/([^/]+)()()|/(.+)()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2035,7 +2522,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/audittraillist/([^/]+)|/alfa\\-projectlearning\\.id/audittrailadd/([^/]+)()|/alfa\\-projectlearning\\.id/audittrailview/([^/]+)()()|/alfa\\-projectlearning\\.id/audittrailedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/audittraildelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/calendar1add/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/calendar1view/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/calendar1edit/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/calendar1delete/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/calendarlist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/calendaradd/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/audittraillist/([^/]+)|/audittrailadd/([^/]+)()|/audittrailview/([^/]+)()()|/audittrailedit/([^/]+)()()()|/audittraildelete/([^/]+)()()()()|/calendar1add/([^/]+)()()()()()|/calendar1view/([^/]+)()()()()()()|/calendar1edit/([^/]+)()()()()()()()|/calendar1delete/([^/]+)()()()()()()()()|/calendarlist/([^/]+)()()()()()()()()()|/calendaradd/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2130,7 +2621,11 @@
       ),
       1 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/calendarview/([^/]+)|/alfa\\-projectlearning\\.id/calendaredit/([^/]+)()|/alfa\\-projectlearning\\.id/calendardelete/([^/]+)()()|/alfa\\-projectlearning\\.id/cars2list/([^/]+)()()()|/alfa\\-projectlearning\\.id/carslist/([^/]+)()()()()|/alfa\\-projectlearning\\.id/carsadd/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/carsview/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/carsedit/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/carsdelete/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/categorieslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/categoriesview/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/calendarview/([^/]+)|/calendaredit/([^/]+)()|/calendardelete/([^/]+)()()|/cars2list/([^/]+)()()()|/carslist/([^/]+)()()()()|/carsadd/([^/]+)()()()()()|/carsview/([^/]+)()()()()()()|/carsedit/([^/]+)()()()()()()()|/carsdelete/([^/]+)()()()()()()()()|/categorieslist/([^/]+)()()()()()()()()()|/categoriesview/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2225,7 +2720,11 @@
       ),
       2 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/categoriesedit/([^/]+)|/alfa\\-projectlearning\\.id/categoriesdelete/([^/]+)()|/alfa\\-projectlearning\\.id/customerslist/(.*)()()|/alfa\\-projectlearning\\.id/customersadd/(.*)()()()|/alfa\\-projectlearning\\.id/customersview/(.*)()()()()|/alfa\\-projectlearning\\.id/customersedit/(.*)()()()()()|/alfa\\-projectlearning\\.id/customersdelete/(.*)()()()()()()|/alfa\\-projectlearning\\.id/djilist/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/djiadd/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/djiview/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/djiedit/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/categoriesedit/([^/]+)|/categoriesdelete/([^/]+)()|/customerslist/(.*)()()|/customersadd/(.*)()()()|/customersview/(.*)()()()()|/customersedit/(.*)()()()()()|/customersdelete/(.*)()()()()()()|/djilist/([^/]+)()()()()()()()|/djiadd/([^/]+)()()()()()()()()|/djiview/([^/]+)()()()()()()()()()|/djiedit/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2320,7 +2819,11 @@
       ),
       3 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/djidelete/([^/]+)|/alfa\\-projectlearning\\.id/employeeslist/([^/]+)()|/alfa\\-projectlearning\\.id/employeesadd/([^/]+)()()|/alfa\\-projectlearning\\.id/employeesview/([^/]+)()()()|/alfa\\-projectlearning\\.id/employeesedit/([^/]+)()()()()|/alfa\\-projectlearning\\.id/employeesdelete/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/home/(.*)()()()()()()|/alfa\\-projectlearning\\.id/locations2list/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/locations3list/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/locationslist/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/modelslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/djidelete/([^/]+)|/employeeslist/([^/]+)()|/employeesadd/([^/]+)()()|/employeesview/([^/]+)()()()|/employeesedit/([^/]+)()()()()|/employeesdelete/([^/]+)()()()()()|/home/(.*)()()()()()()|/locations2list/([^/]+)()()()()()()()|/locations3list/([^/]+)()()()()()()()()|/locationslist/([^/]+)()()()()()()()()()|/modelslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2415,7 +2918,11 @@
       ),
       4 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/modelsadd/([^/]+)|/alfa\\-projectlearning\\.id/modelsview/([^/]+)()|/alfa\\-projectlearning\\.id/modelsedit/([^/]+)()()|/alfa\\-projectlearning\\.id/modelsdelete/([^/]+)()()()|/alfa\\-projectlearning\\.id/news/(.*)()()()()|/alfa\\-projectlearning\\.id/orderdetailslist/(.*)()()()()()|/alfa\\-projectlearning\\.id/orderdetailsadd/(.*)()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsview/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsedit/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsdelete/(.*)()()()()()()()()()|/alfa\\-projectlearning\\.id/orderdetailsextendedlist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/modelsadd/([^/]+)|/modelsview/([^/]+)()|/modelsedit/([^/]+)()()|/modelsdelete/([^/]+)()()()|/news/(.*)()()()()|/orderdetailslist/(.*)()()()()()|/orderdetailsadd/(.*)()()()()()()|/orderdetailsview/(.*)()()()()()()()|/orderdetailsedit/(.*)()()()()()()()()|/orderdetailsdelete/(.*)()()()()()()()()()|/orderdetailsextendedlist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2510,7 +3017,11 @@
       ),
       5 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/orders2list/([^/]+)|/alfa\\-projectlearning\\.id/orders2add/([^/]+)()|/alfa\\-projectlearning\\.id/orders2view/([^/]+)()()|/alfa\\-projectlearning\\.id/orders2edit/([^/]+)()()()|/alfa\\-projectlearning\\.id/orders2delete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/orderslist/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/ordersadd/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/ordersview/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/ordersedit/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/ordersdelete/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/login/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/orders2list/([^/]+)|/orders2add/([^/]+)()|/orders2view/([^/]+)()()|/orders2edit/([^/]+)()()()|/orders2delete/([^/]+)()()()()|/orderslist/([^/]+)()()()()()|/ordersadd/([^/]+)()()()()()()|/ordersview/([^/]+)()()()()()()()|/ordersedit/([^/]+)()()()()()()()()|/ordersdelete/([^/]+)()()()()()()()()()|/login/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2605,7 +3116,11 @@
       ),
       6 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/productslist/([^/]+)|/alfa\\-projectlearning\\.id/productsadd/([^/]+)()|/alfa\\-projectlearning\\.id/productsview/([^/]+)()()|/alfa\\-projectlearning\\.id/productsedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/productsdelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/shipperslist/([^/]+)()()()()()|/alfa\\-projectlearning\\.id/supplierslist/([^/]+)()()()()()()|/alfa\\-projectlearning\\.id/suppliersadd/([^/]+)()()()()()()()|/alfa\\-projectlearning\\.id/suppliersview/([^/]+)()()()()()()()()|/alfa\\-projectlearning\\.id/suppliersedit/([^/]+)()()()()()()()()()|/alfa\\-projectlearning\\.id/suppliersdelete/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/productslist/([^/]+)|/productsadd/([^/]+)()|/productsview/([^/]+)()()|/productsedit/([^/]+)()()()|/productsdelete/([^/]+)()()()()|/shipperslist/([^/]+)()()()()()|/supplierslist/([^/]+)()()()()()()|/suppliersadd/([^/]+)()()()()()()()|/suppliersview/([^/]+)()()()()()()()()|/suppliersedit/([^/]+)()()()()()()()()()|/suppliersdelete/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2700,7 +3215,11 @@
       ),
       7 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/trademarkslist/([^/]+)|/alfa\\-projectlearning\\.id/trademarksadd/([^/]+)()|/alfa\\-projectlearning\\.id/trademarksview/([^/]+)()()|/alfa\\-projectlearning\\.id/trademarksedit/([^/]+)()()()|/alfa\\-projectlearning\\.id/trademarksdelete/([^/]+)()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionslist/(.*)()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsadd/(.*)()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsview/(.*)()()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsedit/(.*)()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelpermissionsdelete/(.*)()()()()()()()()()|/alfa\\-projectlearning\\.id/userlevelslist/([^/]+)()()()()()()()()()())$~',
+=======
+        'regex' => '~^(?|/trademarkslist/([^/]+)|/trademarksadd/([^/]+)()|/trademarksview/([^/]+)()()|/trademarksedit/([^/]+)()()()|/trademarksdelete/([^/]+)()()()()|/userlevelpermissionslist/(.*)()()()()()|/userlevelpermissionsadd/(.*)()()()()()()|/userlevelpermissionsview/(.*)()()()()()()()|/userlevelpermissionsedit/(.*)()()()()()()()()|/userlevelpermissionsdelete/(.*)()()()()()()()()()|/userlevelslist/([^/]+)()()()()()()()()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2795,7 +3314,11 @@
       ),
       8 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/userlevelsadd/([^/]+)|/alfa\\-projectlearning\\.id/userlevelsview/([^/]+)()|/alfa\\-projectlearning\\.id/userlevelsedit/([^/]+)()()|/alfa\\-projectlearning\\.id/userlevelsdelete/([^/]+)()()())$~',
+=======
+        'regex' => '~^(?|/userlevelsadd/([^/]+)|/userlevelsview/([^/]+)()|/userlevelsedit/([^/]+)()()|/userlevelsdelete/([^/]+)()()())$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2837,7 +3360,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/(.+))$~',
+=======
+        'regex' => '~^(?|/(.+))$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2855,7 +3382,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/(.+))$~',
+=======
+        'regex' => '~^(?|/(.+))$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
@@ -2873,7 +3404,11 @@
     array (
       0 => 
       array (
+<<<<<<< HEAD
         'regex' => '~^(?|/alfa\\-projectlearning\\.id/(.+))$~',
+=======
+        'regex' => '~^(?|/(.+))$~',
+>>>>>>> 13fec4d2705622b5f96aac0f926e9aa9077107ac
         'routeMap' => 
         array (
           2 => 
