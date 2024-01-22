@@ -707,7 +707,7 @@
       </field>
     </table>
     <table id="home">
-      <phrase id="tblcaption" value="Home Page" />
+      <phrase id="tblcaption" value="Welcome" />
     </table>
     <table id="news">
       <phrase id="tblcaption" value="News" />
