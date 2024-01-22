@@ -14,14 +14,14 @@ $Page->showMessage();
 	</div>
     <div class="card-body">
 		<h6 class="card-title">22-01-2024 - Project Learning Membership (alfa-release) Released</h6>
-		<p class="card-text">For more information, please visit <a href="#">Project Learning</a></p>
-		<a href="projectlearning.id" class="btn btn-primary">Go to Project-Learning website</a>
+		<p class="card-text">For more information, please visit Project Learning</p>
+		<a href="https://projectlearning.id" class="btn btn-primary">Go to Project-Learning website</a>
 	</div>
-	<div class="card-body">
+	<!--<div class="card-body">
 		<h6 class="card-title">2023/09/05 - PHPMaker 2024 Released</h6>
 		<p class="card-text">For more information, please visit PHPMaker website.</p>
 		<a href="https://phpmaker.dev" class="btn btn-primary">Go to PHPMaker website</a>
-	</div>
+	</div>-->
 </div>
 
 <?= GetDebugMessage() ?>
