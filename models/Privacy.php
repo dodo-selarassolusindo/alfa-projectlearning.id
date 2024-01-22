@@ -45,7 +45,7 @@ class Privacy
     public $RenderingView = false;
 
     // CSS class/style
-    public $CurrentPageName = "audittraildelete";
+    public $CurrentPageName = "konfirmasipembayarancontroller";
 
     // Page headings
     public $Heading = "";

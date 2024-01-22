@@ -86,6 +86,7 @@
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone ($p['PHPMaker2024\\demo2024\\Attributes\\Get'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('PHPMaker2024\\demo2024\\Attributes\\Get')),
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Get'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
@@ -177,6 +178,11 @@
                 ],
                 [
                     'GET',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
                     'OPTIONS',
                 ],
                 [
@@ -827,6 +833,7 @@
                 '/gantt',
                 '/home[/{params:.*}]',
                 '/joinpremium[/{params:.*}]',
+                '/konfirmasipembayaran[/{params:.*}]',
                 '/modelslist[/{ID}]',
                 '/modelsadd[/{ID}]',
                 '/modelsaddopt',
@@ -959,6 +966,7 @@
                 'PHPMaker2024\\demo2024\\GanttController:summary',
                 'PHPMaker2024\\demo2024\\HomeController:custom',
                 'PHPMaker2024\\demo2024\\JoinPremiumController:custom',
+                'PHPMaker2024\\demo2024\\KonfirmasiPembayaranController:custom',
                 'PHPMaker2024\\demo2024\\ModelsController:list',
                 'PHPMaker2024\\demo2024\\ModelsController:add',
                 'PHPMaker2024\\demo2024\\ModelsController:addopt',
@@ -1045,6 +1053,9 @@
                 'PHPMaker2024\\demo2024\\UserlevelsController:delete',
             ],
             'middleware' => [
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
                 [
                     'PHPMaker2024\\demo2024\\PermissionMiddleware',
                 ],
@@ -1481,6 +1492,7 @@
                 'summary.Gantt',
                 'custom.home',
                 'custom.join_premium',
+                'custom.konfirmasi_pembayaran',
                 'list.models',
                 'add.models',
                 'addopt.models',
@@ -1567,6 +1579,7 @@
                 'delete.userlevels',
             ],
             'options' => [
+                [],
                 [],
                 [],
                 [],
@@ -1831,6 +1844,7 @@
         $o[127],
         $o[128],
         $o[129],
+        $o[130],
     ],
     []
 );

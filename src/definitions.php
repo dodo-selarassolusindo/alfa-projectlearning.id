@@ -127,6 +127,7 @@ return [
     "calendar1" => \DI\create(Calendar1::class),
     "join_premium" => \DI\create(JoinPremium::class),
     "audittrail" => \DI\create(Audittrail::class),
+    "konfirmasi_pembayaran" => \DI\create(KonfirmasiPembayaran::class),
 
     // User table
     "usertable" => \DI\get("employees"),

@@ -17,6 +17,9 @@
     <menu id="10206">
       <phrase id="menutext" value="Join Premium" />
     </menu>
+    <menu id="10208">
+      <phrase id="menutext" value="Konfirmasi Pembayaran" />
+    </menu>
     <menu id="16">
       <phrase id="menutext" value="CARS RELATED" />
     </menu>
@@ -31,9 +34,6 @@
     </menu>
     <menu id="10">
       <phrase id="menutext" value="Models" />
-    </menu>
-    <menu id="10154">
-      <phrase id="menutext" value="favorites" />
     </menu>
     <menu id="10109">
       <phrase id="menutext" value="OTHER TABLES" />
@@ -68,6 +68,9 @@
     <menu id="10089">
       <phrase id="menutext" value="Dow Jones Index" />
     </menu>
+    <menu id="10154">
+      <phrase id="menutext" value="favorites" />
+    </menu>
     <menu id="17">
       <phrase id="menutext" value="ADMIN ONLY" />
     </menu>
@@ -85,9 +88,6 @@
     </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
-    </menu>
-    <menu id="10148">
-      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="10152">
       <phrase id="menutext" value="Calendar" />
@@ -127,6 +127,9 @@
     </menu>
     <menu id="10146">
       <phrase id="menutext" value="Gantt" />
+    </menu>
+    <menu id="10148">
+      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="10149">
       <phrase id="menutext" value="Locations (Leaflet OSM)" />
@@ -1520,6 +1523,9 @@
       <field id="newvalue">
         <phrase id="fldcaption" value="New Value" />
       </field>
+    </table>
+    <table id="konfirmasi_pembayaran">
+      <phrase id="tblcaption" value="Konfirmasi Pembayaran" />
     </table>
   </project>
 </ew-language>
