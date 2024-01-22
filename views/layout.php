@@ -17,24 +17,24 @@ $basePath = BasePath(true);
 <link rel="stylesheet" href="<?= $basePath ?>adminlte3/css/<?= CssFile("adminlte.css") ?>?v=24.7.4">
 <link rel="stylesheet" href="<?= $basePath ?><?= CssFile(Config("PROJECT_STYLESHEET_FILENAME")) ?>?v=24.7.4">
 <script data-pace-options='<?= JsonEncode(Config("PACE_OPTIONS")) ?>' src="<?= $basePath ?>js/pace.js?v=24.7.4"></script><!-- Single quotes for data-pace-options -->
-<script src="<?= $basePath ?>js/ewcore.min.js?v=24.7.4"></script>
+<script src="<?= $basePath ?>js/ewcore.js?v=24.7.4"></script>
 <script>
 var $rowindex$ = null;
 Object.assign(ew, <?= JsonEncode(ConfigClientVars()) ?>, <?= JsonEncode(GlobalClientVars()) ?>);
-loadjs(ew.PATH_BASE + "jquery/jquery.min.js?v=24.7.4", "jquery");
-loadjs(ew.PATH_BASE + "js/popper.min.js?v=24.7.4", "popper");
-loadjs(ew.PATH_BASE + "js/luxon.min.js?v=24.7.4", "luxon");
+loadjs(ew.PATH_BASE + "jquery/jquery.js?v=24.7.4", "jquery");
+loadjs(ew.PATH_BASE + "js/popper.js?v=24.7.4", "popper");
+loadjs(ew.PATH_BASE + "js/luxon.js?v=24.7.4", "luxon");
 loadjs([
-    ew.PATH_BASE + "js/mobile-detect.min.js?v=24.7.4",
-    ew.PATH_BASE + "js/purify.min.js?v=24.7.4",
-    ew.PATH_BASE + "js/cropper.min.js?v=24.7.4",
-    ew.PATH_BASE + "jquery/load-image.all.min.js?v=24.7.4"
+    ew.PATH_BASE + "js/mobile-detect.js?v=24.7.4",
+    ew.PATH_BASE + "js/purify.js?v=24.7.4",
+    ew.PATH_BASE + "js/cropper.js?v=24.7.4",
+    ew.PATH_BASE + "jquery/load-image.all.js?v=24.7.4"
 ], "others");
-loadjs(ew.PATH_BASE + "js/sweetalert2.all.min.js?v=24.7.4", "swal");
+loadjs(ew.PATH_BASE + "js/sweetalert2.all.js?v=24.7.4", "swal");
 <?= $Language->toJson() ?>
 ew.vars = <?= JsonEncode(GetClientVar()) ?>;
-ew.ready(["wrapper", "jquery"], ew.PATH_BASE + "jquery/jsrender.min.js?v=24.7.4", "jsrender", ew.renderJsTemplates);
-ew.ready("jquery", ew.PATH_BASE + "jquery/jquery-ui.min.js?v=24.7.4", "widget");
+ew.ready(["wrapper", "jquery"], ew.PATH_BASE + "jquery/jsrender.js?v=24.7.4", "jsrender", ew.renderJsTemplates);
+ew.ready("jquery", ew.PATH_BASE + "jquery/jquery-ui.js?v=24.7.4", "widget");
 </script>
 <?php include_once "views/menu.php"; ?>
 <script>
@@ -49,22 +49,22 @@ var cssjs = [];
 <?php foreach (array_merge(Config("STYLESHEET_FILES"), Config("JAVASCRIPT_FILES")) as $file) { // External Stylesheets and JavaScripts ?>
 cssjs.push("<?= (IsRemote($file) ? "" : BasePath(true)) . $file ?>?v=24.7.4");
 <?php } ?>
-cssjs.push(ew.PATH_BASE + "jquery/query-builder.min.js?v=24.7.4");
+cssjs.push(ew.PATH_BASE + "jquery/query-builder.js?v=24.7.4");
 cssjs.push(ew.PATH_BASE + "css/<?= CssFile("query-builder.css") ?>?v=24.7.4");
 var jqueryjs = [
-    ew.PATH_BASE + "jquery/select2.full.min.js?v=24.7.4",
-    ew.PATH_BASE + "jquery/jqueryfileupload.min.js?v=24.7.4",
-    ew.PATH_BASE + "jquery/typeahead.jquery.min.js?v=24.7.4"
+    ew.PATH_BASE + "jquery/select2.full.js?v=24.7.4",
+    ew.PATH_BASE + "jquery/jqueryfileupload.js?v=24.7.4",
+    ew.PATH_BASE + "jquery/typeahead.jquery.js?v=24.7.4"
 ];
-jqueryjs.push(ew.PATH_BASE + "jquery/pStrength.jquery.min.js?v=24.7.4");
-jqueryjs.push(ew.PATH_BASE + "jquery/pGenerator.jquery.min.js?v=24.7.4");
-jqueryjs.push(ew.PATH_BASE + "colorbox/jquery.colorbox.min.js?v=24.7.4");
-jqueryjs.push(ew.PATH_BASE + "js/pdfobject.min.js?v=24.7.4");
-ew.ready(["jquery", "dom", "popper"], ew.PATH_BASE + "bootstrap5/js/bootstrap.min.js?v=24.7.4", "bootstrap"); // Bootstrap
-ew.ready("popper", ew.PATH_BASE + "js/tippy-bundle.umd.min.js?v=24.7.4", "tippy"); // Tippy
-ew.ready("bootstrap", ew.PATH_BASE + "adminlte3/js/adminlte.min.js?v=24.7.4", "adminlte"); // AdminLTE (After Bootstrap)
+jqueryjs.push(ew.PATH_BASE + "jquery/pStrength.jquery.js?v=24.7.4");
+jqueryjs.push(ew.PATH_BASE + "jquery/pGenerator.jquery.js?v=24.7.4");
+jqueryjs.push(ew.PATH_BASE + "colorbox/jquery.colorbox.js?v=24.7.4");
+jqueryjs.push(ew.PATH_BASE + "js/pdfobject.js?v=24.7.4");
+ew.ready(["jquery", "dom", "popper"], ew.PATH_BASE + "bootstrap5/js/bootstrap.js?v=24.7.4", "bootstrap"); // Bootstrap
+ew.ready("popper", ew.PATH_BASE + "js/tippy-bundle.umd.js?v=24.7.4", "tippy"); // Tippy
+ew.ready("bootstrap", ew.PATH_BASE + "adminlte3/js/adminlte.js?v=24.7.4", "adminlte"); // AdminLTE (After Bootstrap)
 ew.ready(["jquery", "widget"], [jqueryjs], "jqueryjs");
-ew.ready(["bootstrap", "adminlte", "jqueryjs", "luxon", "others"], ew.PATH_BASE + "js/ew.min.js?v=24.7.4", "makerjs");
+ew.ready(["bootstrap", "adminlte", "jqueryjs", "luxon", "others"], ew.PATH_BASE + "js/ew.js?v=24.7.4", "makerjs");
 ew.ready("makerjs", [
     cssjs,
     ew.PATH_BASE + "js/userfn.js?v=24.7.4",
@@ -77,17 +77,17 @@ ew.ready("head", [ew.PATH_BASE + "ckeditor/ckeditor.js?v=24.7.0", ew.PATH_BASE +
 <script>
 loadjs(ew.PATH_BASE + "css/<?= CssFile("tempus-dominus.css") ?>?v=24.7.0");
 ew.ready("head", [
-    ew.PATH_BASE + "js/tempus-dominus.min.js?v=24.7.0",
-    ew.PATH_BASE + "js/ewdatetimepicker.min.js?v=24.7.0"
+    ew.PATH_BASE + "js/tempus-dominus.js?v=24.7.0",
+    ew.PATH_BASE + "js/ewdatetimepicker.js?v=24.7.0"
 ], "datetimepicker");
 </script>
 <script>
 // Load chart *.js
 loadjs(ew.PATH_BASE + "js/chart.umd.js?v=24.7.0", "chartjs");
 ew.ready(["chartjs", "luxon"], [
-    ew.PATH_BASE + "js/chartjs-adapter-luxon.umd.min.js?v=24.7.0",
-    ew.PATH_BASE + "js/chartjs-plugin-annotation.min.js?v=24.7.0",
-    ew.PATH_BASE + "js/chartjs-plugin-datalabels.min.js?v=24.7.0",
+    ew.PATH_BASE + "js/chartjs-adapter-luxon.umd.js?v=24.7.0",
+    ew.PATH_BASE + "js/chartjs-plugin-annotation.js?v=24.7.0",
+    ew.PATH_BASE + "js/chartjs-plugin-datalabels.js?v=24.7.0",
     ew.PATH_BASE + "js/chartjs-plugin-stacked100.js?v=24.7.0",
     ew.PATH_BASE + "js/ewchart.js?v=24.7.0",
 ], "chart");
