@@ -11,6 +11,9 @@
     <menu id="10088">
       <phrase id="menutext" value="News" />
     </menu>
+    <menu id="10205">
+      <phrase id="menutext" value="Membership" />
+    </menu>
     <menu id="10154">
       <phrase id="menutext" value="favorites" />
     </menu>
@@ -28,9 +31,6 @@
     </menu>
     <menu id="10">
       <phrase id="menutext" value="Models" />
-    </menu>
-    <menu id="10148">
-      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="10109">
       <phrase id="menutext" value="OTHER TABLES" />
@@ -65,11 +65,8 @@
     <menu id="10089">
       <phrase id="menutext" value="Dow Jones Index" />
     </menu>
-    <menu id="10149">
-      <phrase id="menutext" value="Locations (Leaflet OSM)" />
-    </menu>
-    <menu id="10150">
-      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
+    <menu id="10148">
+      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="17">
       <phrase id="menutext" value="ADMIN ONLY" />
@@ -86,20 +83,17 @@
     <menu id="10155">
       <phrase id="menutext" value="Audit Trail" />
     </menu>
-    <menu id="10147">
-      <phrase id="menutext" value="Tasks" />
-    </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
     </menu>
-    <menu id="10110">
-      <phrase id="menutext" value="employee sales by county for 2014" />
+    <menu id="10149">
+      <phrase id="menutext" value="Locations (Leaflet OSM)" />
     </menu>
     <menu id="10152">
       <phrase id="menutext" value="Calendar" />
     </menu>
-    <menu id="10111">
-      <phrase id="menutext" value="list of products" />
+    <menu id="10150">
+      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
     </menu>
     <menu id="10144">
       <phrase id="menutext" value="REPORTS" />
@@ -136,6 +130,15 @@
     </menu>
     <menu id="10146">
       <phrase id="menutext" value="Gantt" />
+    </menu>
+    <menu id="10147">
+      <phrase id="menutext" value="Tasks" />
+    </menu>
+    <menu id="10110">
+      <phrase id="menutext" value="employee sales by county for 2014" />
+    </menu>
+    <menu id="10111">
+      <phrase id="menutext" value="list of products" />
     </menu>
     <menu id="10112">
       <phrase id="menutext" value="order details extended 2" />
