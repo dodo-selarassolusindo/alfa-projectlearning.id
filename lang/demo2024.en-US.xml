@@ -2,59 +2,17 @@
   <project>
     <phrase id="bodytitle" value="Project Learning" />
     <phrase id="footertext" value="&amp;copy;2024 Project Learning Team. All rights reserved." />
-    <menu id="10153">
-      <phrase id="menutext" value="messages" />
-    </menu>
-    <menu id="10154">
-      <phrase id="menutext" value="favorites" />
-    </menu>
-    <menu id="10148">
-      <phrase id="menutext" value="Locations (GoogleMaps)" />
-    </menu>
-    <menu id="10149">
-      <phrase id="menutext" value="Locations (Leaflet OSM)" />
-    </menu>
-    <menu id="10150">
-      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
-    </menu>
-    <menu id="10147">
-      <phrase id="menutext" value="Tasks" />
-    </menu>
-    <menu id="10110">
-      <phrase id="menutext" value="employee sales by county for 2014" />
-    </menu>
-    <menu id="10111">
-      <phrase id="menutext" value="list of products" />
-    </menu>
-    <menu id="10112">
-      <phrase id="menutext" value="order details extended 2" />
-    </menu>
-    <menu id="10113">
-      <phrase id="menutext" value="orders by product" />
-    </menu>
-    <menu id="10114">
-      <phrase id="menutext" value="product sales for 2014" />
-    </menu>
-    <menu id="10115">
-      <phrase id="menutext" value="products by category 2" />
-    </menu>
-    <menu id="10116">
-      <phrase id="menutext" value="sales by category for 2014 2" />
-    </menu>
-    <menu id="10117">
-      <phrase id="menutext" value="sales by year 2" />
-    </menu>
-    <menu id="10130">
-      <phrase id="menutext" value="gantt 3" />
-    </menu>
-    <menu id="10151">
-      <phrase id="menutext" value="calendar" />
-    </menu>
     <menu id="10087">
       <phrase id="menutext" value="Home" />
     </menu>
+    <menu id="10153">
+      <phrase id="menutext" value="messages" />
+    </menu>
     <menu id="10088">
       <phrase id="menutext" value="News" />
+    </menu>
+    <menu id="10154">
+      <phrase id="menutext" value="favorites" />
     </menu>
     <menu id="16">
       <phrase id="menutext" value="CARS RELATED" />
@@ -70,6 +28,9 @@
     </menu>
     <menu id="10">
       <phrase id="menutext" value="Models" />
+    </menu>
+    <menu id="10148">
+      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="10109">
       <phrase id="menutext" value="OTHER TABLES" />
@@ -104,6 +65,12 @@
     <menu id="10089">
       <phrase id="menutext" value="Dow Jones Index" />
     </menu>
+    <menu id="10149">
+      <phrase id="menutext" value="Locations (Leaflet OSM)" />
+    </menu>
+    <menu id="10150">
+      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
+    </menu>
     <menu id="17">
       <phrase id="menutext" value="ADMIN ONLY" />
     </menu>
@@ -116,11 +83,23 @@
     <menu id="10083">
       <phrase id="menutext" value="User Level Permissions" />
     </menu>
+    <menu id="10155">
+      <phrase id="menutext" value="Audit Trail" />
+    </menu>
+    <menu id="10147">
+      <phrase id="menutext" value="Tasks" />
+    </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
     </menu>
+    <menu id="10110">
+      <phrase id="menutext" value="employee sales by county for 2014" />
+    </menu>
     <menu id="10152">
       <phrase id="menutext" value="Calendar" />
+    </menu>
+    <menu id="10111">
+      <phrase id="menutext" value="list of products" />
     </menu>
     <menu id="10144">
       <phrase id="menutext" value="REPORTS" />
@@ -157,6 +136,30 @@
     </menu>
     <menu id="10146">
       <phrase id="menutext" value="Gantt" />
+    </menu>
+    <menu id="10112">
+      <phrase id="menutext" value="order details extended 2" />
+    </menu>
+    <menu id="10113">
+      <phrase id="menutext" value="orders by product" />
+    </menu>
+    <menu id="10114">
+      <phrase id="menutext" value="product sales for 2014" />
+    </menu>
+    <menu id="10115">
+      <phrase id="menutext" value="products by category 2" />
+    </menu>
+    <menu id="10116">
+      <phrase id="menutext" value="sales by category for 2014 2" />
+    </menu>
+    <menu id="10117">
+      <phrase id="menutext" value="sales by year 2" />
+    </menu>
+    <menu id="10130">
+      <phrase id="menutext" value="gantt 3" />
+    </menu>
+    <menu id="10151">
+      <phrase id="menutext" value="calendar" />
     </menu>
     <table id="cars">
       <phrase id="tblcaption" value="Cars" />
@@ -1474,6 +1477,39 @@
       </field>
       <field id="createdat">
         <phrase id="fldcaption" value="Created At" />
+      </field>
+    </table>
+    <table id="audittrail">
+      <phrase id="tblcaption" value="Audit Trail" />
+      <field id="id">
+        <phrase id="fldcaption" value="Id" />
+      </field>
+      <field id="datetime">
+        <phrase id="fldcaption" value="Date Time" />
+      </field>
+      <field id="script">
+        <phrase id="fldcaption" value="Script" />
+      </field>
+      <field id="user">
+        <phrase id="fldcaption" value="User" />
+      </field>
+      <field id="_action">
+        <phrase id="fldcaption" value="Action" />
+      </field>
+      <field id="_table">
+        <phrase id="fldcaption" value="Table" />
+      </field>
+      <field id="field">
+        <phrase id="fldcaption" value="Field" />
+      </field>
+      <field id="keyvalue">
+        <phrase id="fldcaption" value="Key Value" />
+      </field>
+      <field id="oldvalue">
+        <phrase id="fldcaption" value="Old Value" />
+      </field>
+      <field id="newvalue">
+        <phrase id="fldcaption" value="New Value" />
       </field>
     </table>
   </project>

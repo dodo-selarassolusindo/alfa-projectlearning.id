@@ -24,9 +24,6 @@ use Illuminate\Encryption\Encrypter;
 use HTMLPurifier_Config;
 use HTMLPurifier;
 
-use Hybridauth\Hybridauth;
-use Hybridauth\Logger\Psr3LoggerWrapper;
-
 // Connections and entity managers
 $definitions = [];
 $dbids = array_keys(Config("Databases"));
@@ -80,17 +77,6 @@ return [
     JwtMiddleware::class => \DI\create(JwtMiddleware::class),
     Std::class => \DI\create(Std::class),
     Encrypter::class => fn(ContainerInterface $c) => new Encrypter(AesEncryptionKey(base64_decode(Config("AES_ENCRYPTION_KEY"))), Config("AES_ENCRYPTION_CIPHER")),
-    "hybridauth" => function (ContainerInterface $c) {
-        $authConfig = Config("AUTH_CONFIG");
-        $authConfig["debug_mode"] = Config("DEBUG");
-        $providers = &$authConfig["providers"];
-        foreach ($providers as $provider => &$config) {
-            $config["callback"] ??= FullUrl("login/" . $provider, "auth"); // Set callback URL for each provider
-        }
-        $logger = new Psr3LoggerWrapper();
-        $logger->setLogger($c->get("app.logger"));
-        return new Hybridauth($authConfig, null, null, $logger);
-    },
 
     // Tables
     "cars" => \DI\create(Cars::class),
@@ -143,6 +129,7 @@ return [
     "calendar" => \DI\create(Calendar::class),
     "Calendar1" => \DI\create(Calendar1::class),
     "calendar1" => \DI\create(Calendar1::class),
+    "audittrail" => \DI\create(Audittrail::class),
 
     // User table
     "usertable" => \DI\get("employees"),

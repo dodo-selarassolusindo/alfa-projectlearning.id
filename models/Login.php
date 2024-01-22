@@ -456,6 +456,7 @@ class Login extends Employees
             } else {
                 RemoveCookie("AutoLogin"); // Clear cookie
             }
+            $this->writeAuditTrailOnLogin();
 
             // Call loggedin event
             $this->userLoggedIn($this->Username->CurrentValue);
@@ -532,6 +533,14 @@ class Login extends Employees
             $this->setFailureMessage($formCustomError);
         }
         return $validateForm;
+    }
+
+    // Write audit trail on login
+    protected function writeAuditTrailOnLogin()
+    {
+        global $Language;
+        $usr = CurrentUserIdentifier();
+        WriteAuditLog($usr, $Language->phrase("AuditTrailLogin"), CurrentUserIP());
     }
 
     // Page Load event

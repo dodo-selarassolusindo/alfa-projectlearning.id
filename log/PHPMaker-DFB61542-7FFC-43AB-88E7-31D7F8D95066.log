@@ -4,6 +4,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\api\index.php
 C:\xampp\htdocs\alfa-projectlearning.id\composer.json
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\AlphabeticalListOfProductsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ApiController.php
+C:\xampp\htdocs\alfa-projectlearning.id\controllers\AudittrailController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\Calendar1Controller.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\CalendarController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\Cars2Controller.php
@@ -53,6 +54,12 @@ C:\xampp\htdocs\alfa-projectlearning.id\js\userfn.js
 C:\xampp\htdocs\alfa-projectlearning.id\log\index.html
 C:\xampp\htdocs\alfa-projectlearning.id\models\AlphabeticalListOfProducts.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\AlphabeticalListOfProductsSummary.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\Audittrail.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\AudittrailAdd.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\AudittrailDelete.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\AudittrailEdit.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\AudittrailList.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\AudittrailView.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Barcode.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Calendar.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Calendar1.php
@@ -273,6 +280,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\src\DebugSqlLogger.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Email.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\EmailTwoFactorAuthentication.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\EntityDescriptor.php
+C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Audittrail.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Calendar.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Car.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Cars2.php
@@ -382,6 +390,11 @@ C:\xampp\htdocs\alfa-projectlearning.id\src\userfn.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\userlevelsettings.php
 C:\xampp\htdocs\alfa-projectlearning.id\upload\index.html
 C:\xampp\htdocs\alfa-projectlearning.id\views\AlphabeticalListOfProductsSummary.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\AudittrailAdd.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\AudittrailDelete.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\AudittrailEdit.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\AudittrailList.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\AudittrailView.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Calendar1Add.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Calendar1Calendar.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Calendar1Delete.php

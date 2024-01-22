@@ -259,13 +259,6 @@ class Logout
             $params = $_GET;
             $flash = Container("app.flash");
 
-            // Disconnect all connected adapters
-            try {
-                Container("hybridauth")->disconnectAllAdapters();
-            } catch (\Exception $e) {
-                LogError($e->getMessage());
-            }
-
             // Remove cookie
             RemoveCookie("LastUrl"); // Clear last URL
 
@@ -280,6 +273,7 @@ class Logout
 
             // Password changed (after expired password)
             $isPasswordChanged = Config("USE_TWO_FACTOR_AUTHENTICATION") && Session(SESSION_STATUS) == "passwordchanged";
+            $this->writeAuditTrailOnLogout();
 
             // Call User LoggedOut event
             $this->userLoggedOut($username);
@@ -343,6 +337,13 @@ class Logout
                 $this->renderSearchOptions();
             }
         }
+    }
+
+    // Write audit trail on logout
+    protected function writeAuditTrailOnLogout()
+    {
+        global $Language;
+        WriteAuditLog(CurrentUserIdentifier(), $Language->phrase("AuditTrailLogout"), CurrentUserIP());
     }
 
     // Page Load event

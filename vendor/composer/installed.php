@@ -244,15 +244,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'hybridauth/hybridauth' => array(
-            'pretty_version' => 'v3.11.0',
-            'version' => '3.11.0.0',
-            'reference' => 'b70b9cbe1c7fa99b5847c5868610a8f024cc7d38',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../hybridauth/hybridauth',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'illuminate/collections' => array(
             'pretty_version' => 'v9.52.16',
             'version' => '9.52.16.0',
@@ -682,8 +673,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(

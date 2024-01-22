@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45ac72a8f283cacb326821e8cdd2cdd8",
+    "content-hash": "ba192ad3a1320e2fafcd0eb0cfa7e0e4",
     "packages": [
         {
             "name": "brick/math",
@@ -1882,68 +1882,6 @@
                 "source": "https://github.com/portphp/spreadsheet"
             },
             "time": "2022-08-15T09:57:20+00:00"
-        },
-        {
-            "name": "hybridauth/hybridauth",
-            "version": "v3.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hybridauth/hybridauth.git",
-                "reference": "b70b9cbe1c7fa99b5847c5868610a8f024cc7d38"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/b70b9cbe1c7fa99b5847c5868610a8f024cc7d38",
-                "reference": "b70b9cbe1c7fa99b5847c5868610a8f024cc7d38",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^6.5 || ^8.0"
-            },
-            "suggest": {
-                "firebase/php-jwt": "Needed to support Apple provider",
-                "phpseclib/phpseclib": "Needed to support Apple provider"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Hybridauth\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miled",
-                    "email": "hybridauth@gmail.com"
-                }
-            ],
-            "description": "PHP Social Authentication Library",
-            "homepage": "https://hybridauth.github.io",
-            "keywords": [
-                "Authentication",
-                "OpenId",
-                "api",
-                "apple",
-                "authorization",
-                "facebook",
-                "google",
-                "oauth",
-                "social",
-                "twitter"
-            ],
-            "support": {
-                "gitter": "https://gitter.im/hybridauth/hybridauth",
-                "issues": "https://github.com/hybridauth/hybridauth/issues",
-                "source": "https://github.com/hybridauth/hybridauth/tree/v3.11.0"
-            },
-            "time": "2024-01-02T23:09:56+00:00"
         },
         {
             "name": "illuminate/collections",

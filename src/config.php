@@ -218,27 +218,27 @@ $CONFIG = [
     "AUTH_CONFIG" => [
         "providers" => [
             "Google" => [
-                "enabled" => true,
+                "enabled" => false,
                 "keys" => [
-                    "id" => 'your-google-client-id-here',
-                    "secret" => 'your-google-client-secret-here'
+                    "id" => '',
+                    "secret" => ''
                 ],
                 "color" => "danger"
             ],
             "Facebook" => [
-                "enabled" => true,
+                "enabled" => false,
                 "keys" => [
-                    "id" => 'your-facebook-app-id-here',
-                    "secret" => 'your-facebook-app-secret-here'
+                    "id" => '',
+                    "secret" => ''
                 ],
                 "color" => "primary"
             ],
             "Azure" => [
-                "enabled" => true,
+                "enabled" => false,
                 "adapter" => 'PHPMaker2024\\demo2024\\AzureAD',
                 "keys" => [
-                    "id" => 'your-azure-app-id-here',
-                    "secret" => 'your-azure-app-secret-here' // Note: Client secret value, not client secret ID
+                    "id" => '',
+                    "secret" => '' // Note: Client secret value, not client secret ID
                 ],
                 "color" => "info"
             ],
@@ -367,19 +367,19 @@ $CONFIG = [
     "LOG_USER_ID" => true, // Write to database
 
     // Audit Trail
-    "AUDIT_TRAIL_TO_DATABASE" => false, // Write to database
+    "AUDIT_TRAIL_TO_DATABASE" => true, // Write to database
     "AUDIT_TRAIL_DBID" => "DB", // DB ID
-    "AUDIT_TRAIL_TABLE_NAME" => "", // Table name
-    "AUDIT_TRAIL_TABLE_VAR" => "", // Table var
-    "AUDIT_TRAIL_FIELD_NAME_DATETIME" => "datetime", // DateTime field name
-    "AUDIT_TRAIL_FIELD_NAME_SCRIPT" => "script", // Script field name
-    "AUDIT_TRAIL_FIELD_NAME_USER" => "user", // User field name
-    "AUDIT_TRAIL_FIELD_NAME_ACTION" => "action", // Action field name
-    "AUDIT_TRAIL_FIELD_NAME_TABLE" => "table", // Table field name
-    "AUDIT_TRAIL_FIELD_NAME_FIELD" => "field", // Field field name
-    "AUDIT_TRAIL_FIELD_NAME_KEYVALUE" => "keyvalue", // Key Value field name
-    "AUDIT_TRAIL_FIELD_NAME_OLDVALUE" => "oldvalue", // Old Value field name
-    "AUDIT_TRAIL_FIELD_NAME_NEWVALUE" => "newvalue", // New Value field name
+    "AUDIT_TRAIL_TABLE_NAME" => "audittrail", // Table name
+    "AUDIT_TRAIL_TABLE_VAR" => "audittrail", // Table var
+    "AUDIT_TRAIL_FIELD_NAME_DATETIME" => "DateTime", // DateTime field name
+    "AUDIT_TRAIL_FIELD_NAME_SCRIPT" => "Script", // Script field name
+    "AUDIT_TRAIL_FIELD_NAME_USER" => "User", // User field name
+    "AUDIT_TRAIL_FIELD_NAME_ACTION" => "Action", // Action field name
+    "AUDIT_TRAIL_FIELD_NAME_TABLE" => "Table", // Table field name
+    "AUDIT_TRAIL_FIELD_NAME_FIELD" => "Field", // Field field name
+    "AUDIT_TRAIL_FIELD_NAME_KEYVALUE" => "KeyValue", // Key Value field name
+    "AUDIT_TRAIL_FIELD_NAME_OLDVALUE" => "OldValue", // Old Value field name
+    "AUDIT_TRAIL_FIELD_NAME_NEWVALUE" => "NewValue", // New Value field name
 
     // Export Log
     "EXPORT_PATH" => "export-dfb61542-7ffc-43ab-88e7-31d7f8d95066", // Export folder

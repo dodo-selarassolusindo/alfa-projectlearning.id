@@ -131,10 +131,6 @@ class ComposerStaticInit45ac72a8f283cacb326821e8cdd2cdd8
             'Illuminate\\Encryption\\' => 22,
             'Illuminate\\Contracts\\' => 21,
         ),
-        'H' => 
-        array (
-            'Hybridauth\\' => 11,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -355,8 +351,8 @@ class ComposerStaticInit45ac72a8f283cacb326821e8cdd2cdd8
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -450,9 +446,9 @@ class ComposerStaticInit45ac72a8f283cacb326821e8cdd2cdd8
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Filesystem\\' => 
@@ -466,10 +462,6 @@ class ComposerStaticInit45ac72a8f283cacb326821e8cdd2cdd8
         'Illuminate\\Contracts\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/contracts',
-        ),
-        'Hybridauth\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hybridauth/hybridauth/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -529,8 +521,8 @@ class ComposerStaticInit45ac72a8f283cacb326821e8cdd2cdd8
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'DiDom\\' => 
         array (

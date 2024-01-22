@@ -45,7 +45,7 @@ class PersonalData
     public $RenderingView = false;
 
     // CSS class/style
-    public $CurrentPageName = "favorites";
+    public $CurrentPageName = "audittraildelete";
 
     // Page headings
     public $Heading = "";

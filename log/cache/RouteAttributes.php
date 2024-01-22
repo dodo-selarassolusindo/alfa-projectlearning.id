@@ -88,6 +88,11 @@
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone ($p['PHPMaker2024\\demo2024\\Attributes\\Get'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('PHPMaker2024\\demo2024\\Attributes\\Get')),
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Get'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
@@ -137,6 +142,31 @@
     [
         'PHPMaker2024\\demo2024\\Attributes\\Map' => [
             'methods' => [
+                [
+                    'GET',
+                    'POST',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
+                    'OPTIONS',
+                ],
                 [
                     'GET',
                     'POST',
@@ -794,6 +824,11 @@
             ],
             'pattern' => [
                 '/alphabeticallistofproducts',
+                '/audittraillist[/{Id}]',
+                '/audittrailadd[/{Id}]',
+                '/audittrailview[/{Id}]',
+                '/audittrailedit[/{Id}]',
+                '/audittraildelete[/{Id}]',
                 '/calendar1',
                 '/calendar1add[/{Id}]',
                 '/calendar1view[/{Id}]',
@@ -928,6 +963,11 @@
             ],
             'handler' => [
                 'PHPMaker2024\\demo2024\\AlphabeticalListOfProductsController:summary',
+                'PHPMaker2024\\demo2024\\AudittrailController:list',
+                'PHPMaker2024\\demo2024\\AudittrailController:add',
+                'PHPMaker2024\\demo2024\\AudittrailController:view',
+                'PHPMaker2024\\demo2024\\AudittrailController:edit',
+                'PHPMaker2024\\demo2024\\AudittrailController:delete',
                 'PHPMaker2024\\demo2024\\Calendar1Controller:calendar',
                 'PHPMaker2024\\demo2024\\Calendar1Controller:add',
                 'PHPMaker2024\\demo2024\\Calendar1Controller:view',
@@ -1325,6 +1365,21 @@
                 [
                     'PHPMaker2024\\demo2024\\PermissionMiddleware',
                 ],
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
                 [],
                 [
                     'PHPMaker2024\\demo2024\\PermissionMiddleware',
@@ -1458,6 +1513,11 @@
             ],
             'name' => [
                 'summary.Alphabetical_List_of_Products',
+                'list.audittrail',
+                'add.audittrail',
+                'view.audittrail',
+                'edit.audittrail',
+                'delete.audittrail',
                 'calendar.Calendar1',
                 'add.Calendar1',
                 'view.Calendar1',
@@ -1591,6 +1651,11 @@
                 'delete.userlevels',
             ],
             'options' => [
+                [],
+                [],
+                [],
+                [],
+                [],
                 [],
                 [],
                 [],
@@ -1859,6 +1924,11 @@
         $o[129],
         $o[130],
         $o[131],
+        $o[132],
+        $o[133],
+        $o[134],
+        $o[135],
+        $o[136],
     ],
     []
 );
