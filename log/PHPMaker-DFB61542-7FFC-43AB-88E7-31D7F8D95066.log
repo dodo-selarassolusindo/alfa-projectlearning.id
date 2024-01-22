@@ -1,3 +1,4 @@
+
 C:\xampp\htdocs\alfa-projectlearning.id\.htaccess
 C:\xampp\htdocs\alfa-projectlearning.id\api\.htaccess
 C:\xampp\htdocs\alfa-projectlearning.id\api\index.php
@@ -13,13 +14,9 @@ C:\xampp\htdocs\alfa-projectlearning.id\controllers\CategoriesController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ControllerBase.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\CustomersController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\Dashboard1Controller.php
-C:\xampp\htdocs\alfa-projectlearning.id\controllers\DjiController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\EmployeesController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\GanttController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\HomeController.php
-C:\xampp\htdocs\alfa-projectlearning.id\controllers\Locations2Controller.php
-C:\xampp\htdocs\alfa-projectlearning.id\controllers\Locations3Controller.php
-C:\xampp\htdocs\alfa-projectlearning.id\controllers\LocationsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ModelsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\NewsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\OrderDetailsExtendedController.php
@@ -99,11 +96,6 @@ C:\xampp\htdocs\alfa-projectlearning.id\models\CustomersSearch.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\CustomersView.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Dashboard1.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Dji.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\DjiAdd.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\DjiDelete.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\DjiEdit.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\DjiList.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\DjiView.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\EmployeeSalesByCountryFor2014.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Employees.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\EmployeesAdd.php
@@ -120,10 +112,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\models\Home.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\ListOfProducts.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Locations.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Locations2.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\Locations2List.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Locations3.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\Locations3List.php
-C:\xampp\htdocs\alfa-projectlearning.id\models\LocationsList.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Login.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Logout.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Messages2.php
@@ -286,9 +275,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Car.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Cars2.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Category.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Customer.php
-C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Dji.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Employee.php
-C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Location.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Model.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\Order.php
 C:\xampp\htdocs\alfa-projectlearning.id\src\Entity\OrderDetailsExtended.php
@@ -431,11 +418,6 @@ C:\xampp\htdocs\alfa-projectlearning.id\views\CustomersMaster.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\CustomersSearch.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\CustomersView.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Dashboard1.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\DjiAdd.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\DjiDelete.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\DjiEdit.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\DjiList.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\DjiView.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\EmployeesAdd.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\EmployeesDelete.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\EmployeesEdit.php
@@ -445,9 +427,6 @@ C:\xampp\htdocs\alfa-projectlearning.id\views\EmployeesView.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Error.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\GanttSummary.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Home.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\Locations2List.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\Locations3List.php
-C:\xampp\htdocs\alfa-projectlearning.id\views\LocationsList.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Login.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\ModelsAdd.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\ModelsAddopt.php
