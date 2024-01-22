@@ -8,5 +8,5 @@ $Home = &$Page;
 <?php
 $Page->showMessage();
 ?>
-<?= "Welcome to Project-Learning's Home Page" ?>
+<?= "Welcome to Project-Learning's website" ?>
 <?= GetDebugMessage() ?>
