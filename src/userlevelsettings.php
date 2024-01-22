@@ -220,7 +220,7 @@ $USER_LEVEL_PRIVS = [["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}cars","-2","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","0","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","1","9"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","2","15"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","-2","72"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","-2","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","0","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","1","8"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","2","8"]];
