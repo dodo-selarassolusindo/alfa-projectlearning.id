@@ -44,7 +44,7 @@ function Database_Connecting(&$info)
     //    $info["password"] = "";
     //}
     if (!isLocal()) {
-        $info["host"] = "localhost";
+        // $info["host"] = "localhost";
         $info["user"] = "u736643050_alfa";
         $info["password"] = "PresarioCQ43@";
         $info["dbname"] = "u736643050_alfa";
