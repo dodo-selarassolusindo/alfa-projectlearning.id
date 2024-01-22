@@ -5,17 +5,17 @@
     <menu id="10087">
       <phrase id="menutext" value="Home" />
     </menu>
-    <menu id="10153">
-      <phrase id="menutext" value="messages" />
-    </menu>
     <menu id="10088">
       <phrase id="menutext" value="News" />
+    </menu>
+    <menu id="10153">
+      <phrase id="menutext" value="messages" />
     </menu>
     <menu id="10205">
       <phrase id="menutext" value="Membership" />
     </menu>
-    <menu id="10154">
-      <phrase id="menutext" value="favorites" />
+    <menu id="10206">
+      <phrase id="menutext" value="Join Premium" />
     </menu>
     <menu id="16">
       <phrase id="menutext" value="CARS RELATED" />
@@ -31,6 +31,9 @@
     </menu>
     <menu id="10">
       <phrase id="menutext" value="Models" />
+    </menu>
+    <menu id="10154">
+      <phrase id="menutext" value="favorites" />
     </menu>
     <menu id="10109">
       <phrase id="menutext" value="OTHER TABLES" />
@@ -65,9 +68,6 @@
     <menu id="10089">
       <phrase id="menutext" value="Dow Jones Index" />
     </menu>
-    <menu id="10148">
-      <phrase id="menutext" value="Locations (GoogleMaps)" />
-    </menu>
     <menu id="17">
       <phrase id="menutext" value="ADMIN ONLY" />
     </menu>
@@ -86,14 +86,11 @@
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
     </menu>
-    <menu id="10149">
-      <phrase id="menutext" value="Locations (Leaflet OSM)" />
+    <menu id="10148">
+      <phrase id="menutext" value="Locations (GoogleMaps)" />
     </menu>
     <menu id="10152">
       <phrase id="menutext" value="Calendar" />
-    </menu>
-    <menu id="10150">
-      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
     </menu>
     <menu id="10144">
       <phrase id="menutext" value="REPORTS" />
@@ -130,6 +127,12 @@
     </menu>
     <menu id="10146">
       <phrase id="menutext" value="Gantt" />
+    </menu>
+    <menu id="10149">
+      <phrase id="menutext" value="Locations (Leaflet OSM)" />
+    </menu>
+    <menu id="10150">
+      <phrase id="menutext" value="Locations (Leaflet Mapbox)" />
     </menu>
     <menu id="10147">
       <phrase id="menutext" value="Tasks" />
@@ -1514,6 +1517,9 @@
       <field id="newvalue">
         <phrase id="fldcaption" value="New Value" />
       </field>
+    </table>
+    <table id="join_premium">
+      <phrase id="tblcaption" value="Join Premium" />
     </table>
   </project>
 </ew-language>

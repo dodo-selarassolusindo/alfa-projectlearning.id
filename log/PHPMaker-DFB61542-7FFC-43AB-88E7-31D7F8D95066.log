@@ -16,6 +16,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\controllers\Dashboard1Controller.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\EmployeesController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\GanttController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\HomeController.php
+C:\xampp\htdocs\alfa-projectlearning.id\controllers\JoinPremiumController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ModelsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\NewsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\OrderDetailsExtendedController.php
@@ -108,6 +109,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\models\Gantt.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Gantt3.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\GanttSummary.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Home.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\JoinPremium.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\ListOfProducts.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Locations.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Locations2.php
@@ -426,6 +428,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\views\EmployeesView.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Error.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\GanttSummary.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Home.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\JoinPremium.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Login.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\ModelsAdd.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\ModelsAddopt.php

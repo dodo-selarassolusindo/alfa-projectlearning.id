@@ -85,6 +85,7 @@
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
+        clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
         clone ($p['PHPMaker2024\\demo2024\\Attributes\\Get'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('PHPMaker2024\\demo2024\\Attributes\\Get')),
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Get'],
         clone $p['PHPMaker2024\\demo2024\\Attributes\\Map'],
@@ -176,6 +177,11 @@
                 ],
                 [
                     'GET',
+                    'OPTIONS',
+                ],
+                [
+                    'GET',
+                    'POST',
                     'OPTIONS',
                 ],
                 [
@@ -820,6 +826,7 @@
                 '/employeessearch',
                 '/gantt',
                 '/home[/{params:.*}]',
+                '/joinpremium[/{params:.*}]',
                 '/modelslist[/{ID}]',
                 '/modelsadd[/{ID}]',
                 '/modelsaddopt',
@@ -951,6 +958,7 @@
                 'PHPMaker2024\\demo2024\\EmployeesController:search',
                 'PHPMaker2024\\demo2024\\GanttController:summary',
                 'PHPMaker2024\\demo2024\\HomeController:custom',
+                'PHPMaker2024\\demo2024\\JoinPremiumController:custom',
                 'PHPMaker2024\\demo2024\\ModelsController:list',
                 'PHPMaker2024\\demo2024\\ModelsController:add',
                 'PHPMaker2024\\demo2024\\ModelsController:addopt',
@@ -1037,6 +1045,9 @@
                 'PHPMaker2024\\demo2024\\UserlevelsController:delete',
             ],
             'middleware' => [
+                [
+                    'PHPMaker2024\\demo2024\\PermissionMiddleware',
+                ],
                 [
                     'PHPMaker2024\\demo2024\\PermissionMiddleware',
                 ],
@@ -1469,6 +1480,7 @@
                 'search.employees',
                 'summary.Gantt',
                 'custom.home',
+                'custom.join_premium',
                 'list.models',
                 'add.models',
                 'addopt.models',
@@ -1555,6 +1567,7 @@
                 'delete.userlevels',
             ],
             'options' => [
+                [],
                 [],
                 [],
                 [],
@@ -1817,6 +1830,7 @@
         $o[126],
         $o[127],
         $o[128],
+        $o[129],
     ],
     []
 );

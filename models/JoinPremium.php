@@ -16,12 +16,12 @@ use Closure;
 /**
  * Page class
  */
-class Privacy
+class JoinPremium
 {
     use MessagesTrait;
 
     // Page ID
-    public $PageID = "privacy";
+    public $PageID = "custom";
 
     // Project ID
     public $ProjectID = PROJECT_ID;
@@ -33,7 +33,7 @@ class Privacy
     public $TableVar;
 
     // Page object name
-    public $PageObjName = "Privacy";
+    public $PageObjName = "JoinPremium";
 
     // View file path
     public $View = null;
@@ -45,13 +45,12 @@ class Privacy
     public $RenderingView = false;
 
     // CSS class/style
+    public $ReportContainerClass = "ew-grid";
     public $CurrentPageName = "joinpremiumcontroller";
 
     // Page headings
     public $Heading = "";
     public $Subheading = "";
-    public $PageHeader;
-    public $PageFooter;
 
     // Page layout
     public $UseLayout = true;
@@ -112,6 +111,11 @@ class Privacy
 
         // Language object
         $Language = Container("app.language");
+
+        // Table name (for backward compatibility only)
+        if (!defined(PROJECT_NAMESPACE . "TABLE_NAME")) {
+            define(PROJECT_NAMESPACE . "TABLE_NAME", 'join_premium.php');
+        }
 
         // Start timer
         $DebugTimer = Container("debug.timer");
@@ -178,6 +182,11 @@ class Privacy
 
         // Page is terminated
         $this->terminated = true;
+
+        // Page Unload event
+        if (method_exists($this, "pageUnload")) {
+            $this->pageUnload();
+        }
         DispatchEvent(new PageUnloadedEvent($this), PageUnloadedEvent::NAME);
 
         // Close connection
@@ -217,7 +226,7 @@ class Privacy
      */
     public function run()
     {
-        global $ExportType, $Language, $Security, $CurrentForm, $Breadcrumb;
+        global $ExportType, $Language, $Security, $CurrentForm;
 
         // Use layout
         $this->UseLayout = $this->UseLayout && ConvertToBool(Param(Config("PAGE_LAYOUT"), true));
@@ -229,11 +238,20 @@ class Privacy
         if (IsLoggedIn()) {
             Profile()->setUserName(CurrentUserName())->loadFromStorage();
         }
+        if (Get("export") !== null) {
+            $ExportType = Get("export"); // Get export parameter, used in header
+        }
 
         // Global Page Loading event (in userfn*.php)
         DispatchEvent(new PageLoadingEvent($this), PageLoadingEvent::NAME);
-        $Breadcrumb = Breadcrumb::create("home")->add("privacy", "PrivacyPolicy", CurrentUrl(), "ew-privacy", "", true);
-        $this->Heading = $Language->phrase("PrivacyPolicy");
+
+        // Page Load event
+        if (method_exists($this, "pageLoad")) {
+            $this->pageLoad();
+        }
+
+        // Set up Breadcrumb
+        $this->setupBreadcrumb();
 
         // Set LoginStatus / Page_Rendering / Page_Render
         if (!IsApi() && !$this->isTerminated()) {
@@ -256,5 +274,31 @@ class Privacy
                 $this->renderSearchOptions();
             }
         }
+    }
+
+    // Set up Breadcrumb
+    protected function setupBreadcrumb()
+    {
+        global $Breadcrumb, $Language;
+        $Breadcrumb = Breadcrumb::create("home")->add("custom", "join_premium", CurrentUrl(), "", "join_premium", true);
+        $this->Heading = $Language->tablePhrase("join_premium", "TblCaption");
+    }
+
+    // Page Load event
+    public function pageLoad()
+    {
+        //Log("Page Load");
+    }
+
+    // Page Unload event
+    public function pageUnload()
+    {
+        //Log("Page Unload");
+    }
+
+    // Page Render event
+    public function pageRender()
+    {
+        //Log("Page Render");
     }
 }

@@ -219,7 +219,11 @@ $USER_LEVEL_PRIVS = [["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}cars","-2","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","-2","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","0","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","1","9"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","2","15"]];
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","2","15"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","-2","72"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","0","0"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","1","8"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","2","8"]];
 
 /**
  * Tables
@@ -280,4 +284,5 @@ $USER_LEVEL_TABLES = [["cars","cars","Cars",true,"{DFB61542-7FFC-43AB-88E7-31D7F
     ["Calendar1","Calendar1","Calendar 1",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","calendar1"],
     ["messages","messages2","messages",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["favorites","favorites","favorites",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
-    ["audittrail","audittrail","Audit Trail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"]];
+    ["audittrail","audittrail","Audit Trail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"],
+    ["join_premium.php","join_premium","Join Premium",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","joinpremium"]];
