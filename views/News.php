@@ -12,6 +12,11 @@ $Page->showMessage();
 	<div class="card-header">
 		<h5 class="m-0">Latest News</h5>
 	</div>
+    <div class="card-body">
+		<h6 class="card-title">22-01-2024 - Project Learning Membership (alfa-release) Released</h6>
+		<p class="card-text">For more information, please visit <a href="#">Project Learning</a></p>
+		<a href="projectlearning.id" class="btn btn-primary">Go to Project-Learning website</a>
+	</div>
 	<div class="card-body">
 		<h6 class="card-title">2023/09/05 - PHPMaker 2024 Released</h6>
 		<p class="card-text">For more information, please visit PHPMaker website.</p>
