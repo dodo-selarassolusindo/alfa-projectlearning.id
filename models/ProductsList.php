@@ -1865,12 +1865,12 @@ class ProductsList extends Products
                         $icon = ($listAction->Icon != "") ? "<i class=\"" . HtmlEncode(str_replace(" ew-icon", "", $listAction->Icon)) . "\" data-caption=\"" . $title . "\"></i> " : "";
                         $link = $disabled
                             ? "<li><div class=\"alert alert-light\">" . $icon . " " . $caption . "</div></li>"
-                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fproductslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button></li>";
+                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fproductslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button></li>";
                         $links[] = $link;
                         if ($body == "") { // Setup first button
                             $body = $disabled
                             ? "<div class=\"alert alert-light\">" . $icon . " " . $caption . "</div>"
-                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fproductslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button>";
+                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fproductslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button>";
                         }
                     }
                 }
@@ -2027,7 +2027,7 @@ class ProductsList extends Products
                 $item = &$option->add("custom_" . $listAction->Action);
                 $caption = $listAction->Caption;
                 $icon = ($listAction->Icon != "") ? '<i class="' . HtmlEncode($listAction->Icon) . '" data-caption="' . HtmlEncode($caption) . '"></i>' . $caption : $caption;
-                $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fproductslist"' . $listAction->toDataAttributes() . '>' . $icon . '</button>';
+                $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fproductslist"' . $listAction->toDataAttrs() . '>' . $icon . '</button>';
                 $item->Visible = $listAction->Allowed;
             }
         }
@@ -2105,9 +2105,7 @@ class ProductsList extends Products
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2117,9 +2115,7 @@ class ProductsList extends Products
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);
@@ -2984,13 +2980,9 @@ class ProductsList extends Products
                     // Rollback transaction
                     if ($this->ImportUseTransaction) {
                         if ($rollback || $failCnt > $this->ImportMaxFailures) {
-                            if ($conn->isTransactionActive()) {
-                                $res["rollbacked"] = $conn->rollback();
-                            }
+                            $res["rollbacked"] = $conn->rollback();
                         } else {
-                            if ($conn->isTransactionActive()) {
-                                $conn->commit();
-                            }
+                            $conn->commit();
                         }
                     }
                     unset($res["row"], $res["error"]); // Remove current row info

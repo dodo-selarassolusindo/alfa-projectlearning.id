@@ -7,7 +7,6 @@ use Monolog\Formatter\LineFormatter;
 use Monolog\Formatter\NormalizerFormatter;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Utils;
-use Monolog\LogRecord;
 
 /**
  * Stores to CSV file
@@ -24,7 +23,7 @@ class AuditTrailHandler extends RotatingFileHandler
     /**
      * @inheritdoc
      */
-    protected function streamWrite($stream, LogRecord $record): void
+    protected function streamWrite($stream, \Monolog\LogRecord $record): void
     {
         if (self::$UseHeader && filesize($this->url) == 0 && $this->writeHeader) {
             fputcsv($stream, self::$Headers, self::$Delimiter, self::$Enclosure, self::$EscapeChar); // Write headers

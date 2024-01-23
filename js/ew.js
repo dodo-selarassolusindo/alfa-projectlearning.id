@@ -1,5 +1,5 @@
 /*!
- * JavaScript for PHPMaker v2024.7.0
+ * JavaScript for PHPMaker v2024.6.0
  * Copyright (c) e.World Technology Limited. All rights reserved.
  */
 (function (ew$1, $$1, luxon) {
@@ -1915,7 +1915,6 @@
           });
         }, delay); // Focus after tab transition
         this._focused = true;
-        this.trigger("focused");
       }
     }
 
@@ -1987,7 +1986,6 @@
           preventScroll: Form.autoFocusPreventScroll && this.autoFocusPreventScroll
         }); // Focus the Quick Search input
         this._focused = true;
-        this.trigger("focused");
       }
     }
 
@@ -6433,6 +6431,32 @@
   }
 
   /**
+   * Get HTML for a single option
+   *
+   * @param {*} val - Value of the option
+   * @returns {string} HTML
+   */
+  function optionHtml(val) {
+    return ew.OPTION_HTML_TEMPLATE.replace(/\{value\}/g, val);
+  }
+
+  /**
+   * Get HTML for diplaying all options
+   *
+   * @param {string[]} options - Array of all options (HTML)
+   * @param {number} max - Maximum number of options to show
+   * @returns {string} HTML
+   */
+  function optionsHtml(options, max) {
+    if (options.length > (max || ew.MAX_OPTION_COUNT))
+      // More than max option count
+      return ew.language.phrase("CountSelected").replace("%s", options.length);else if (options.length)
+      // Some options
+      return options.reduce((previous, current) => previous + optionHtml(current), "");
+    return ew.language.phrase("PleaseSelect"); // No options
+  }
+
+  /**
    * Create new option
    *
    * @param {(HTMLElement|array)} obj - Selection list
@@ -9257,6 +9281,8 @@
     modalDialogShow,
     newOption,
     onError,
+    optionHtml,
+    optionsHtml,
     parseDate: parseDateTime,
     parseDateTime,
     parseJson,

@@ -1,4 +1,4 @@
-<ew-language date="2024/1/23" id="en-US" author="e.World Technology Limited">
+<ew-language date="2024/1/23" id="en-US" desc="English" author="e.World Technology Limited">
   <project>
     <phrase id="bodytitle" value="Project Learning Membership (alfa-release)" />
     <phrase id="footertext" value="&amp;copy;2024 Project Learning Team. All rights reserved." />
@@ -8,9 +8,6 @@
     <menu id="10088">
       <phrase id="menutext" value="News" />
     </menu>
-    <menu id="10153">
-      <phrase id="menutext" value="messages" />
-    </menu>
     <menu id="10205">
       <phrase id="menutext" value="Membership" />
     </menu>
@@ -19,6 +16,9 @@
     </menu>
     <menu id="10208">
       <phrase id="menutext" value="Konfirmasi Pembayaran" />
+    </menu>
+    <menu id="10153">
+      <phrase id="menutext" value="messages" />
     </menu>
     <menu id="16">
       <phrase id="menutext" value="CARS RELATED" />
@@ -68,9 +68,6 @@
     <menu id="10089">
       <phrase id="menutext" value="Dow Jones Index" />
     </menu>
-    <menu id="10154">
-      <phrase id="menutext" value="favorites" />
-    </menu>
     <menu id="17">
       <phrase id="menutext" value="ADMIN ONLY" />
     </menu>
@@ -83,8 +80,11 @@
     <menu id="10083">
       <phrase id="menutext" value="User Level Permissions" />
     </menu>
-    <menu id="10207">
+    <menu id="10209">
       <phrase id="menutext" value="Audit Trail" />
+    </menu>
+    <menu id="10154">
+      <phrase id="menutext" value="favorites" />
     </menu>
     <menu id="10127">
       <phrase id="menutext" value="Dashboard" />
@@ -715,9 +715,7 @@
         <phrase id="fldcaption" value="Torque" />
       </field>
     </table>
-    <table id="home">
-      <phrase id="tblcaption" value="Welcome" />
-    </table>
+    <table id="home" />
     <table id="news">
       <phrase id="tblcaption" value="News" />
     </table>
@@ -1491,6 +1489,9 @@
     <table id="join_premium">
       <phrase id="tblcaption" value="Join Premium" />
     </table>
+    <table id="konfirmasi_pembayaran">
+      <phrase id="tblcaption" value="Konfirmasi Pembayaran" />
+    </table>
     <table id="audittrail">
       <phrase id="tblcaption" value="Audit Trail" />
       <field id="id">
@@ -1523,9 +1524,6 @@
       <field id="newvalue">
         <phrase id="fldcaption" value="New Value" />
       </field>
-    </table>
-    <table id="konfirmasi_pembayaran">
-      <phrase id="tblcaption" value="Konfirmasi Pembayaran" />
     </table>
   </project>
 </ew-language>

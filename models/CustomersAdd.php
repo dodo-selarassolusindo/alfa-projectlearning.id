@@ -1325,15 +1325,11 @@ class CustomersAdd extends Customers
         if ($this->getCurrentDetailTable() != "") {
             if ($addRow) {
                 if ($this->UseTransaction) { // Commit transaction
-                    if ($conn->isTransactionActive()) {
-                        $conn->commit();
-                    }
+                    $conn->commit();
                 }
             } else {
                 if ($this->UseTransaction) { // Rollback transaction
-                    if ($conn->isTransactionActive()) {
-                        $conn->rollback();
-                    }
+                    $conn->rollback();
                 }
             }
         }

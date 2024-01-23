@@ -1431,9 +1431,7 @@ class SuppliersList extends Suppliers
         }
         if ($gridUpdate) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
             $this->FilterForModalActions = $wrkfilter;
 
@@ -1448,9 +1446,7 @@ class SuppliersList extends Suppliers
             $this->clearInlineMode(); // Clear inline edit mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("UpdateFailed")); // Set update failed message
@@ -1562,9 +1558,7 @@ class SuppliersList extends Suppliers
         }
         if ($gridInsert) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Get new records
@@ -1581,9 +1575,7 @@ class SuppliersList extends Suppliers
             $this->clearInlineMode(); // Clear grid add mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("InsertFailed")); // Set insert failed message
@@ -1596,28 +1588,13 @@ class SuppliersList extends Suppliers
     public function emptyRow()
     {
         global $CurrentForm;
-        if (
-            $CurrentForm->hasValue("x_CompanyName") &&
-            $CurrentForm->hasValue("o_CompanyName") &&
-            $this->CompanyName->CurrentValue != $this->CompanyName->DefaultValue &&
-            !($this->CompanyName->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->CompanyName->CurrentValue == $this->CompanyName->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_CompanyName") && $CurrentForm->hasValue("o_CompanyName") && $this->CompanyName->CurrentValue != $this->CompanyName->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_ContactName") &&
-            $CurrentForm->hasValue("o_ContactName") &&
-            $this->ContactName->CurrentValue != $this->ContactName->DefaultValue &&
-            !($this->ContactName->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ContactName->CurrentValue == $this->ContactName->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_ContactName") && $CurrentForm->hasValue("o_ContactName") && $this->ContactName->CurrentValue != $this->ContactName->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_ContactTitle") &&
-            $CurrentForm->hasValue("o_ContactTitle") &&
-            $this->ContactTitle->CurrentValue != $this->ContactTitle->DefaultValue &&
-            !($this->ContactTitle->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ContactTitle->CurrentValue == $this->ContactTitle->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_ContactTitle") && $CurrentForm->hasValue("o_ContactTitle") && $this->ContactTitle->CurrentValue != $this->ContactTitle->DefaultValue) {
             return false;
         }
         return true;
@@ -2533,12 +2510,12 @@ class SuppliersList extends Suppliers
                         $icon = ($listAction->Icon != "") ? "<i class=\"" . HtmlEncode(str_replace(" ew-icon", "", $listAction->Icon)) . "\" data-caption=\"" . $title . "\"></i> " : "";
                         $link = $disabled
                             ? "<li><div class=\"alert alert-light\">" . $icon . " " . $caption . "</div></li>"
-                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fsupplierslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button></li>";
+                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fsupplierslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button></li>";
                         $links[] = $link;
                         if ($body == "") { // Setup first button
                             $body = $disabled
                             ? "<div class=\"alert alert-light\">" . $icon . " " . $caption . "</div>"
-                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fsupplierslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button>";
+                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fsupplierslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button>";
                         }
                     }
                 }
@@ -2752,7 +2729,7 @@ class SuppliersList extends Suppliers
                     $item = &$option->add("custom_" . $listAction->Action);
                     $caption = $listAction->Caption;
                     $icon = ($listAction->Icon != "") ? '<i class="' . HtmlEncode($listAction->Icon) . '" data-caption="' . HtmlEncode($caption) . '"></i>' . $caption : $caption;
-                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fsupplierslist"' . $listAction->toDataAttributes() . '>' . $icon . '</button>';
+                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fsupplierslist"' . $listAction->toDataAttrs() . '>' . $icon . '</button>';
                     $item->Visible = $listAction->Allowed;
                 }
             }
@@ -2914,9 +2891,7 @@ class SuppliersList extends Suppliers
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2926,9 +2901,7 @@ class SuppliersList extends Suppliers
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

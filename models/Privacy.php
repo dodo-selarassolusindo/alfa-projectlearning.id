@@ -45,7 +45,7 @@ class Privacy
     public $RenderingView = false;
 
     // CSS class/style
-    public $CurrentPageName = "homecontroller";
+    public $CurrentPageName = "audittraildelete";
 
     // Page headings
     public $Heading = "";

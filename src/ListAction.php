@@ -50,7 +50,7 @@ class ListAction
     }
 
     // To data-* attributes
-    public function toDataAttributes(): string
+    public function toDataAttrs(): string
     {
         return (new Attributes([
             "data-msg" => HtmlEncode($this->ConfirmMessage),

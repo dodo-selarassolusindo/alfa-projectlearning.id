@@ -1260,9 +1260,7 @@ class OrderdetailsList extends Orderdetails
         }
         if ($gridUpdate) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
             $this->FilterForModalActions = $wrkfilter;
 
@@ -1277,9 +1275,7 @@ class OrderdetailsList extends Orderdetails
             $this->clearInlineMode(); // Clear inline edit mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("UpdateFailed")); // Set update failed message
@@ -1395,9 +1391,7 @@ class OrderdetailsList extends Orderdetails
         }
         if ($gridInsert) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Get new records
@@ -1414,9 +1408,7 @@ class OrderdetailsList extends Orderdetails
             $this->clearInlineMode(); // Clear grid add mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("InsertFailed")); // Set insert failed message
@@ -1429,52 +1421,22 @@ class OrderdetailsList extends Orderdetails
     public function emptyRow()
     {
         global $CurrentForm;
-        if (
-            $CurrentForm->hasValue("x_OrderID") &&
-            $CurrentForm->hasValue("o_OrderID") &&
-            $this->OrderID->CurrentValue != $this->OrderID->DefaultValue &&
-            !($this->OrderID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->OrderID->CurrentValue == $this->OrderID->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_OrderID") && $CurrentForm->hasValue("o_OrderID") && $this->OrderID->CurrentValue != $this->OrderID->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_ProductID") &&
-            $CurrentForm->hasValue("o_ProductID") &&
-            $this->ProductID->CurrentValue != $this->ProductID->DefaultValue &&
-            !($this->ProductID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ProductID->CurrentValue == $this->ProductID->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_ProductID") && $CurrentForm->hasValue("o_ProductID") && $this->ProductID->CurrentValue != $this->ProductID->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_UnitPrice") &&
-            $CurrentForm->hasValue("o_UnitPrice") &&
-            $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue &&
-            !($this->UnitPrice->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->UnitPrice->CurrentValue == $this->UnitPrice->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_UnitPrice") && $CurrentForm->hasValue("o_UnitPrice") && $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_Quantity") &&
-            $CurrentForm->hasValue("o_Quantity") &&
-            $this->Quantity->CurrentValue != $this->Quantity->DefaultValue &&
-            !($this->Quantity->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Quantity->CurrentValue == $this->Quantity->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_Quantity") && $CurrentForm->hasValue("o_Quantity") && $this->Quantity->CurrentValue != $this->Quantity->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_Discount") &&
-            $CurrentForm->hasValue("o_Discount") &&
-            $this->Discount->CurrentValue != $this->Discount->DefaultValue &&
-            !($this->Discount->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Discount->CurrentValue == $this->Discount->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_Discount") && $CurrentForm->hasValue("o_Discount") && $this->Discount->CurrentValue != $this->Discount->DefaultValue) {
             return false;
         }
-        if (
-            $CurrentForm->hasValue("x_SubTotal") &&
-            $CurrentForm->hasValue("o_SubTotal") &&
-            $this->SubTotal->CurrentValue != $this->SubTotal->DefaultValue &&
-            !($this->SubTotal->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->SubTotal->CurrentValue == $this->SubTotal->getSessionValue())
-        ) {
+        if ($CurrentForm->hasValue("x_SubTotal") && $CurrentForm->hasValue("o_SubTotal") && $this->SubTotal->CurrentValue != $this->SubTotal->DefaultValue) {
             return false;
         }
         return true;
@@ -2188,12 +2150,12 @@ class OrderdetailsList extends Orderdetails
                         $icon = ($listAction->Icon != "") ? "<i class=\"" . HtmlEncode(str_replace(" ew-icon", "", $listAction->Icon)) . "\" data-caption=\"" . $title . "\"></i> " : "";
                         $link = $disabled
                             ? "<li><div class=\"alert alert-light\">" . $icon . " " . $caption . "</div></li>"
-                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forderdetailslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button></li>";
+                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forderdetailslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button></li>";
                         $links[] = $link;
                         if ($body == "") { // Setup first button
                             $body = $disabled
                             ? "<div class=\"alert alert-light\">" . $icon . " " . $caption . "</div>"
-                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forderdetailslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button>";
+                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forderdetailslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button>";
                         }
                     }
                 }
@@ -2363,7 +2325,7 @@ class OrderdetailsList extends Orderdetails
                     $item = &$option->add("custom_" . $listAction->Action);
                     $caption = $listAction->Caption;
                     $icon = ($listAction->Icon != "") ? '<i class="' . HtmlEncode($listAction->Icon) . '" data-caption="' . HtmlEncode($caption) . '"></i>' . $caption : $caption;
-                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="forderdetailslist"' . $listAction->toDataAttributes() . '>' . $icon . '</button>';
+                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="forderdetailslist"' . $listAction->toDataAttrs() . '>' . $icon . '</button>';
                     $item->Visible = $listAction->Allowed;
                 }
             }
@@ -2492,9 +2454,7 @@ class OrderdetailsList extends Orderdetails
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2504,9 +2464,7 @@ class OrderdetailsList extends Orderdetails
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

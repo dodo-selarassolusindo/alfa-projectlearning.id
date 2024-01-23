@@ -1477,15 +1477,11 @@ class CustomersEdit extends Customers
             if ($this->getCurrentDetailTable() != "") {
                 if ($editRow) {
                     if ($this->UseTransaction) { // Commit transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->commit();
-                        }
+                        $conn->commit();
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        if ($conn->isTransactionActive()) {
-                            $conn->rollback();
-                        }
+                        $conn->rollback();
                     }
                 }
             }

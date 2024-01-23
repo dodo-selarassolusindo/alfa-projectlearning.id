@@ -220,14 +220,14 @@ $USER_LEVEL_PRIVS = [["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}cars","-2","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","0","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","1","8"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}join_premium.php","2","8"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","-2","0"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","0","0"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","1","9"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","2","15"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}konfirmasi_pembayaran.php","-2","72"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}konfirmasi_pembayaran.php","0","0"],
     ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}konfirmasi_pembayaran.php","1","8"],
-    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}konfirmasi_pembayaran.php","2","8"]];
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}konfirmasi_pembayaran.php","2","8"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","-2","0"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","0","0"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","1","9"],
+    ["{DFB61542-7FFC-43AB-88E7-31D7F8D95066}audittrail","2","15"]];
 
 /**
  * Tables
@@ -256,7 +256,7 @@ $USER_LEVEL_TABLES = [["cars","cars","Cars",true,"{DFB61542-7FFC-43AB-88E7-31D7F
     ["order details extended","order_details_extended","Order Details Extended",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","orderdetailsextendedlist"],
     ["orders2","orders2","Orders 2",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","orders2list"],
     ["cars2","cars2","Cars 2",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","cars2list"],
-    ["home.php","home","Welcome",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","home"],
+    ["home.php","home","",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","home"],
     ["news.php","news","News",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","news"],
     ["dji","dji","Dow Jones Index",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["employee_sales_by_country_for_2014","employee_sales_by_country_for_2014","employee sales by county for 2014",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
@@ -289,5 +289,5 @@ $USER_LEVEL_TABLES = [["cars","cars","Cars",true,"{DFB61542-7FFC-43AB-88E7-31D7F
     ["messages","messages2","messages",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["favorites","favorites","favorites",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}",""],
     ["join_premium.php","join_premium","Join Premium",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","joinpremium"],
-    ["audittrail","audittrail","Audit Trail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"],
-    ["konfirmasi_pembayaran.php","konfirmasi_pembayaran","Konfirmasi Pembayaran",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","konfirmasipembayaran"]];
+    ["konfirmasi_pembayaran.php","konfirmasi_pembayaran","Konfirmasi Pembayaran",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","konfirmasipembayaran"],
+    ["audittrail","audittrail","Audit Trail",true,"{DFB61542-7FFC-43AB-88E7-31D7F8D95066}","audittraillist"]];

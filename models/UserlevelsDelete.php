@@ -709,9 +709,7 @@ class UserlevelsDelete extends Userlevels
         }
         if ($deleteRows) {
             if ($this->UseTransaction) { // Commit transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->commit();
-                }
+                $conn->commit();
             }
 
             // Set warning message if delete some records failed
@@ -720,9 +718,7 @@ class UserlevelsDelete extends Userlevels
             }
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                if ($conn->isTransactionActive()) {
-                    $conn->rollback();
-                }
+                $conn->rollback();
             }
         }
 

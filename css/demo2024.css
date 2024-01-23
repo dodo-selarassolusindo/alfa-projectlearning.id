@@ -490,7 +490,7 @@ label.form-check-label {
 .ew-desktop .ew-desktop-table > thead > tr > td:first-of-type > span[id^=elh_], .ew-desktop .ew-desktop-table > tbody > tr > td:first-of-type > span[id^=elh_] {
   font-weight: bold;
   display: inline-block;
-  margin-top: 0.25rem;
+  margin-top: 0.75rem;
 }
 .ew-desktop .ew-desktop-table > thead > tr > td:first-of-type .checkbox, .ew-desktop .ew-desktop-table > tbody > tr > td:first-of-type .checkbox {
   margin-top: 0;
@@ -500,7 +500,7 @@ label.form-check-label {
   font-weight: bold;
 }
 .ew-desktop .ew-desktop-table > thead > tr > td:nth-of-type(2):not(:last-of-type) .ew-search-operator, .ew-desktop .ew-desktop-table > tbody > tr > td:nth-of-type(2):not(:last-of-type) .ew-search-operator {
-  margin-top: 0.25rem;
+  margin-top: 0.75rem;
 }
 .ew-desktop .ew-desktop-table > thead > tr > th:last-of-type, .ew-desktop .ew-desktop-table > thead > tr > td:last-of-type, .ew-desktop .ew-desktop-table > tbody > tr > th:last-of-type, .ew-desktop .ew-desktop-table > tbody > tr > td:last-of-type {
   min-width: 150px;
