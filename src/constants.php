@@ -41,7 +41,7 @@ define(PROJECT_NAMESPACE . "PRIVILEGES", [
 ]); // User permissions
 
 // Product version
-define(PROJECT_NAMESPACE . "PRODUCT_VERSION", "24.6.0");
+define(PROJECT_NAMESPACE . "PRODUCT_VERSION", "24.7.0");
 
 // Project
 define(PROJECT_NAMESPACE . "PROJECT_NAME", "demo2024"); // Project name

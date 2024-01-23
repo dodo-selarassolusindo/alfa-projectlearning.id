@@ -1091,34 +1091,79 @@ class ProductsGrid extends Products
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_ProductName") && $CurrentForm->hasValue("o_ProductName") && $this->ProductName->CurrentValue != $this->ProductName->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ProductName") &&
+            $CurrentForm->hasValue("o_ProductName") &&
+            $this->ProductName->CurrentValue != $this->ProductName->DefaultValue &&
+            !($this->ProductName->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ProductName->CurrentValue == $this->ProductName->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_SupplierID") && $CurrentForm->hasValue("o_SupplierID") && $this->SupplierID->CurrentValue != $this->SupplierID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_SupplierID") &&
+            $CurrentForm->hasValue("o_SupplierID") &&
+            $this->SupplierID->CurrentValue != $this->SupplierID->DefaultValue &&
+            !($this->SupplierID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->SupplierID->CurrentValue == $this->SupplierID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_CategoryID") && $CurrentForm->hasValue("o_CategoryID") && $this->CategoryID->CurrentValue != $this->CategoryID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_CategoryID") &&
+            $CurrentForm->hasValue("o_CategoryID") &&
+            $this->CategoryID->CurrentValue != $this->CategoryID->DefaultValue &&
+            !($this->CategoryID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->CategoryID->CurrentValue == $this->CategoryID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_QuantityPerUnit") && $CurrentForm->hasValue("o_QuantityPerUnit") && $this->QuantityPerUnit->CurrentValue != $this->QuantityPerUnit->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_QuantityPerUnit") &&
+            $CurrentForm->hasValue("o_QuantityPerUnit") &&
+            $this->QuantityPerUnit->CurrentValue != $this->QuantityPerUnit->DefaultValue &&
+            !($this->QuantityPerUnit->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->QuantityPerUnit->CurrentValue == $this->QuantityPerUnit->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_UnitPrice") && $CurrentForm->hasValue("o_UnitPrice") && $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_UnitPrice") &&
+            $CurrentForm->hasValue("o_UnitPrice") &&
+            $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue &&
+            !($this->UnitPrice->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->UnitPrice->CurrentValue == $this->UnitPrice->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_UnitsInStock") && $CurrentForm->hasValue("o_UnitsInStock") && $this->UnitsInStock->CurrentValue != $this->UnitsInStock->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_UnitsInStock") &&
+            $CurrentForm->hasValue("o_UnitsInStock") &&
+            $this->UnitsInStock->CurrentValue != $this->UnitsInStock->DefaultValue &&
+            !($this->UnitsInStock->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->UnitsInStock->CurrentValue == $this->UnitsInStock->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_UnitsOnOrder") && $CurrentForm->hasValue("o_UnitsOnOrder") && $this->UnitsOnOrder->CurrentValue != $this->UnitsOnOrder->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_UnitsOnOrder") &&
+            $CurrentForm->hasValue("o_UnitsOnOrder") &&
+            $this->UnitsOnOrder->CurrentValue != $this->UnitsOnOrder->DefaultValue &&
+            !($this->UnitsOnOrder->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->UnitsOnOrder->CurrentValue == $this->UnitsOnOrder->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ReorderLevel") && $CurrentForm->hasValue("o_ReorderLevel") && $this->ReorderLevel->CurrentValue != $this->ReorderLevel->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ReorderLevel") &&
+            $CurrentForm->hasValue("o_ReorderLevel") &&
+            $this->ReorderLevel->CurrentValue != $this->ReorderLevel->DefaultValue &&
+            !($this->ReorderLevel->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ReorderLevel->CurrentValue == $this->ReorderLevel->getSessionValue())
+        ) {
             return false;
         }
         if ($CurrentForm->hasValue("x_Discontinued") && $CurrentForm->hasValue("o_Discontinued") && ConvertToBool($this->Discontinued->CurrentValue) != ConvertToBool($this->Discontinued->DefaultValue)) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_EAN13") && $CurrentForm->hasValue("o_EAN13") && $this->EAN13->CurrentValue != $this->EAN13->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_EAN13") &&
+            $CurrentForm->hasValue("o_EAN13") &&
+            $this->EAN13->CurrentValue != $this->EAN13->DefaultValue &&
+            !($this->EAN13->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->EAN13->CurrentValue == $this->EAN13->getSessionValue())
+        ) {
             return false;
         }
         return true;

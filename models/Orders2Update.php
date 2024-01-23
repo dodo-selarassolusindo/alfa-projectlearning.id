@@ -728,7 +728,9 @@ class Orders2Update extends Orders2
         // Check if any rows updated
         if (count($successKeys) > 0) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
 
             // Set warning message if update some records failed
@@ -741,7 +743,9 @@ class Orders2Update extends Orders2
             return true;
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             return false;
         }

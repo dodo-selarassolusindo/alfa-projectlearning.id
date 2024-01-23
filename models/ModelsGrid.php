@@ -1080,10 +1080,20 @@ class ModelsGrid extends Models
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_Trademark") && $CurrentForm->hasValue("o_Trademark") && $this->Trademark->CurrentValue != $this->Trademark->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Trademark") &&
+            $CurrentForm->hasValue("o_Trademark") &&
+            $this->Trademark->CurrentValue != $this->Trademark->DefaultValue &&
+            !($this->Trademark->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Trademark->CurrentValue == $this->Trademark->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Model") && $CurrentForm->hasValue("o_Model") && $this->Model->CurrentValue != $this->Model->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Model") &&
+            $CurrentForm->hasValue("o_Model") &&
+            $this->Model->CurrentValue != $this->Model->DefaultValue &&
+            !($this->Model->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Model->CurrentValue == $this->Model->getSessionValue())
+        ) {
             return false;
         }
         return true;

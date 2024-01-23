@@ -714,7 +714,9 @@ class SuppliersUpdate extends Suppliers
         // Check if any rows updated
         if (count($successKeys) > 0) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
 
             // Set warning message if update some records failed
@@ -727,7 +729,9 @@ class SuppliersUpdate extends Suppliers
             return true;
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             return false;
         }

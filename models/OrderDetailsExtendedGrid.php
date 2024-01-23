@@ -1091,22 +1091,52 @@ class OrderDetailsExtendedGrid extends OrderDetailsExtended
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_CompanyName") && $CurrentForm->hasValue("o_CompanyName") && $this->CompanyName->CurrentValue != $this->CompanyName->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_CompanyName") &&
+            $CurrentForm->hasValue("o_CompanyName") &&
+            $this->CompanyName->CurrentValue != $this->CompanyName->DefaultValue &&
+            !($this->CompanyName->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->CompanyName->CurrentValue == $this->CompanyName->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ProductName") && $CurrentForm->hasValue("o_ProductName") && $this->ProductName->CurrentValue != $this->ProductName->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ProductName") &&
+            $CurrentForm->hasValue("o_ProductName") &&
+            $this->ProductName->CurrentValue != $this->ProductName->DefaultValue &&
+            !($this->ProductName->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ProductName->CurrentValue == $this->ProductName->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_UnitPrice") && $CurrentForm->hasValue("o_UnitPrice") && $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_UnitPrice") &&
+            $CurrentForm->hasValue("o_UnitPrice") &&
+            $this->UnitPrice->CurrentValue != $this->UnitPrice->DefaultValue &&
+            !($this->UnitPrice->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->UnitPrice->CurrentValue == $this->UnitPrice->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Quantity") && $CurrentForm->hasValue("o_Quantity") && $this->Quantity->CurrentValue != $this->Quantity->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Quantity") &&
+            $CurrentForm->hasValue("o_Quantity") &&
+            $this->Quantity->CurrentValue != $this->Quantity->DefaultValue &&
+            !($this->Quantity->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Quantity->CurrentValue == $this->Quantity->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Discount") && $CurrentForm->hasValue("o_Discount") && $this->Discount->CurrentValue != $this->Discount->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Discount") &&
+            $CurrentForm->hasValue("o_Discount") &&
+            $this->Discount->CurrentValue != $this->Discount->DefaultValue &&
+            !($this->Discount->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Discount->CurrentValue == $this->Discount->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ExtendedPrice") && $CurrentForm->hasValue("o_ExtendedPrice") && $this->ExtendedPrice->CurrentValue != $this->ExtendedPrice->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ExtendedPrice") &&
+            $CurrentForm->hasValue("o_ExtendedPrice") &&
+            $this->ExtendedPrice->CurrentValue != $this->ExtendedPrice->DefaultValue &&
+            !($this->ExtendedPrice->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ExtendedPrice->CurrentValue == $this->ExtendedPrice->getSessionValue())
+        ) {
             return false;
         }
         return true;

@@ -37,6 +37,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\controllers\HomeController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\JoinPremiumController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\JoinPremiumController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\KonfirmasiPembayaranController.php
+C:\xampp\htdocs\alfa-projectlearning.id\controllers\KonfirmasiPembayaranController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ModelsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\ModelsController.php
 C:\xampp\htdocs\alfa-projectlearning.id\controllers\NewsController.php
@@ -223,6 +224,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\models\Home.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\Home.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\JoinPremium.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\JoinPremium.php
+C:\xampp\htdocs\alfa-projectlearning.id\models\KonfirmasiPembayaran.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\KonfirmasiPembayaran.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\ListOfProducts.php
 C:\xampp\htdocs\alfa-projectlearning.id\models\ListOfProducts.php
@@ -862,6 +864,7 @@ C:\xampp\htdocs\alfa-projectlearning.id\views\Home.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Home.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\JoinPremium.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\JoinPremium.php
+C:\xampp\htdocs\alfa-projectlearning.id\views\KonfirmasiPembayaran.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\KonfirmasiPembayaran.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Login.php
 C:\xampp\htdocs\alfa-projectlearning.id\views\Login.php

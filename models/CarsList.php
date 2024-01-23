@@ -1289,7 +1289,9 @@ class CarsList extends Cars
         }
         if ($gridUpdate) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
             $this->FilterForModalActions = $wrkfilter;
 
@@ -1304,7 +1306,9 @@ class CarsList extends Cars
             $this->clearInlineMode(); // Clear inline edit mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("UpdateFailed")); // Set update failed message
@@ -1416,7 +1420,9 @@ class CarsList extends Cars
         }
         if ($gridInsert) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
 
             // Get new records
@@ -1433,7 +1439,9 @@ class CarsList extends Cars
             $this->clearInlineMode(); // Clear grid add mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("InsertFailed")); // Set insert failed message
@@ -1446,28 +1454,63 @@ class CarsList extends Cars
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_Trademark") && $CurrentForm->hasValue("o_Trademark") && $this->Trademark->CurrentValue != $this->Trademark->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Trademark") &&
+            $CurrentForm->hasValue("o_Trademark") &&
+            $this->Trademark->CurrentValue != $this->Trademark->DefaultValue &&
+            !($this->Trademark->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Trademark->CurrentValue == $this->Trademark->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Model") && $CurrentForm->hasValue("o_Model") && $this->Model->CurrentValue != $this->Model->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Model") &&
+            $CurrentForm->hasValue("o_Model") &&
+            $this->Model->CurrentValue != $this->Model->DefaultValue &&
+            !($this->Model->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Model->CurrentValue == $this->Model->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_HP") && $CurrentForm->hasValue("o_HP") && $this->HP->CurrentValue != $this->HP->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_HP") &&
+            $CurrentForm->hasValue("o_HP") &&
+            $this->HP->CurrentValue != $this->HP->DefaultValue &&
+            !($this->HP->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->HP->CurrentValue == $this->HP->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Cylinders") && $CurrentForm->hasValue("o_Cylinders") && $this->Cylinders->CurrentValue != $this->Cylinders->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Cylinders") &&
+            $CurrentForm->hasValue("o_Cylinders") &&
+            $this->Cylinders->CurrentValue != $this->Cylinders->DefaultValue &&
+            !($this->Cylinders->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Cylinders->CurrentValue == $this->Cylinders->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Price") && $CurrentForm->hasValue("o_Price") && $this->Price->CurrentValue != $this->Price->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Price") &&
+            $CurrentForm->hasValue("o_Price") &&
+            $this->Price->CurrentValue != $this->Price->DefaultValue &&
+            !($this->Price->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Price->CurrentValue == $this->Price->getSessionValue())
+        ) {
             return false;
         }
         if (!EmptyValue($this->Picture->Upload->Value)) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Doors") && $CurrentForm->hasValue("o_Doors") && $this->Doors->CurrentValue != $this->Doors->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Doors") &&
+            $CurrentForm->hasValue("o_Doors") &&
+            $this->Doors->CurrentValue != $this->Doors->DefaultValue &&
+            !($this->Doors->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Doors->CurrentValue == $this->Doors->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Torque") && $CurrentForm->hasValue("o_Torque") && $this->Torque->CurrentValue != $this->Torque->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Torque") &&
+            $CurrentForm->hasValue("o_Torque") &&
+            $this->Torque->CurrentValue != $this->Torque->DefaultValue &&
+            !($this->Torque->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Torque->CurrentValue == $this->Torque->getSessionValue())
+        ) {
             return false;
         }
         return true;
@@ -2330,12 +2373,12 @@ class CarsList extends Cars
                         $icon = ($listAction->Icon != "") ? "<i class=\"" . HtmlEncode(str_replace(" ew-icon", "", $listAction->Icon)) . "\" data-caption=\"" . $title . "\"></i> " : "";
                         $link = $disabled
                             ? "<li><div class=\"alert alert-light\">" . $icon . " " . $caption . "</div></li>"
-                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fcarslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button></li>";
+                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fcarslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button></li>";
                         $links[] = $link;
                         if ($body == "") { // Setup first button
                             $body = $disabled
                             ? "<div class=\"alert alert-light\">" . $icon . " " . $caption . "</div>"
-                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fcarslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button>";
+                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"fcarslist\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button>";
                         }
                     }
                 }
@@ -2537,7 +2580,7 @@ class CarsList extends Cars
                     $item = &$option->add("custom_" . $listAction->Action);
                     $caption = $listAction->Caption;
                     $icon = ($listAction->Icon != "") ? '<i class="' . HtmlEncode($listAction->Icon) . '" data-caption="' . HtmlEncode($caption) . '"></i>' . $caption : $caption;
-                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fcarslist"' . $listAction->toDataAttrs() . '>' . $icon . '</button>';
+                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="fcarslist"' . $listAction->toDataAttributes() . '>' . $icon . '</button>';
                     $item->Visible = $listAction->Allowed;
                 }
             }
@@ -2703,7 +2746,9 @@ class CarsList extends Cars
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        $conn->commit();
+                        if ($conn->isTransactionActive()) {
+                            $conn->commit();
+                        }
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2713,7 +2758,9 @@ class CarsList extends Cars
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        $conn->rollback();
+                        if ($conn->isTransactionActive()) {
+                            $conn->rollback();
+                        }
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

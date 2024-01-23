@@ -880,7 +880,9 @@ class Orders2Delete extends Orders2
         }
         if ($deleteRows) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
 
             // Set warning message if delete some records failed
@@ -889,7 +891,9 @@ class Orders2Delete extends Orders2
             }
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
         }
 

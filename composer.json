@@ -50,7 +50,6 @@
         "spatie/color": "^1.5.3",
         "nikic/php-parser": "^4.13.0",
         "symfony/polyfill-php83": "^1.27.0",
-        "giggsey/libphonenumber-for-php": "^8.13.8",
         "portphp/portphp": "^1.8.0",
         "portphp/csv": "^2.0.1",
         "portphp/steps": "^1.5.0",

@@ -1092,13 +1092,28 @@ class OrdersGrid extends Orders
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_CustomerID") && $CurrentForm->hasValue("o_CustomerID") && $this->CustomerID->CurrentValue != $this->CustomerID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_CustomerID") &&
+            $CurrentForm->hasValue("o_CustomerID") &&
+            $this->CustomerID->CurrentValue != $this->CustomerID->DefaultValue &&
+            !($this->CustomerID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->CustomerID->CurrentValue == $this->CustomerID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_EmployeeID") && $CurrentForm->hasValue("o_EmployeeID") && $this->EmployeeID->CurrentValue != $this->EmployeeID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_EmployeeID") &&
+            $CurrentForm->hasValue("o_EmployeeID") &&
+            $this->EmployeeID->CurrentValue != $this->EmployeeID->DefaultValue &&
+            !($this->EmployeeID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->EmployeeID->CurrentValue == $this->EmployeeID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_OrderDate") && $CurrentForm->hasValue("o_OrderDate") && $this->OrderDate->CurrentValue != $this->OrderDate->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_OrderDate") &&
+            $CurrentForm->hasValue("o_OrderDate") &&
+            $this->OrderDate->CurrentValue != $this->OrderDate->DefaultValue &&
+            !($this->OrderDate->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->OrderDate->CurrentValue == $this->OrderDate->getSessionValue())
+        ) {
             return false;
         }
         return true;

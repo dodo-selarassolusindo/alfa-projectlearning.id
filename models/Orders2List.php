@@ -1403,7 +1403,9 @@ class Orders2List extends Orders2
         }
         if ($gridUpdate) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
             $this->FilterForModalActions = $wrkfilter;
 
@@ -1418,7 +1420,9 @@ class Orders2List extends Orders2
             $this->clearInlineMode(); // Clear inline edit mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("UpdateFailed")); // Set update failed message
@@ -1530,7 +1534,9 @@ class Orders2List extends Orders2
         }
         if ($gridInsert) {
             if ($this->UseTransaction) { // Commit transaction
-                $conn->commit();
+                if ($conn->isTransactionActive()) {
+                    $conn->commit();
+                }
             }
 
             // Get new records
@@ -1547,7 +1553,9 @@ class Orders2List extends Orders2
             $this->clearInlineMode(); // Clear grid add mode
         } else {
             if ($this->UseTransaction) { // Rollback transaction
-                $conn->rollback();
+                if ($conn->isTransactionActive()) {
+                    $conn->rollback();
+                }
             }
             if ($this->getFailureMessage() == "") {
                 $this->setFailureMessage($Language->phrase("InsertFailed")); // Set insert failed message
@@ -1560,31 +1568,76 @@ class Orders2List extends Orders2
     public function emptyRow()
     {
         global $CurrentForm;
-        if ($CurrentForm->hasValue("x_CustomerID") && $CurrentForm->hasValue("o_CustomerID") && $this->CustomerID->CurrentValue != $this->CustomerID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_CustomerID") &&
+            $CurrentForm->hasValue("o_CustomerID") &&
+            $this->CustomerID->CurrentValue != $this->CustomerID->DefaultValue &&
+            !($this->CustomerID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->CustomerID->CurrentValue == $this->CustomerID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_EmployeeID") && $CurrentForm->hasValue("o_EmployeeID") && $this->EmployeeID->CurrentValue != $this->EmployeeID->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_EmployeeID") &&
+            $CurrentForm->hasValue("o_EmployeeID") &&
+            $this->EmployeeID->CurrentValue != $this->EmployeeID->DefaultValue &&
+            !($this->EmployeeID->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->EmployeeID->CurrentValue == $this->EmployeeID->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_OrderDate") && $CurrentForm->hasValue("o_OrderDate") && $this->OrderDate->CurrentValue != $this->OrderDate->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_OrderDate") &&
+            $CurrentForm->hasValue("o_OrderDate") &&
+            $this->OrderDate->CurrentValue != $this->OrderDate->DefaultValue &&
+            !($this->OrderDate->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->OrderDate->CurrentValue == $this->OrderDate->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_RequiredDate") && $CurrentForm->hasValue("o_RequiredDate") && $this->RequiredDate->CurrentValue != $this->RequiredDate->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_RequiredDate") &&
+            $CurrentForm->hasValue("o_RequiredDate") &&
+            $this->RequiredDate->CurrentValue != $this->RequiredDate->DefaultValue &&
+            !($this->RequiredDate->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->RequiredDate->CurrentValue == $this->RequiredDate->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ShippedDate") && $CurrentForm->hasValue("o_ShippedDate") && $this->ShippedDate->CurrentValue != $this->ShippedDate->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ShippedDate") &&
+            $CurrentForm->hasValue("o_ShippedDate") &&
+            $this->ShippedDate->CurrentValue != $this->ShippedDate->DefaultValue &&
+            !($this->ShippedDate->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ShippedDate->CurrentValue == $this->ShippedDate->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_Freight") && $CurrentForm->hasValue("o_Freight") && $this->Freight->CurrentValue != $this->Freight->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_Freight") &&
+            $CurrentForm->hasValue("o_Freight") &&
+            $this->Freight->CurrentValue != $this->Freight->DefaultValue &&
+            !($this->Freight->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->Freight->CurrentValue == $this->Freight->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ShipAddress") && $CurrentForm->hasValue("o_ShipAddress") && $this->ShipAddress->CurrentValue != $this->ShipAddress->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ShipAddress") &&
+            $CurrentForm->hasValue("o_ShipAddress") &&
+            $this->ShipAddress->CurrentValue != $this->ShipAddress->DefaultValue &&
+            !($this->ShipAddress->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ShipAddress->CurrentValue == $this->ShipAddress->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ShipCity") && $CurrentForm->hasValue("o_ShipCity") && $this->ShipCity->CurrentValue != $this->ShipCity->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ShipCity") &&
+            $CurrentForm->hasValue("o_ShipCity") &&
+            $this->ShipCity->CurrentValue != $this->ShipCity->DefaultValue &&
+            !($this->ShipCity->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ShipCity->CurrentValue == $this->ShipCity->getSessionValue())
+        ) {
             return false;
         }
-        if ($CurrentForm->hasValue("x_ShipCountry") && $CurrentForm->hasValue("o_ShipCountry") && $this->ShipCountry->CurrentValue != $this->ShipCountry->DefaultValue) {
+        if (
+            $CurrentForm->hasValue("x_ShipCountry") &&
+            $CurrentForm->hasValue("o_ShipCountry") &&
+            $this->ShipCountry->CurrentValue != $this->ShipCountry->DefaultValue &&
+            !($this->ShipCountry->IsForeignKey && $this->getCurrentMasterTable() != "" && $this->ShipCountry->CurrentValue == $this->ShipCountry->getSessionValue())
+        ) {
             return false;
         }
         return true;
@@ -2323,12 +2376,12 @@ class Orders2List extends Orders2
                         $icon = ($listAction->Icon != "") ? "<i class=\"" . HtmlEncode(str_replace(" ew-icon", "", $listAction->Icon)) . "\" data-caption=\"" . $title . "\"></i> " : "";
                         $link = $disabled
                             ? "<li><div class=\"alert alert-light\">" . $icon . " " . $caption . "</div></li>"
-                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forders2list\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button></li>";
+                            : "<li><button type=\"button\" class=\"dropdown-item ew-action ew-list-action\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forders2list\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button></li>";
                         $links[] = $link;
                         if ($body == "") { // Setup first button
                             $body = $disabled
                             ? "<div class=\"alert alert-light\">" . $icon . " " . $caption . "</div>"
-                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forders2list\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttrs() . ">" . $icon . " " . $caption . "</button>";
+                            : "<button type=\"button\" class=\"btn btn-default ew-action ew-list-action\" title=\"" . $title . "\" data-caption=\"" . $title . "\" data-ew-action=\"submit\" form=\"forders2list\" data-key=\"" . $this->keyToJson(true) . "\"" . $listAction->toDataAttributes() . ">" . $icon . " " . $caption . "</button>";
                         }
                     }
                 }
@@ -2533,7 +2586,7 @@ class Orders2List extends Orders2
                     $item = &$option->add("custom_" . $listAction->Action);
                     $caption = $listAction->Caption;
                     $icon = ($listAction->Icon != "") ? '<i class="' . HtmlEncode($listAction->Icon) . '" data-caption="' . HtmlEncode($caption) . '"></i>' . $caption : $caption;
-                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="forders2list"' . $listAction->toDataAttrs() . '>' . $icon . '</button>';
+                    $item->Body = '<button type="button" class="btn btn-default ew-action ew-list-action" title="' . HtmlEncode($caption) . '" data-caption="' . HtmlEncode($caption) . '" data-ew-action="submit" form="forders2list"' . $listAction->toDataAttributes() . '>' . $icon . '</button>';
                     $item->Visible = $listAction->Allowed;
                 }
             }
@@ -2675,7 +2728,9 @@ class Orders2List extends Orders2
                 }
                 if ($processed) {
                     if ($this->UseTransaction) { // Commit transaction
-                        $conn->commit();
+                        if ($conn->isTransactionActive()) {
+                            $conn->commit();
+                        }
                     }
                     if ($this->getSuccessMessage() == "") {
                         $this->setSuccessMessage($listAction->SuccessMessage);
@@ -2685,7 +2740,9 @@ class Orders2List extends Orders2
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        $conn->rollback();
+                        if ($conn->isTransactionActive()) {
+                            $conn->rollback();
+                        }
                     }
                     if ($this->getFailureMessage() == "") {
                         $this->setFailureMessage($listAction->FailureMessage);

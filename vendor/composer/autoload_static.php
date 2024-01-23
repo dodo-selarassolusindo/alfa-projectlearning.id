@@ -32,10 +32,6 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         array (
             'voku\\' => 5,
         ),
-        'l' => 
-        array (
-            'libphonenumber\\' => 15,
-        ),
         'Z' => 
         array (
             'ZipStream\\' => 10,
@@ -138,7 +134,6 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
-            'Giggsey\\Locale\\' => 15,
         ),
         'F' => 
         array (
@@ -184,10 +179,6 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
-        ),
-        'libphonenumber\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'ZipStream\\' => 
         array (
@@ -475,10 +466,6 @@ class ComposerStaticInitba192ad3a1320e2fafcd0eb0cfa7e0e4
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'Giggsey\\Locale\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
         'FontLib\\' => 
         array (

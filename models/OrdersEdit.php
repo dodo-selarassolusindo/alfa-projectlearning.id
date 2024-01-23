@@ -1719,11 +1719,15 @@ class OrdersEdit extends Orders
             if ($this->getCurrentDetailTable() != "") {
                 if ($editRow) {
                     if ($this->UseTransaction) { // Commit transaction
-                        $conn->commit();
+                        if ($conn->isTransactionActive()) {
+                            $conn->commit();
+                        }
                     }
                 } else {
                     if ($this->UseTransaction) { // Rollback transaction
-                        $conn->rollback();
+                        if ($conn->isTransactionActive()) {
+                            $conn->rollback();
+                        }
                     }
                 }
             }
