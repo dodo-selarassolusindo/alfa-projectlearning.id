@@ -45,7 +45,7 @@ class PersonalData
     public $RenderingView = false;
 
     // CSS class/style
-    public $CurrentPageName = "homecontroller";
+    public $CurrentPageName = "konfirmasipembayarancontroller";
 
     // Page headings
     public $Heading = "";
