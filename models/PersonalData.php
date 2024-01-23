@@ -45,7 +45,7 @@ class PersonalData
     public $RenderingView = false;
 
     // CSS class/style
-    public $CurrentPageName = "audittraildelete";
+    public $CurrentPageName = "homecontroller";
 
     // Page headings
     public $Heading = "";

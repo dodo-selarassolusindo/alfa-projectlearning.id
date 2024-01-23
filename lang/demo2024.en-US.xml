@@ -715,7 +715,9 @@
         <phrase id="fldcaption" value="Torque" />
       </field>
     </table>
-    <table id="home" />
+    <table id="home">
+      <phrase id="tblcaption" value="Home" />
+    </table>
     <table id="news">
       <phrase id="tblcaption" value="News" />
     </table>
