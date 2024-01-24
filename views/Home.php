@@ -73,7 +73,7 @@ $Page->showMessage();
 </div>
 
 
-<header data-bs-theme="dark">
+<!-- <header data-bs-theme="dark">
     <div class="collapse text-bg-dark" id="navbarHeader">
         <div class="container">
             <div class="row">
@@ -103,7 +103,7 @@ $Page->showMessage();
             </button>
         </div>
     </div>
-</header>
+</header> -->
 
 <main>
 
