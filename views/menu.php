@@ -15,6 +15,7 @@ $topMenu->addMenuItem(17, "mci_ADMIN_ONLY", $Language->menuPhrase("17", "MenuTex
 $topMenu->addMenuItem(4, "mi_employees", $Language->menuPhrase("4", "MenuText"), "employeeslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}employees'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10084, "mi_userlevels", $Language->menuPhrase("10084", "MenuText"), "userlevelslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}userlevels'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10083, "mi_userlevelpermissions", $Language->menuPhrase("10083", "MenuText"), "userlevelpermissionslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}userlevelpermissions'), false, false, "", "", true, false);
+$topMenu->addMenuItem(10270, "mi_audittrail", $Language->menuPhrase("10270", "MenuText"), "audittraillist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}audittrail'), false, false, "", "", true, false);
 $topMenu->addMenuItem(10267, "mci_Demo", $Language->menuPhrase("10267", "MenuText"), "", -1, "", true, false, true, "", "", true, false);
 $topMenu->addMenuItem(16, "mci_CARS_RELATED", $Language->menuPhrase("16", "MenuText"), "", 10267, "", true, false, true, "fa-car", "", true, false);
 $topMenu->addMenuItem(1, "mi_cars", $Language->menuPhrase("1", "MenuText"), "carslist", 16, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}cars'), false, false, "", "", true, false);
@@ -49,7 +50,6 @@ echo $topMenu->toScript();
 
 // Sidebar menu
 $sideMenu = new Menu("menu", true, false);
-$sideMenu->addMenuItem(10270, "mi_audittrail", $Language->menuPhrase("10270", "MenuText"), "audittraillist", -1, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}audittrail'), false, false, "", "", false, true);
 $sideMenu->addMenuItem(10155, "mi_home2", $Language->menuPhrase("10155", "MenuText"), "home2", -1, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}home2.php'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10209, "mci_Membership", $Language->menuPhrase("10209", "MenuText"), "", -1, "", true, false, true, "", "", true, true);
 $sideMenu->addMenuItem(10156, "mi_join_premium", $Language->menuPhrase("10156", "MenuText"), "joinpremium", 10209, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}join_premium.php'), false, false, "", "", true, true);
@@ -61,6 +61,7 @@ $sideMenu->addMenuItem(17, "mci_ADMIN_ONLY", $Language->menuPhrase("17", "MenuTe
 $sideMenu->addMenuItem(4, "mi_employees", $Language->menuPhrase("4", "MenuText"), "employeeslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}employees'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10084, "mi_userlevels", $Language->menuPhrase("10084", "MenuText"), "userlevelslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}userlevels'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10083, "mi_userlevelpermissions", $Language->menuPhrase("10083", "MenuText"), "userlevelpermissionslist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}userlevelpermissions'), false, false, "", "", true, true);
+$sideMenu->addMenuItem(10270, "mi_audittrail", $Language->menuPhrase("10270", "MenuText"), "audittraillist", 17, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}audittrail'), false, false, "", "", true, true);
 $sideMenu->addMenuItem(10267, "mci_Demo", $Language->menuPhrase("10267", "MenuText"), "", -1, "", true, false, true, "", "", true, true);
 $sideMenu->addMenuItem(16, "mci_CARS_RELATED", $Language->menuPhrase("16", "MenuText"), "", 10267, "", true, false, true, "fa-car", "", true, true);
 $sideMenu->addMenuItem(1, "mi_cars", $Language->menuPhrase("1", "MenuText"), "carslist", 16, "", AllowListMenu('{B699EC9A-9493-4587-8132-9CCDCDB555DD}cars'), false, false, "", "", true, true);

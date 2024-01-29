@@ -2,9 +2,6 @@
   <project>
     <phrase id="bodytitle" value="Project Learning" />
     <phrase id="footertext" value="&amp;copy;2024 Project Learning Team. All rights reserved." />
-    <menu id="10270">
-      <phrase id="menutext" value="audittrail" />
-    </menu>
     <menu id="10155">
       <phrase id="menutext" value="Home" />
     </menu>
@@ -20,11 +17,11 @@
     <menu id="10269">
       <phrase id="menutext" value="Materi" />
     </menu>
-    <menu id="10211">
-      <phrase id="menutext" value="Produk" />
-    </menu>
     <menu id="10212">
       <phrase id="menutext" value="Contact" />
+    </menu>
+    <menu id="10211">
+      <phrase id="menutext" value="Produk" />
     </menu>
     <menu id="10213">
       <phrase id="menutext" value="About" />
@@ -40,6 +37,9 @@
     </menu>
     <menu id="10083">
       <phrase id="menutext" value="User Level Permissions" />
+    </menu>
+    <menu id="10270">
+      <phrase id="menutext" value="Audit Trail" />
     </menu>
     <menu id="10267">
       <phrase id="menutext" value="Demo" />
@@ -1541,7 +1541,7 @@
       </field>
     </table>
     <table id="audittrail">
-      <phrase id="tblcaption" value="audittrail" />
+      <phrase id="tblcaption" value="Audit Trail" />
       <field id="id">
         <phrase id="fldcaption" value="Id" />
       </field>

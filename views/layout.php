@@ -252,10 +252,10 @@ ew.ready(["chartjs", "luxon"], [
         <div class="container-fluid">
             <!-- Left navbar links -->
             <ul id="ew-navbar" class="navbar-nav">
-                <li class="nav-item d-block">
+                <li class="nav-item d-block d-sm-none">
                     <a class="nav-link" data-widget="pushmenu" data-enable-remember="true" data-ew-action="none"><i class="fa-solid fa-bars ew-icon"></i></a>
                 </li>
-                <a class="navbar-brand d-none" href=".">
+                <a class="navbar-brand d-none d-sm-block" href=".">
                     <span class="brand-text">Project Learning</span>
                 </a>
             </ul>

@@ -315,4 +315,4 @@ $USER_LEVEL_TABLES = [["about.php","about","About",true,"{B699EC9A-9493-4587-813
     ["trademarks","trademarks","Trademarks",true,"{B699EC9A-9493-4587-8132-9CCDCDB555DD}","trademarkslist"],
     ["userlevelpermissions","userlevelpermissions","User Level Permissions",true,"{B699EC9A-9493-4587-8132-9CCDCDB555DD}","userlevelpermissionslist"],
     ["userlevels","userlevels","User Levels",true,"{B699EC9A-9493-4587-8132-9CCDCDB555DD}","userlevelslist"],
-    ["audittrail","audittrail","audittrail",true,"{B699EC9A-9493-4587-8132-9CCDCDB555DD}","audittraillist"]];
+    ["audittrail","audittrail","Audit Trail",true,"{B699EC9A-9493-4587-8132-9CCDCDB555DD}","audittraillist"]];
