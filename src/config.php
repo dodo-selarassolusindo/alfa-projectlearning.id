@@ -798,7 +798,7 @@ $CONFIG = [
     "LOOKUP_CACHE_PAGE_IDS" => ["list","grid"],
 
     // Page Title Style
-    "PAGE_TITLE_STYLE" => "Title",
+    "PAGE_TITLE_STYLE" => "Caption",
 
     // Responsive table
     "USE_RESPONSIVE_TABLE" => true,
