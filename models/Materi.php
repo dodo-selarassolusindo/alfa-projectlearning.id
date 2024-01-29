@@ -1281,9 +1281,9 @@ class Materi extends DbTable
     {
         // Enter your code here
         // pre(CurrentUserInfo("UserLevel")); exit;
-        if (CurrentUserLevel() == 0) {
+        // if (CurrentUserLevel() == 0) {
             AddFilter($filter, "Tipe = 'Free'");
-        }
+        // }
     }
 
     // Row Selected event
