@@ -1251,6 +1251,9 @@ class Materi extends DbTable
     public function recordsetSelecting(&$filter)
     {
         // Enter your code here
+        if (CurrentUserLevel() == 0) {
+            AddFilter($filter, "Tipe = 0");
+        }
     }
 
     // Recordset Selected event
@@ -1276,10 +1279,6 @@ class Materi extends DbTable
     public function rowSelecting(&$filter)
     {
         // Enter your code here
-        // pre(CurrentUserInfo("UserLevel")); exit;
-        // if (CurrentUserLevel() == 0) {
-            AddFilter($filter, "Tipe = 0");
-        // }
     }
 
     // Row Selected event
