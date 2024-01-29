@@ -45,7 +45,7 @@ function Database_Connecting(&$info)
     //}
     if (!isLocal()) {
         $info["user"] = "u736643050_alfa";
-        $info["password"] = "PresarioCQ43";
+        $info["password"] = "PresarioCQ43@";
         $info["dbname"] = "u736643050_alfa";
     }
 }
