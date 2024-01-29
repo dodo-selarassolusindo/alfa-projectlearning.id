@@ -829,9 +829,9 @@
       </field>
       <field id="tipe">
         <phrase id="fldcaption" value="Tipe" />
-        <phrase id="fldtagvalue1" value="Free" />
+        <phrase id="fldtagvalue1" value="0" />
         <phrase id="fldtagcaption1" value="Free" />
-        <phrase id="fldtagvalue2" value="Premium" />
+        <phrase id="fldtagvalue2" value="1" />
         <phrase id="fldtagcaption2" value="Premium" />
       </field>
     </table>

@@ -83,45 +83,31 @@ $Page->showMessage();
 <?php } ?>
 <?php if ($Page->Tipe->Visible) { // Tipe ?>
     <div id="r_Tipe"<?= $Page->Tipe->rowAttributes() ?>>
-        <label id="elh_materi_Tipe" for="x_Tipe" class="<?= $Page->LeftColumnClass ?>"><?= $Page->Tipe->caption() ?><?= $Page->Tipe->Required ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
+        <label id="elh_materi_Tipe" class="<?= $Page->LeftColumnClass ?>"><?= $Page->Tipe->caption() ?><?= $Page->Tipe->Required ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
         <div class="<?= $Page->RightColumnClass ?>"><div<?= $Page->Tipe->cellAttributes() ?>>
 <span id="el_materi_Tipe">
-    <select
-        id="x_Tipe"
-        name="x_Tipe"
-        class="form-select ew-select<?= $Page->Tipe->isInvalidClass() ?>"
-        <?php if (!$Page->Tipe->IsNativeSelect) { ?>
-        data-select2-id="fmateriadd_x_Tipe"
-        <?php } ?>
-        data-table="materi"
-        data-field="x_Tipe"
-        data-value-separator="<?= $Page->Tipe->displayValueSeparatorAttribute() ?>"
-        data-placeholder="<?= HtmlEncode($Page->Tipe->getPlaceHolder()) ?>"
-        <?= $Page->Tipe->editAttributes() ?>>
-        <?= $Page->Tipe->selectOptionListHtml("x_Tipe") ?>
-    </select>
-    <?= $Page->Tipe->getCustomMessage() ?>
-    <div class="invalid-feedback"><?= $Page->Tipe->getErrorMessage() ?></div>
-<?php if (!$Page->Tipe->IsNativeSelect) { ?>
-<script>
-loadjs.ready("fmateriadd", function() {
-    var options = { name: "x_Tipe", selectId: "fmateriadd_x_Tipe" },
-        el = document.querySelector("select[data-select2-id='" + options.selectId + "']");
-    if (!el)
-        return;
-    options.closeOnSelect = !options.multiple;
-    options.dropdownParent = el.closest("#ew-modal-dialog, #ew-add-opt-dialog");
-    if (fmateriadd.lists.Tipe?.lookupOptions.length) {
-        options.data = { id: "x_Tipe", form: "fmateriadd" };
-    } else {
-        options.ajax = { id: "x_Tipe", form: "fmateriadd", limit: ew.LOOKUP_PAGE_SIZE };
-    }
-    options.minimumResultsForSearch = Infinity;
-    options = Object.assign({}, ew.selectOptions, options, ew.vars.tables.materi.fields.Tipe.selectOptions);
-    ew.createSelect(options);
-});
-</script>
-<?php } ?>
+<template id="tp_x_Tipe">
+    <div class="form-check">
+        <input type="radio" class="form-check-input" data-table="materi" data-field="x_Tipe" name="x_Tipe" id="x_Tipe"<?= $Page->Tipe->editAttributes() ?>>
+        <label class="form-check-label"></label>
+    </div>
+</template>
+<div id="dsl_x_Tipe" class="ew-item-list"></div>
+<selection-list hidden
+    id="x_Tipe"
+    name="x_Tipe"
+    value="<?= HtmlEncode($Page->Tipe->CurrentValue) ?>"
+    data-type="select-one"
+    data-template="tp_x_Tipe"
+    data-target="dsl_x_Tipe"
+    data-repeatcolumn="5"
+    class="form-control<?= $Page->Tipe->isInvalidClass() ?>"
+    data-table="materi"
+    data-field="x_Tipe"
+    data-value-separator="<?= $Page->Tipe->displayValueSeparatorAttribute() ?>"
+    <?= $Page->Tipe->editAttributes() ?>></selection-list>
+<?= $Page->Tipe->getCustomMessage() ?>
+<div class="invalid-feedback"><?= $Page->Tipe->getErrorMessage() ?></div>
 </span>
 </div></div>
     </div>

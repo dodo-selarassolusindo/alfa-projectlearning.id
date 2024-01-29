@@ -42,8 +42,8 @@ class Materi extends AbstractEntity
     #[Column(name: "Nama", type: "string")]
     private string $nama;
 
-    #[Column(name: "Tipe", type: "string")]
-    private string $tipe;
+    #[Column(name: "Tipe", type: "boolean")]
+    private bool $tipe;
 
     public function getId(): int
     {
@@ -67,16 +67,13 @@ class Materi extends AbstractEntity
         return $this;
     }
 
-    public function getTipe(): string
+    public function getTipe(): bool
     {
         return $this->tipe;
     }
 
-    public function setTipe(string $value): static
+    public function setTipe(bool $value): static
     {
-        if (!in_array($value, ["Free", "Premium"])) {
-            throw new \InvalidArgumentException("Invalid 'Tipe' value");
-        }
         $this->tipe = $value;
         return $this;
     }

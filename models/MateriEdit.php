@@ -972,8 +972,7 @@ class MateriEdit extends Materi
             $this->Nama->PlaceHolder = RemoveHtml($this->Nama->caption());
 
             // Tipe
-            $this->Tipe->setupEditAttributes();
-            $this->Tipe->EditValue = $this->Tipe->options(true);
+            $this->Tipe->EditValue = $this->Tipe->options(false);
             $this->Tipe->PlaceHolder = RemoveHtml($this->Tipe->caption());
 
             // Edit refer script
@@ -1010,7 +1009,7 @@ class MateriEdit extends Materi
                 }
             }
             if ($this->Tipe->Visible && $this->Tipe->Required) {
-                if (!$this->Tipe->IsDetailKey && EmptyValue($this->Tipe->FormValue)) {
+                if ($this->Tipe->FormValue == "") {
                     $this->Tipe->addErrorMessage(str_replace("%s", $this->Tipe->caption(), $this->Tipe->RequiredErrorMessage));
                 }
             }

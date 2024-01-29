@@ -154,8 +154,8 @@ class Materi extends DbTable
             'Tipe', // Name
             '`Tipe`', // Expression
             '`Tipe`', // Basic search expression
-            200, // Type
-            7, // Size
+            16, // Type
+            4, // Size
             -1, // Date/Time format
             false, // Is upload field
             '`Tipe`', // Virtual expression
@@ -163,18 +163,15 @@ class Materi extends DbTable
             false, // Force selection
             false, // Is Virtual search
             'FORMATTED TEXT', // View Tag
-            'SELECT' // Edit Tag
+            'RADIO' // Edit Tag
         );
         $this->Tipe->InputTextType = "text";
         $this->Tipe->Raw = true;
         $this->Tipe->Nullable = false; // NOT NULL field
         $this->Tipe->Required = true; // Required field
-        $this->Tipe->setSelectMultiple(false); // Select one
-        $this->Tipe->UsePleaseSelect = true; // Use PleaseSelect by default
-        $this->Tipe->PleaseSelectText = $Language->phrase("PleaseSelect"); // "PleaseSelect" text
         $this->Tipe->Lookup = new Lookup($this->Tipe, 'materi', false, '', ["","","",""], '', '', [], [], [], [], [], [], false, '', '', "");
         $this->Tipe->OptionCount = 2;
-        $this->Tipe->SearchOperators = ["=", "<>"];
+        $this->Tipe->SearchOperators = ["=", "<>", "<", "<=", ">", ">=", "BETWEEN", "NOT BETWEEN"];
         $this->Fields['Tipe'] = &$this->Tipe;
 
         // Add Doctrine Cache
@@ -1149,8 +1146,7 @@ class Materi extends DbTable
         $this->Nama->PlaceHolder = RemoveHtml($this->Nama->caption());
 
         // Tipe
-        $this->Tipe->setupEditAttributes();
-        $this->Tipe->EditValue = $this->Tipe->options(true);
+        $this->Tipe->EditValue = $this->Tipe->options(false);
         $this->Tipe->PlaceHolder = RemoveHtml($this->Tipe->caption());
 
         // Call Row Rendered event
@@ -1281,9 +1277,9 @@ class Materi extends DbTable
     {
         // Enter your code here
         // pre(CurrentUserInfo("UserLevel")); exit;
-        // if (CurrentUserLevel() == 0) {
-            AddFilter($filter, "Tipe = 'Free'");
-        // }
+        if (CurrentUserLevel() == 0) {
+            AddFilter($filter, "Tipe = 0");
+        }
     }
 
     // Row Selected event
