@@ -84,7 +84,7 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('_TITLE', 'Trucking Apps.');
-define('_COMPANY', 'vts');
-define('_VERSION', '2.0');
-define('_APPS_NAME', 'Trucking Apps.');
+define('_TITLE', 'Project Learning Membership');
+define('_COMPANY', 'Project Learning Team');
+define('_VERSION', '1.0');
+define('_APPS_NAME', 'Project Learning Membership');
