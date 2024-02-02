@@ -31,16 +31,16 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		if (!$this->ion_auth->logged_in()) {
-			redirect(site_url().'auth/login');
-		} else {
+		// if (!$this->ion_auth->logged_in()) {
+		// 	redirect(site_url().'auth/login');
+		// } else {
 			// $this->load->view('welcome_message');
 			$data['_sub_judul'] = 'Dashboard';
-			$data['_judul'] = 'Trucking Apps.';
+			$data['_judul'] = 'Project Learning Membership';
 			$data['_view'] = 'welcome/welcome_message_list';
 	    	// $data['_caption'] = 'Dashboard';
 	    	$this->load->view('welcome/welcome_message', $data);
-		}
+		// }
 	}
 
 	public function index0()

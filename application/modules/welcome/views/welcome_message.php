@@ -193,6 +193,8 @@
 
                                 <?php $uri = $this->uri->segment(1) ?>
 
+                                <?php if ($this->ion_auth->logged_in()) { ?>
+
                                 <!-- home -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="./" >
@@ -302,6 +304,8 @@
                                         </a>
                                     </div>
                                 </li>
+
+                                <?php } ?>
 
                                 <!-- interface -->
                                 <li class="nav-item dropdown">
