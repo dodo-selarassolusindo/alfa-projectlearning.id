@@ -193,19 +193,53 @@
 
                                 <?php $uri = $this->uri->segment(1) ?>
 
-                                <?php if ($this->ion_auth->logged_in()) { ?>
-
                                 <!-- home -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./" >
-                                        <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                                        </span>
+                                    <a class="nav-link" href="<?= site_url() ?>">
+                                        <!-- <span class="nav-link-icon d-md-none d-lg-inline-block"> -->
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg> -->
+                                        <!-- </span> -->
                                         <span class="nav-link-title">
                                             Home
                                         </span>
                                     </a>
                                 </li>
+
+                                <!-- membership -->
+                                <li class="nav-item
+                                <?php
+                                switch($uri) {
+                                    case 't00_lokasi':
+                                    case 't01_customer':
+                                    case 't02_shipper':
+                                    case 't03_vendor':
+                                    case 't04_armada':
+                                    case 't05_satuan':
+                                    case 't06_cost':
+                                        echo 'active';
+                                        break;
+                                }
+                                ?>
+                                dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <!-- <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-database" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" /><path d="M4 6v6a8 3 0 0 0 16 0v-6" /><path d="M4 12v6a8 3 0 0 0 16 0v-6" /></svg>
+                                        </span> -->
+                                        <span class="nav-link-title">Membership</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item <?= $uri == 't00_lokasi' ? 'active' : '' ?>" href="<?= site_url() ?>t00_lokasi">Join Premium</a>
+                                        <a class="dropdown-item <?= $uri == 't01_customer' ? 'active' : '' ?>" href="<?= site_url() ?>t01_customer">Konfirmasi Pembayaran</a>
+                                        <!-- <a class="dropdown-item <?= $uri == 't02_shipper' ? 'active' : '' ?>" href="<?= site_url() ?>t02_shipper">Shipper</a>
+                                        <a class="dropdown-item <?= $uri == 't03_vendor' ? 'active' : '' ?>" href="<?= site_url() ?>t03_vendor">Vendor</a>
+                                        <a class="dropdown-item <?= $uri == 't04_armada' ? 'active' : '' ?>" href="<?= site_url() ?>t04_armada">Armada</a>
+                                        <a class="dropdown-item <?= $uri == 't05_satuan' ? 'active' : '' ?>" href="<?= site_url() ?>t05_satuan">Satuan</a>
+                                        <a class="dropdown-item <?= $uri == 't06_cost' ? 'active' : '' ?>" href="<?= site_url() ?>t06_cost">Cost</a> -->
+                                    </div>
+                                </li>
+
+                                <?php if ($this->ion_auth->logged_in()) { ?>
 
                                 <!-- master -->
                                 <li class="nav-item
