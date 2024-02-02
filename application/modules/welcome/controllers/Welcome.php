@@ -36,7 +36,7 @@ class Welcome extends CI_Controller {
 		// } else {
 			// $this->load->view('welcome_message');
 			$data['_sub_judul'] = 'Dashboard';
-			$data['_judul'] = 'Project Learning Membership';
+			$data['_judul'] = _TITLE;
 			$data['_view'] = 'welcome/welcome_message_list';
 	    	// $data['_caption'] = 'Dashboard';
 	    	$this->load->view('welcome/welcome_message', $data);
