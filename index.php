@@ -53,7 +53,39 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	switch ($_SERVER["HTTP_HOST"]) {
+		case "localhost":
+		case "localhost:8888":
+			$env = "development";
+			define('DBPREFIX', 'db');
+			break;
+
+		case "siat3.selusin.online":
+		case "selusin.online":
+		case "alfa.projectlearning.id":
+			$env = "production";
+			define('DBPREFIX', 'u473805576');
+			break;
+
+		case "trucking.vcscon.com":
+		case "vcscon.com":
+			$env = "production";
+			define('DBPREFIX', 'vcsconco');
+			break;
+
+		case "trucking_test.vcscon.com":
+			$env = "testing";
+			define('DBPREFIX', 'vcsconco');
+			break;
+
+		default:
+			$env = "development";
+			break;
+	}
+
+	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
 
 /*
  *---------------------------------------------------------------

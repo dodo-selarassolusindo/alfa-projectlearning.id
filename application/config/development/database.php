@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost:3306',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_membership',
+	'hostname' => 'localhost:3306', // 'sql298.main-hosting.eu',
+	'username' => 'root', //'u736643050_trucking',
+	'password' => '', //'PresarioCQ43',
+	'database' => 'db_membership', // 'db_trucking', //'u736643050_trucking',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
