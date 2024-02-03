@@ -170,20 +170,19 @@
                                 </li>
 
                                 <?php if ($this->ion_auth->logged_in() and !$this->ion_auth->is_admin()) { ?>
-                                <!-- my account -->
-                                <!-- members logged in -->
+                                <!-- my account, members logged in -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
                                         <span class="nav-link-title">My Account</span>
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="./profile.html">Profile</a>
+                                        <a class="dropdown-item" href="#">Profile</a>
+                                        <a class="dropdown-item" href="#">Change Password</a>
                                         <a class="dropdown-item" href="<?= site_url() ?>auth/logout">Logout</a>
                                     </div>
                                 </li>
                                 <?php } else { ?>
-                                <!-- login -->
-                                <!-- anonymous users -->
+                                <!-- login, anonymous users -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?= site_url() ?>auth/login">
                                         <span class="nav-link-title">
