@@ -6,7 +6,7 @@
             <p class="col-lg-8 mx-auto lead">
                 Selamat datang di Project Learning, pembelajaran proyek konstruksi,
                 <br>
-                dapatkan berbagai materi pembelajaran terbaik di website ini
+                dapatkan berbagai materi pembelajaran proyek konstruksi di website ini
             </p>
         </div>
     </div>
