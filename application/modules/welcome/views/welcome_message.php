@@ -170,32 +170,27 @@
                                 </li>
 
                                 <?php if ($this->ion_auth->logged_in() and !$this->ion_auth->is_admin()) { ?>
-                                    <!-- my account -->
-                                    <li class="nav-item
-                                    <?php
-                                    switch($uri) {
-                                        case 't30_job_order':
-                                            echo 'active';
-                                            break;
-                                    }
-                                    ?>
-                                    dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                            <span class="nav-link-title">My Account</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item <?= $uri == 't30_job_order' ? 'active' : '' ?>" href="<?= site_url() ?>auth/logout">Logout</a>
-                                        </div>
-                                    </li>
+                                <!-- my account -->
+                                <!-- members logged in -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-title">My Account</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./profile.html">Profile</a>
+                                        <a class="dropdown-item" href="<?= site_url() ?>auth/logout">Logout</a>
+                                    </div>
+                                </li>
                                 <?php } else { ?>
-                                    <!-- login -->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?= site_url() ?>auth/login">
-                                            <span class="nav-link-title">
-                                                Login
-                                            </span>
-                                        </a>
-                                    </li>
+                                <!-- login -->
+                                <!-- anonymous users -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= site_url() ?>auth/login">
+                                        <span class="nav-link-title">
+                                            Login
+                                        </span>
+                                    </a>
+                                </li>
                                 <?php } ?>
 
 
