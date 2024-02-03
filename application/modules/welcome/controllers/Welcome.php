@@ -35,8 +35,8 @@ class Welcome extends CI_Controller {
 		// 	redirect(site_url().'auth/login');
 		// } else {
 			// $this->load->view('welcome_message');
-			$data['_sub_judul'] = 'Dashboard';
-			$data['_judul'] = _TITLE;
+			$data['_sub_judul'] = ''; // 'Dashboard';
+			$data['_judul'] = ''; // _TITLE;
 			$data['_view'] = 'welcome/welcome_message_list';
 	    	// $data['_caption'] = 'Dashboard';
 	    	$this->load->view('welcome/welcome_message', $data);

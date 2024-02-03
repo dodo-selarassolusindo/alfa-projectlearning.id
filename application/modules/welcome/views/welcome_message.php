@@ -366,7 +366,7 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="./changelog.html" class="link-secondary" rel="noopener">
-                                            v1.0.0-beta19
+                                            v1.0.0-alfa2
                                         </a>
                                     </li>
                                 </ul>
